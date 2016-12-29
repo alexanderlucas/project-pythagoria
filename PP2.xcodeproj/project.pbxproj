@@ -1,0 +1,1067 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F0165FB41D04F1FB0070EF07 /* CationNums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0165FB31D04F1FB0070EF07 /* CationNums.swift */; };
+		F02327B01C83B2EE0042A155 /* GameSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02327AF1C83B2ED0042A155 /* GameSelectorView.swift */; };
+		F037CCDF1D087AD700524992 /* DivideEquation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F037CCDE1D087AD700524992 /* DivideEquation.swift */; };
+		F037CCE11D087AF800524992 /* DivideLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F037CCE01D087AF800524992 /* DivideLevel.swift */; };
+		F037CCE31D087C7500524992 /* DivideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F037CCE21D087C7500524992 /* DivideViewController.swift */; };
+		F037CCE61D0880B700524992 /* RemainderEquation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F037CCE51D0880B700524992 /* RemainderEquation.swift */; };
+		F037CCE81D0880C100524992 /* RemainderLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F037CCE71D0880C100524992 /* RemainderLevel.swift */; };
+		F037CCEA1D0882C400524992 /* RemainderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F037CCE91D0882C400524992 /* RemainderViewController.swift */; };
+		F037CCED1D0889AE00524992 /* EquivalentEquation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F037CCEC1D0889AE00524992 /* EquivalentEquation.swift */; };
+		F037CCEF1D0889BC00524992 /* EquivalentLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F037CCEE1D0889BC00524992 /* EquivalentLevel.swift */; };
+		F037CCF11D088C9200524992 /* EquivalentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F037CCF01D088C9200524992 /* EquivalentViewController.swift */; };
+		F037CCF41D088FEE00524992 /* ComparingEquation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F037CCF31D088FEE00524992 /* ComparingEquation.swift */; };
+		F037CCF61D088FF800524992 /* ComparingLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F037CCF51D088FF800524992 /* ComparingLevel.swift */; };
+		F037CCF81D0893A200524992 /* ComparingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F037CCF71D0893A200524992 /* ComparingViewController.swift */; };
+		F0393A651D09BFC900AA2873 /* CheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0393A641D09BFC900AA2873 /* CheckView.swift */; };
+		F0393A671D09F06A00AA2873 /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0393A661D09F06A00AA2873 /* WelcomePageViewController.swift */; };
+		F0393A691D0B3C9400AA2873 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0393A681D0B3C9400AA2873 /* WelcomeViewController.swift */; };
+		F0393A6B1D0B3CE900AA2873 /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0393A6A1D0B3CE900AA2873 /* ViewController1.swift */; };
+		F0393A6D1D0B3CF200AA2873 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0393A6C1D0B3CF200AA2873 /* ViewController2.swift */; };
+		F04235051CF7BA060054446A /* OperationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04235041CF7BA060054446A /* OperationsViewController.swift */; };
+		F04235071CF8A43D0054446A /* RemainderNums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04235061CF8A43D0054446A /* RemainderNums.swift */; };
+		F04235091CF8A69C0054446A /* EquivalentNums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04235081CF8A69C0054446A /* EquivalentNums.swift */; };
+		F042350B1CF938D80054446A /* ComparingNums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042350A1CF938D80054446A /* ComparingNums.swift */; };
+		F042350D1CFA7E520054446A /* TimesNums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042350C1CFA7E520054446A /* TimesNums.swift */; };
+		F04342C21C82161100EAAFF6 /* LevelSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04342C11C82161100EAAFF6 /* LevelSelectorView.swift */; };
+		F055B6891C7E825000695559 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F055B6881C7E825000695559 /* CloudKit.framework */; };
+		F055B68D1C7FB0E500695559 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F055B68C1C7FB0E500695559 /* Settings.bundle */; };
+		F055B68F1C7FB56500695559 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F055B68E1C7FB56500695559 /* PageViewController.swift */; };
+		F055B6911C80A12000695559 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F055B6901C80A12000695559 /* ScrollViewController.swift */; };
+		F06F21751C49EC7B00DE5B46 /* DifferenceNums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06F21741C49EC7B00DE5B46 /* DifferenceNums.swift */; };
+		F0714A5F1C38AA4F00242C9A /* TakeAwayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0714A5E1C38AA4E00242C9A /* TakeAwayViewController.swift */; };
+		F0714A611C38AC0400242C9A /* TakeAwayNums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0714A601C38AC0400242C9A /* TakeAwayNums.swift */; };
+		F0714A631C38BF1700242C9A /* SubtractNums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0714A621C38BF1700242C9A /* SubtractNums.swift */; };
+		F0714A651C38C5A300242C9A /* TALevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0714A641C38C5A300242C9A /* TALevel.swift */; };
+		F0714A671C38C7F600242C9A /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0714A661C38C7F600242C9A /* LevelViewController.swift */; };
+		F0714A691C38CC5400242C9A /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0714A681C38CC5400242C9A /* Level.swift */; };
+		F0714A6B1C38D31000242C9A /* TAEquation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0714A6A1C38D31000242C9A /* TAEquation.swift */; };
+		F0714A6D1C38D78600242C9A /* SubtractLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0714A6C1C38D78600242C9A /* SubtractLevelViewController.swift */; };
+		F0714A6F1C398AD100242C9A /* SubtractLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0714A6E1C398AD100242C9A /* SubtractLevel.swift */; };
+		F0714A711C398AE300242C9A /* SubtractEquation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0714A701C398AE300242C9A /* SubtractEquation.swift */; };
+		F098450B1CF67882001C8DEB /* PlusNums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098450A1CF67882001C8DEB /* PlusNums.swift */; };
+		F098450D1CF67EB6001C8DEB /* PlusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098450C1CF67EB6001C8DEB /* PlusViewController.swift */; };
+		F098450F1CF67F52001C8DEB /* PlusLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098450E1CF67F52001C8DEB /* PlusLevel.swift */; };
+		F09845111CF67F5C001C8DEB /* PlusEquation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09845101CF67F5C001C8DEB /* PlusEquation.swift */; };
+		F0B069221C24B16100B4A7A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B069211C24B16100B4A7A3 /* AppDelegate.swift */; };
+		F0B069291C24B16100B4A7A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0B069281C24B16100B4A7A3 /* Assets.xcassets */; };
+		F0B0692C1C24B16100B4A7A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0B0692A1C24B16100B4A7A3 /* LaunchScreen.storyboard */; };
+		F0B069371C24B16100B4A7A3 /* PP2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B069361C24B16100B4A7A3 /* PP2Tests.swift */; };
+		F0B069421C24B16100B4A7A3 /* PP2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B069411C24B16100B4A7A3 /* PP2UITests.swift */; };
+		F0B0695C1C24B21300B4A7A3 /* LevelSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0694F1C24B21300B4A7A3 /* LevelSelectorViewController.swift */; };
+		F0B0695D1C24B21300B4A7A3 /* SumLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B069501C24B21300B4A7A3 /* SumLevel.swift */; };
+		F0B0695E1C24B21300B4A7A3 /* SumEquation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B069511C24B21300B4A7A3 /* SumEquation.swift */; };
+		F0B0695F1C24B21300B4A7A3 /* AddLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B069521C24B21300B4A7A3 /* AddLevelViewController.swift */; };
+		F0B069601C24B21300B4A7A3 /* SumLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B069531C24B21300B4A7A3 /* SumLevelViewController.swift */; };
+		F0B069611C24B21300B4A7A3 /* SumLevelNums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B069541C24B21300B4A7A3 /* SumLevelNums.swift */; };
+		F0B069621C24B21300B4A7A3 /* TargetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B069551C24B21300B4A7A3 /* TargetView.swift */; };
+		F0B069641C24B21300B4A7A3 /* AddLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B069571C24B21300B4A7A3 /* AddLevel.swift */; };
+		F0B069651C24B21300B4A7A3 /* AddLevelSums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B069581C24B21300B4A7A3 /* AddLevelSums.swift */; };
+		F0B069661C24B21300B4A7A3 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B069591C24B21300B4A7A3 /* GamesViewController.swift */; };
+		F0B069671C24B21300B4A7A3 /* SimpleEquation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0695A1C24B21300B4A7A3 /* SimpleEquation.swift */; };
+		F0B069681C24B21300B4A7A3 /* NumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0695B1C24B21300B4A7A3 /* NumberView.swift */; };
+		F0B0696A1C24B22300B4A7A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0B069691C24B22300B4A7A3 /* Main.storyboard */; };
+		F0CCE5801D07ABFC000E8C44 /* ProductLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CCE57F1D07ABFC000E8C44 /* ProductLevel.swift */; };
+		F0CCE5821D07AC34000E8C44 /* ProductEquation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CCE5811D07AC34000E8C44 /* ProductEquation.swift */; };
+		F0CCE5851D07AE58000E8C44 /* TimesLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CCE5841D07AE58000E8C44 /* TimesLevel.swift */; };
+		F0CCE5871D07AE66000E8C44 /* TimesEquation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CCE5861D07AE66000E8C44 /* TimesEquation.swift */; };
+		F0CCE58A1D07AEB5000E8C44 /* CationLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CCE5891D07AEB5000E8C44 /* CationLevel.swift */; };
+		F0CCE58E1D07BE6F000E8C44 /* CationEquation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CCE58D1D07BE6F000E8C44 /* CationEquation.swift */; };
+		F0CCE5921D07CAC4000E8C44 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CCE5911D07CAC4000E8C44 /* ProductViewController.swift */; };
+		F0CCE5941D086508000E8C44 /* TimesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CCE5931D086508000E8C44 /* TimesViewController.swift */; };
+		F0CCE5961D086514000E8C44 /* CationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CCE5951D086514000E8C44 /* CationViewController.swift */; };
+		F0EFC4011C3C74EA00C1960F /* BorrowNums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EFC4001C3C74EA00C1960F /* BorrowNums.swift */; };
+		F0EFC4071C3C7AC900C1960F /* BorrowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EFC4061C3C7AC900C1960F /* BorrowViewController.swift */; };
+		F0EFC4091C3C9BE000C1960F /* BorrowLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EFC4081C3C9BE000C1960F /* BorrowLevel.swift */; };
+		F0EFC40B1C3C9BEE00C1960F /* BorrowEquation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EFC40A1C3C9BEE00C1960F /* BorrowEquation.swift */; };
+		F0F158251C4B0FDE004E8F0D /* DifferenceLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F158241C4B0FDE004E8F0D /* DifferenceLevel.swift */; };
+		F0F1582A1C4B1111004E8F0D /* DifferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F158291C4B1111004E8F0D /* DifferenceViewController.swift */; };
+		F0F1582C1C4B151C004E8F0D /* CarryNums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F1582B1C4B151C004E8F0D /* CarryNums.swift */; };
+		F0F1582E1C4B284B004E8F0D /* CarryLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F1582D1C4B284B004E8F0D /* CarryLevel.swift */; };
+		F0F158331C4B29EB004E8F0D /* CarryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F158321C4B29EB004E8F0D /* CarryViewController.swift */; };
+		F0F158351C4B2CED004E8F0D /* MultiNums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F158341C4B2CED004E8F0D /* MultiNums.swift */; };
+		F0F158371C4B2E27004E8F0D /* MultiLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F158361C4B2E27004E8F0D /* MultiLevel.swift */; };
+		F0F158391C4B2E37004E8F0D /* MultiEquation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F158381C4B2E37004E8F0D /* MultiEquation.swift */; };
+		F0F1583C1C4B2F08004E8F0D /* MultiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F1583B1C4B2F08004E8F0D /* MultiViewController.swift */; };
+		F0F1583E1C4C2758004E8F0D /* ProductNums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F1583D1C4C2758004E8F0D /* ProductNums.swift */; };
+		F0F158401C4C29CC004E8F0D /* DivideNums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F1583F1C4C29CC004E8F0D /* DivideNums.swift */; };
+		F0F223961D0B45F2006C0DCA /* ViewController0.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F223951D0B45F2006C0DCA /* ViewController0.swift */; };
+		F0F2239A1D0DB5F2006C0DCA /* OperationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F223991D0DB5F2006C0DCA /* OperationsView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F0B069331C24B16100B4A7A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F0B069161C24B16000B4A7A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0B0691D1C24B16000B4A7A3;
+			remoteInfo = PP2;
+		};
+		F0B0693E1C24B16100B4A7A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F0B069161C24B16000B4A7A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0B0691D1C24B16000B4A7A3;
+			remoteInfo = PP2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F0165FB31D04F1FB0070EF07 /* CationNums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CationNums.swift; path = PP2/CationNums.swift; sourceTree = "<group>"; };
+		F02327AF1C83B2ED0042A155 /* GameSelectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSelectorView.swift; sourceTree = "<group>"; };
+		F037CCDE1D087AD700524992 /* DivideEquation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DivideEquation.swift; sourceTree = "<group>"; };
+		F037CCE01D087AF800524992 /* DivideLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DivideLevel.swift; sourceTree = "<group>"; };
+		F037CCE21D087C7500524992 /* DivideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DivideViewController.swift; sourceTree = "<group>"; };
+		F037CCE51D0880B700524992 /* RemainderEquation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemainderEquation.swift; sourceTree = "<group>"; };
+		F037CCE71D0880C100524992 /* RemainderLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemainderLevel.swift; sourceTree = "<group>"; };
+		F037CCE91D0882C400524992 /* RemainderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemainderViewController.swift; sourceTree = "<group>"; };
+		F037CCEC1D0889AE00524992 /* EquivalentEquation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquivalentEquation.swift; sourceTree = "<group>"; };
+		F037CCEE1D0889BC00524992 /* EquivalentLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquivalentLevel.swift; sourceTree = "<group>"; };
+		F037CCF01D088C9200524992 /* EquivalentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquivalentViewController.swift; sourceTree = "<group>"; };
+		F037CCF31D088FEE00524992 /* ComparingEquation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparingEquation.swift; sourceTree = "<group>"; };
+		F037CCF51D088FF800524992 /* ComparingLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparingLevel.swift; sourceTree = "<group>"; };
+		F037CCF71D0893A200524992 /* ComparingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparingViewController.swift; sourceTree = "<group>"; };
+		F0393A641D09BFC900AA2873 /* CheckView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckView.swift; sourceTree = "<group>"; };
+		F0393A661D09F06A00AA2873 /* WelcomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePageViewController.swift; sourceTree = "<group>"; };
+		F0393A681D0B3C9400AA2873 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		F0393A6A1D0B3CE900AA2873 /* ViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
+		F0393A6C1D0B3CF200AA2873 /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		F04235041CF7BA060054446A /* OperationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationsViewController.swift; path = PP2/OperationsViewController.swift; sourceTree = "<group>"; };
+		F04235061CF8A43D0054446A /* RemainderNums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemainderNums.swift; sourceTree = "<group>"; };
+		F04235081CF8A69C0054446A /* EquivalentNums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquivalentNums.swift; sourceTree = "<group>"; };
+		F042350A1CF938D80054446A /* ComparingNums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparingNums.swift; sourceTree = "<group>"; };
+		F042350C1CFA7E520054446A /* TimesNums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimesNums.swift; sourceTree = "<group>"; };
+		F04342C11C82161100EAAFF6 /* LevelSelectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelSelectorView.swift; sourceTree = "<group>"; };
+		F055B6831C7E663600695559 /* PP2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PP2.entitlements; sourceTree = "<group>"; };
+		F055B6881C7E825000695559 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		F055B68C1C7FB0E500695559 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = ../Settings.bundle; sourceTree = "<group>"; };
+		F055B68E1C7FB56500695559 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		F055B6901C80A12000695559 /* ScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
+		F06F21741C49EC7B00DE5B46 /* DifferenceNums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DifferenceNums.swift; sourceTree = "<group>"; };
+		F0714A5E1C38AA4E00242C9A /* TakeAwayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeAwayViewController.swift; sourceTree = "<group>"; };
+		F0714A601C38AC0400242C9A /* TakeAwayNums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeAwayNums.swift; sourceTree = "<group>"; };
+		F0714A621C38BF1700242C9A /* SubtractNums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubtractNums.swift; path = PP2/SubtractNums.swift; sourceTree = "<group>"; };
+		F0714A641C38C5A300242C9A /* TALevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TALevel.swift; sourceTree = "<group>"; };
+		F0714A661C38C7F600242C9A /* LevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
+		F0714A681C38CC5400242C9A /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		F0714A6A1C38D31000242C9A /* TAEquation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TAEquation.swift; sourceTree = "<group>"; };
+		F0714A6C1C38D78600242C9A /* SubtractLevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubtractLevelViewController.swift; path = PP2/SubtractLevelViewController.swift; sourceTree = "<group>"; };
+		F0714A6E1C398AD100242C9A /* SubtractLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtractLevel.swift; sourceTree = "<group>"; };
+		F0714A701C398AE300242C9A /* SubtractEquation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtractEquation.swift; sourceTree = "<group>"; };
+		F098450A1CF67882001C8DEB /* PlusNums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusNums.swift; sourceTree = "<group>"; };
+		F098450C1CF67EB6001C8DEB /* PlusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusViewController.swift; sourceTree = "<group>"; };
+		F098450E1CF67F52001C8DEB /* PlusLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusLevel.swift; sourceTree = "<group>"; };
+		F09845101CF67F5C001C8DEB /* PlusEquation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusEquation.swift; sourceTree = "<group>"; };
+		F0B0691E1C24B16000B4A7A3 /* PP2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PP2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0B069211C24B16100B4A7A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F0B069281C24B16100B4A7A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F0B0692B1C24B16100B4A7A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F0B0692D1C24B16100B4A7A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0B069321C24B16100B4A7A3 /* PP2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PP2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0B069361C24B16100B4A7A3 /* PP2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PP2Tests.swift; sourceTree = "<group>"; };
+		F0B069381C24B16100B4A7A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0B0693D1C24B16100B4A7A3 /* PP2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PP2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0B069411C24B16100B4A7A3 /* PP2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PP2UITests.swift; sourceTree = "<group>"; };
+		F0B069431C24B16100B4A7A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0B0694F1C24B21300B4A7A3 /* LevelSelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelSelectorViewController.swift; sourceTree = "<group>"; };
+		F0B069501C24B21300B4A7A3 /* SumLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SumLevel.swift; sourceTree = "<group>"; };
+		F0B069511C24B21300B4A7A3 /* SumEquation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SumEquation.swift; sourceTree = "<group>"; };
+		F0B069521C24B21300B4A7A3 /* AddLevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLevelViewController.swift; sourceTree = "<group>"; };
+		F0B069531C24B21300B4A7A3 /* SumLevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SumLevelViewController.swift; sourceTree = "<group>"; };
+		F0B069541C24B21300B4A7A3 /* SumLevelNums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SumLevelNums.swift; sourceTree = "<group>"; };
+		F0B069551C24B21300B4A7A3 /* TargetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetView.swift; sourceTree = "<group>"; };
+		F0B069571C24B21300B4A7A3 /* AddLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLevel.swift; sourceTree = "<group>"; };
+		F0B069581C24B21300B4A7A3 /* AddLevelSums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLevelSums.swift; sourceTree = "<group>"; };
+		F0B069591C24B21300B4A7A3 /* GamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
+		F0B0695A1C24B21300B4A7A3 /* SimpleEquation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleEquation.swift; sourceTree = "<group>"; };
+		F0B0695B1C24B21300B4A7A3 /* NumberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberView.swift; sourceTree = "<group>"; };
+		F0B069691C24B22300B4A7A3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
+		F0CCE57F1D07ABFC000E8C44 /* ProductLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductLevel.swift; sourceTree = "<group>"; };
+		F0CCE5811D07AC34000E8C44 /* ProductEquation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductEquation.swift; sourceTree = "<group>"; };
+		F0CCE5841D07AE58000E8C44 /* TimesLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimesLevel.swift; sourceTree = "<group>"; };
+		F0CCE5861D07AE66000E8C44 /* TimesEquation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimesEquation.swift; sourceTree = "<group>"; };
+		F0CCE5891D07AEB5000E8C44 /* CationLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CationLevel.swift; sourceTree = "<group>"; };
+		F0CCE58D1D07BE6F000E8C44 /* CationEquation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CationEquation.swift; sourceTree = "<group>"; };
+		F0CCE5911D07CAC4000E8C44 /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		F0CCE5931D086508000E8C44 /* TimesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimesViewController.swift; sourceTree = "<group>"; };
+		F0CCE5951D086514000E8C44 /* CationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CationViewController.swift; sourceTree = "<group>"; };
+		F0EFC4001C3C74EA00C1960F /* BorrowNums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorrowNums.swift; sourceTree = "<group>"; };
+		F0EFC4061C3C7AC900C1960F /* BorrowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorrowViewController.swift; sourceTree = "<group>"; };
+		F0EFC4081C3C9BE000C1960F /* BorrowLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorrowLevel.swift; sourceTree = "<group>"; };
+		F0EFC40A1C3C9BEE00C1960F /* BorrowEquation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorrowEquation.swift; sourceTree = "<group>"; };
+		F0F158241C4B0FDE004E8F0D /* DifferenceLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DifferenceLevel.swift; sourceTree = "<group>"; };
+		F0F158291C4B1111004E8F0D /* DifferenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DifferenceViewController.swift; sourceTree = "<group>"; };
+		F0F1582B1C4B151C004E8F0D /* CarryNums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarryNums.swift; sourceTree = "<group>"; };
+		F0F1582D1C4B284B004E8F0D /* CarryLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarryLevel.swift; sourceTree = "<group>"; };
+		F0F158321C4B29EB004E8F0D /* CarryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarryViewController.swift; sourceTree = "<group>"; };
+		F0F158341C4B2CED004E8F0D /* MultiNums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiNums.swift; sourceTree = "<group>"; };
+		F0F158361C4B2E27004E8F0D /* MultiLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiLevel.swift; sourceTree = "<group>"; };
+		F0F158381C4B2E37004E8F0D /* MultiEquation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiEquation.swift; sourceTree = "<group>"; };
+		F0F1583B1C4B2F08004E8F0D /* MultiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiViewController.swift; sourceTree = "<group>"; };
+		F0F1583D1C4C2758004E8F0D /* ProductNums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductNums.swift; sourceTree = "<group>"; };
+		F0F1583F1C4C29CC004E8F0D /* DivideNums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DivideNums.swift; sourceTree = "<group>"; };
+		F0F223951D0B45F2006C0DCA /* ViewController0.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController0.swift; sourceTree = "<group>"; };
+		F0F223991D0DB5F2006C0DCA /* OperationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationsView.swift; path = ../OperationsView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F0B0691B1C24B16000B4A7A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F055B6891C7E825000695559 /* CloudKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0B0692F1C24B16100B4A7A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0B0693A1C24B16100B4A7A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F0165FB51D04F2200070EF07 /* + */ = {
+			isa = PBXGroup;
+			children = (
+				F0EFC4021C3C74FA00C1960F /* Add */,
+				F0EFC4031C3C750100C1960F /* Sum */,
+				F0F1582F1C4B28B8004E8F0D /* Carry */,
+				F0F3EA631CF6857C0027AB30 /* Plus */,
+			);
+			name = "+";
+			sourceTree = "<group>";
+		};
+		F0165FB61D04F2480070EF07 /* - */ = {
+			isa = PBXGroup;
+			children = (
+				F0EFC4041C3C750700C1960F /* Take Away */,
+				F0EFC4051C3C750D00C1960F /* Subtract */,
+				F0EFC40C1C3C9BF400C1960F /* Borrow */,
+				F0F158281C4B10BB004E8F0D /* Difference */,
+			);
+			name = "-";
+			sourceTree = "<group>";
+		};
+		F0165FB71D04F2700070EF07 /* x */ = {
+			isa = PBXGroup;
+			children = (
+				F0F1583A1C4B2E40004E8F0D /* Multi */,
+				F0CCE57E1D07ABEE000E8C44 /* Product */,
+				F0CCE5831D07AE48000E8C44 /* Times */,
+				F0CCE5881D07AEA7000E8C44 /* Cation */,
+			);
+			name = x;
+			sourceTree = "<group>";
+		};
+		F0165FB81D04F2810070EF07 /* / */ = {
+			isa = PBXGroup;
+			children = (
+				F037CCDD1D087AB800524992 /* Divide */,
+				F037CCE41D0880AA00524992 /* Remainder */,
+				F037CCEB1D08899800524992 /* Equivalent */,
+				F037CCF21D088FE100524992 /* Comparing */,
+			);
+			name = /;
+			sourceTree = "<group>";
+		};
+		F037CCDD1D087AB800524992 /* Divide */ = {
+			isa = PBXGroup;
+			children = (
+				F0F1583F1C4C29CC004E8F0D /* DivideNums.swift */,
+				F037CCDE1D087AD700524992 /* DivideEquation.swift */,
+				F037CCE01D087AF800524992 /* DivideLevel.swift */,
+			);
+			name = Divide;
+			sourceTree = "<group>";
+		};
+		F037CCE41D0880AA00524992 /* Remainder */ = {
+			isa = PBXGroup;
+			children = (
+				F04235061CF8A43D0054446A /* RemainderNums.swift */,
+				F037CCE51D0880B700524992 /* RemainderEquation.swift */,
+				F037CCE71D0880C100524992 /* RemainderLevel.swift */,
+			);
+			name = Remainder;
+			sourceTree = "<group>";
+		};
+		F037CCEB1D08899800524992 /* Equivalent */ = {
+			isa = PBXGroup;
+			children = (
+				F04235081CF8A69C0054446A /* EquivalentNums.swift */,
+				F037CCEC1D0889AE00524992 /* EquivalentEquation.swift */,
+				F037CCEE1D0889BC00524992 /* EquivalentLevel.swift */,
+			);
+			name = Equivalent;
+			sourceTree = "<group>";
+		};
+		F037CCF21D088FE100524992 /* Comparing */ = {
+			isa = PBXGroup;
+			children = (
+				F042350A1CF938D80054446A /* ComparingNums.swift */,
+				F037CCF31D088FEE00524992 /* ComparingEquation.swift */,
+				F037CCF51D088FF800524992 /* ComparingLevel.swift */,
+			);
+			name = Comparing;
+			sourceTree = "<group>";
+		};
+		F037CCF91D08C31600524992 /* Division */ = {
+			isa = PBXGroup;
+			children = (
+				F037CCE21D087C7500524992 /* DivideViewController.swift */,
+				F037CCE91D0882C400524992 /* RemainderViewController.swift */,
+				F037CCF01D088C9200524992 /* EquivalentViewController.swift */,
+				F037CCF71D0893A200524992 /* ComparingViewController.swift */,
+			);
+			name = Division;
+			sourceTree = "<group>";
+		};
+		F0B069151C24B16000B4A7A3 = {
+			isa = PBXGroup;
+			children = (
+				F055B6881C7E825000695559 /* CloudKit.framework */,
+				F0B069201C24B16000B4A7A3 /* PP2 */,
+				F0B069351C24B16100B4A7A3 /* PP2Tests */,
+				F0B069401C24B16100B4A7A3 /* PP2UITests */,
+				F0B0691F1C24B16000B4A7A3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F0B0691F1C24B16000B4A7A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0B0691E1C24B16000B4A7A3 /* PP2.app */,
+				F0B069321C24B16100B4A7A3 /* PP2Tests.xctest */,
+				F0B0693D1C24B16100B4A7A3 /* PP2UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F0B069201C24B16000B4A7A3 /* PP2 */ = {
+			isa = PBXGroup;
+			children = (
+				F055B6831C7E663600695559 /* PP2.entitlements */,
+				F0B069691C24B22300B4A7A3 /* Main.storyboard */,
+				F04342C11C82161100EAAFF6 /* LevelSelectorView.swift */,
+				F0393A641D09BFC900AA2873 /* CheckView.swift */,
+				F055B6901C80A12000695559 /* ScrollViewController.swift */,
+				F02327AF1C83B2ED0042A155 /* GameSelectorView.swift */,
+				F055B68E1C7FB56500695559 /* PageViewController.swift */,
+				F0393A661D09F06A00AA2873 /* WelcomePageViewController.swift */,
+				F0B069211C24B16100B4A7A3 /* AppDelegate.swift */,
+				F0F223991D0DB5F2006C0DCA /* OperationsView.swift */,
+				F055B68C1C7FB0E500695559 /* Settings.bundle */,
+				F0B0696B1C24B2D400B4A7A3 /* ViewControllers */,
+				F0B0696C1C24B2ED00B4A7A3 /* Math */,
+				F0B0696D1C24B2F500B4A7A3 /* Tile Views */,
+				F0B069281C24B16100B4A7A3 /* Assets.xcassets */,
+				F0B0692A1C24B16100B4A7A3 /* LaunchScreen.storyboard */,
+				F0B0692D1C24B16100B4A7A3 /* Info.plist */,
+			);
+			path = PP2;
+			sourceTree = "<group>";
+		};
+		F0B069351C24B16100B4A7A3 /* PP2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F0B069361C24B16100B4A7A3 /* PP2Tests.swift */,
+				F0B069381C24B16100B4A7A3 /* Info.plist */,
+			);
+			path = PP2Tests;
+			sourceTree = "<group>";
+		};
+		F0B069401C24B16100B4A7A3 /* PP2UITests */ = {
+			isa = PBXGroup;
+			children = (
+				F0B069411C24B16100B4A7A3 /* PP2UITests.swift */,
+				F0B069431C24B16100B4A7A3 /* Info.plist */,
+			);
+			path = PP2UITests;
+			sourceTree = "<group>";
+		};
+		F0B0696B1C24B2D400B4A7A3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F04235041CF7BA060054446A /* OperationsViewController.swift */,
+				F0393A681D0B3C9400AA2873 /* WelcomeViewController.swift */,
+				F0F223951D0B45F2006C0DCA /* ViewController0.swift */,
+				F0393A6A1D0B3CE900AA2873 /* ViewController1.swift */,
+				F0393A6C1D0B3CF200AA2873 /* ViewController2.swift */,
+				F0B069591C24B21300B4A7A3 /* GamesViewController.swift */,
+				F0B0694F1C24B21300B4A7A3 /* LevelSelectorViewController.swift */,
+				F0714A661C38C7F600242C9A /* LevelViewController.swift */,
+				F0CCE58F1D07CA5E000E8C44 /* + */,
+				F0CCE5901D07CA66000E8C44 /* – */,
+				F0CCE5971D08651A000E8C44 /* × */,
+				F037CCF91D08C31600524992 /* Division */,
+			);
+			name = ViewControllers;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		F0B0696C1C24B2ED00B4A7A3 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				F0714A681C38CC5400242C9A /* Level.swift */,
+				F0165FB51D04F2200070EF07 /* + */,
+				F0165FB61D04F2480070EF07 /* - */,
+				F0165FB71D04F2700070EF07 /* x */,
+				F0165FB81D04F2810070EF07 /* / */,
+			);
+			name = Math;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		F0B0696D1C24B2F500B4A7A3 /* Tile Views */ = {
+			isa = PBXGroup;
+			children = (
+				F0B069551C24B21300B4A7A3 /* TargetView.swift */,
+				F0B0695B1C24B21300B4A7A3 /* NumberView.swift */,
+			);
+			name = "Tile Views";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		F0CCE57E1D07ABEE000E8C44 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				F0F1583D1C4C2758004E8F0D /* ProductNums.swift */,
+				F0CCE57F1D07ABFC000E8C44 /* ProductLevel.swift */,
+				F0CCE5811D07AC34000E8C44 /* ProductEquation.swift */,
+			);
+			name = Product;
+			sourceTree = "<group>";
+		};
+		F0CCE5831D07AE48000E8C44 /* Times */ = {
+			isa = PBXGroup;
+			children = (
+				F042350C1CFA7E520054446A /* TimesNums.swift */,
+				F0CCE5841D07AE58000E8C44 /* TimesLevel.swift */,
+				F0CCE5861D07AE66000E8C44 /* TimesEquation.swift */,
+			);
+			name = Times;
+			sourceTree = "<group>";
+		};
+		F0CCE5881D07AEA7000E8C44 /* Cation */ = {
+			isa = PBXGroup;
+			children = (
+				F0165FB31D04F1FB0070EF07 /* CationNums.swift */,
+				F0CCE58D1D07BE6F000E8C44 /* CationEquation.swift */,
+				F0CCE5891D07AEB5000E8C44 /* CationLevel.swift */,
+			);
+			name = Cation;
+			sourceTree = "<group>";
+		};
+		F0CCE58F1D07CA5E000E8C44 /* + */ = {
+			isa = PBXGroup;
+			children = (
+				F0B069521C24B21300B4A7A3 /* AddLevelViewController.swift */,
+				F0B069531C24B21300B4A7A3 /* SumLevelViewController.swift */,
+				F0F158321C4B29EB004E8F0D /* CarryViewController.swift */,
+				F098450C1CF67EB6001C8DEB /* PlusViewController.swift */,
+			);
+			name = "+";
+			sourceTree = "<group>";
+		};
+		F0CCE5901D07CA66000E8C44 /* – */ = {
+			isa = PBXGroup;
+			children = (
+				F0714A5E1C38AA4E00242C9A /* TakeAwayViewController.swift */,
+				F0714A6C1C38D78600242C9A /* SubtractLevelViewController.swift */,
+				F0EFC4061C3C7AC900C1960F /* BorrowViewController.swift */,
+				F0F158291C4B1111004E8F0D /* DifferenceViewController.swift */,
+			);
+			name = "–";
+			sourceTree = "<group>";
+		};
+		F0CCE5971D08651A000E8C44 /* × */ = {
+			isa = PBXGroup;
+			children = (
+				F0F1583B1C4B2F08004E8F0D /* MultiViewController.swift */,
+				F0CCE5911D07CAC4000E8C44 /* ProductViewController.swift */,
+				F0CCE5931D086508000E8C44 /* TimesViewController.swift */,
+				F0CCE5951D086514000E8C44 /* CationViewController.swift */,
+			);
+			name = "×";
+			sourceTree = "<group>";
+		};
+		F0EFC4021C3C74FA00C1960F /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				F0B069581C24B21300B4A7A3 /* AddLevelSums.swift */,
+				F0B069571C24B21300B4A7A3 /* AddLevel.swift */,
+				F0B0695A1C24B21300B4A7A3 /* SimpleEquation.swift */,
+			);
+			name = Add;
+			sourceTree = "<group>";
+		};
+		F0EFC4031C3C750100C1960F /* Sum */ = {
+			isa = PBXGroup;
+			children = (
+				F0B069541C24B21300B4A7A3 /* SumLevelNums.swift */,
+				F0B069501C24B21300B4A7A3 /* SumLevel.swift */,
+				F0B069511C24B21300B4A7A3 /* SumEquation.swift */,
+			);
+			name = Sum;
+			sourceTree = "<group>";
+		};
+		F0EFC4041C3C750700C1960F /* Take Away */ = {
+			isa = PBXGroup;
+			children = (
+				F0714A601C38AC0400242C9A /* TakeAwayNums.swift */,
+				F0714A641C38C5A300242C9A /* TALevel.swift */,
+				F0714A6A1C38D31000242C9A /* TAEquation.swift */,
+			);
+			name = "Take Away";
+			sourceTree = "<group>";
+		};
+		F0EFC4051C3C750D00C1960F /* Subtract */ = {
+			isa = PBXGroup;
+			children = (
+				F0714A621C38BF1700242C9A /* SubtractNums.swift */,
+				F0714A6E1C398AD100242C9A /* SubtractLevel.swift */,
+				F0714A701C398AE300242C9A /* SubtractEquation.swift */,
+			);
+			name = Subtract;
+			sourceTree = "<group>";
+		};
+		F0EFC40C1C3C9BF400C1960F /* Borrow */ = {
+			isa = PBXGroup;
+			children = (
+				F0EFC4001C3C74EA00C1960F /* BorrowNums.swift */,
+				F0EFC4081C3C9BE000C1960F /* BorrowLevel.swift */,
+				F0EFC40A1C3C9BEE00C1960F /* BorrowEquation.swift */,
+			);
+			name = Borrow;
+			sourceTree = "<group>";
+		};
+		F0F158281C4B10BB004E8F0D /* Difference */ = {
+			isa = PBXGroup;
+			children = (
+				F06F21741C49EC7B00DE5B46 /* DifferenceNums.swift */,
+				F0F158241C4B0FDE004E8F0D /* DifferenceLevel.swift */,
+			);
+			name = Difference;
+			sourceTree = "<group>";
+		};
+		F0F1582F1C4B28B8004E8F0D /* Carry */ = {
+			isa = PBXGroup;
+			children = (
+				F0F1582B1C4B151C004E8F0D /* CarryNums.swift */,
+				F0F1582D1C4B284B004E8F0D /* CarryLevel.swift */,
+			);
+			name = Carry;
+			sourceTree = "<group>";
+		};
+		F0F1583A1C4B2E40004E8F0D /* Multi */ = {
+			isa = PBXGroup;
+			children = (
+				F0F158341C4B2CED004E8F0D /* MultiNums.swift */,
+				F0F158361C4B2E27004E8F0D /* MultiLevel.swift */,
+				F0F158381C4B2E37004E8F0D /* MultiEquation.swift */,
+			);
+			name = Multi;
+			sourceTree = "<group>";
+		};
+		F0F3EA631CF6857C0027AB30 /* Plus */ = {
+			isa = PBXGroup;
+			children = (
+				F098450E1CF67F52001C8DEB /* PlusLevel.swift */,
+				F09845101CF67F5C001C8DEB /* PlusEquation.swift */,
+				F098450A1CF67882001C8DEB /* PlusNums.swift */,
+			);
+			name = Plus;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F0B0691D1C24B16000B4A7A3 /* PP2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0B069461C24B16100B4A7A3 /* Build configuration list for PBXNativeTarget "PP2" */;
+			buildPhases = (
+				F0B0691A1C24B16000B4A7A3 /* Sources */,
+				F0B0691B1C24B16000B4A7A3 /* Frameworks */,
+				F0B0691C1C24B16000B4A7A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PP2;
+			productName = PP2;
+			productReference = F0B0691E1C24B16000B4A7A3 /* PP2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F0B069311C24B16100B4A7A3 /* PP2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0B069491C24B16100B4A7A3 /* Build configuration list for PBXNativeTarget "PP2Tests" */;
+			buildPhases = (
+				F0B0692E1C24B16100B4A7A3 /* Sources */,
+				F0B0692F1C24B16100B4A7A3 /* Frameworks */,
+				F0B069301C24B16100B4A7A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F0B069341C24B16100B4A7A3 /* PBXTargetDependency */,
+			);
+			name = PP2Tests;
+			productName = PP2Tests;
+			productReference = F0B069321C24B16100B4A7A3 /* PP2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F0B0693C1C24B16100B4A7A3 /* PP2UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0B0694C1C24B16100B4A7A3 /* Build configuration list for PBXNativeTarget "PP2UITests" */;
+			buildPhases = (
+				F0B069391C24B16100B4A7A3 /* Sources */,
+				F0B0693A1C24B16100B4A7A3 /* Frameworks */,
+				F0B0693B1C24B16100B4A7A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F0B0693F1C24B16100B4A7A3 /* PBXTargetDependency */,
+			);
+			name = PP2UITests;
+			productName = PP2UITests;
+			productReference = F0B0693D1C24B16100B4A7A3 /* PP2UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F0B069161C24B16000B4A7A3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = tbd;
+				TargetAttributes = {
+					F0B0691D1C24B16000B4A7A3 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = R7LAAHL6K5;
+						LastSwiftMigration = 0800;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+					F0B069311C24B16100B4A7A3 = {
+						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
+						TestTargetID = F0B0691D1C24B16000B4A7A3;
+					};
+					F0B0693C1C24B16100B4A7A3 = {
+						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
+						TestTargetID = F0B0691D1C24B16000B4A7A3;
+					};
+				};
+			};
+			buildConfigurationList = F0B069191C24B16000B4A7A3 /* Build configuration list for PBXProject "PP2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F0B069151C24B16000B4A7A3;
+			productRefGroup = F0B0691F1C24B16000B4A7A3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F0B0691D1C24B16000B4A7A3 /* PP2 */,
+				F0B069311C24B16100B4A7A3 /* PP2Tests */,
+				F0B0693C1C24B16100B4A7A3 /* PP2UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F0B0691C1C24B16000B4A7A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F055B68D1C7FB0E500695559 /* Settings.bundle in Resources */,
+				F0B0692C1C24B16100B4A7A3 /* LaunchScreen.storyboard in Resources */,
+				F0B069291C24B16100B4A7A3 /* Assets.xcassets in Resources */,
+				F0B0696A1C24B22300B4A7A3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0B069301C24B16100B4A7A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0B0693B1C24B16100B4A7A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F0B0691A1C24B16000B4A7A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F04342C21C82161100EAAFF6 /* LevelSelectorView.swift in Sources */,
+				F037CCF81D0893A200524992 /* ComparingViewController.swift in Sources */,
+				F0B069221C24B16100B4A7A3 /* AppDelegate.swift in Sources */,
+				F0EFC4011C3C74EA00C1960F /* BorrowNums.swift in Sources */,
+				F037CCED1D0889AE00524992 /* EquivalentEquation.swift in Sources */,
+				F0F158371C4B2E27004E8F0D /* MultiLevel.swift in Sources */,
+				F04235091CF8A69C0054446A /* EquivalentNums.swift in Sources */,
+				F04235071CF8A43D0054446A /* RemainderNums.swift in Sources */,
+				F0F158351C4B2CED004E8F0D /* MultiNums.swift in Sources */,
+				F0B0695C1C24B21300B4A7A3 /* LevelSelectorViewController.swift in Sources */,
+				F0714A6F1C398AD100242C9A /* SubtractLevel.swift in Sources */,
+				F037CCEF1D0889BC00524992 /* EquivalentLevel.swift in Sources */,
+				F02327B01C83B2EE0042A155 /* GameSelectorView.swift in Sources */,
+				F0393A691D0B3C9400AA2873 /* WelcomeViewController.swift in Sources */,
+				F0CCE5871D07AE66000E8C44 /* TimesEquation.swift in Sources */,
+				F0F1582E1C4B284B004E8F0D /* CarryLevel.swift in Sources */,
+				F09845111CF67F5C001C8DEB /* PlusEquation.swift in Sources */,
+				F0B0695D1C24B21300B4A7A3 /* SumLevel.swift in Sources */,
+				F0CCE5851D07AE58000E8C44 /* TimesLevel.swift in Sources */,
+				F037CCE31D087C7500524992 /* DivideViewController.swift in Sources */,
+				F0714A671C38C7F600242C9A /* LevelViewController.swift in Sources */,
+				F037CCDF1D087AD700524992 /* DivideEquation.swift in Sources */,
+				F04235051CF7BA060054446A /* OperationsViewController.swift in Sources */,
+				F0B069661C24B21300B4A7A3 /* GamesViewController.swift in Sources */,
+				F0CCE5921D07CAC4000E8C44 /* ProductViewController.swift in Sources */,
+				F0F1582A1C4B1111004E8F0D /* DifferenceViewController.swift in Sources */,
+				F037CCF41D088FEE00524992 /* ComparingEquation.swift in Sources */,
+				F0B069671C24B21300B4A7A3 /* SimpleEquation.swift in Sources */,
+				F037CCE81D0880C100524992 /* RemainderLevel.swift in Sources */,
+				F098450F1CF67F52001C8DEB /* PlusLevel.swift in Sources */,
+				F0714A651C38C5A300242C9A /* TALevel.swift in Sources */,
+				F0F223961D0B45F2006C0DCA /* ViewController0.swift in Sources */,
+				F0F1583C1C4B2F08004E8F0D /* MultiViewController.swift in Sources */,
+				F0714A5F1C38AA4F00242C9A /* TakeAwayViewController.swift in Sources */,
+				F0B069601C24B21300B4A7A3 /* SumLevelViewController.swift in Sources */,
+				F0B069611C24B21300B4A7A3 /* SumLevelNums.swift in Sources */,
+				F0714A711C398AE300242C9A /* SubtractEquation.swift in Sources */,
+				F0CCE58E1D07BE6F000E8C44 /* CationEquation.swift in Sources */,
+				F0F1582C1C4B151C004E8F0D /* CarryNums.swift in Sources */,
+				F0F158331C4B29EB004E8F0D /* CarryViewController.swift in Sources */,
+				F0714A631C38BF1700242C9A /* SubtractNums.swift in Sources */,
+				F0165FB41D04F1FB0070EF07 /* CationNums.swift in Sources */,
+				F0CCE5941D086508000E8C44 /* TimesViewController.swift in Sources */,
+				F0F158251C4B0FDE004E8F0D /* DifferenceLevel.swift in Sources */,
+				F0B069641C24B21300B4A7A3 /* AddLevel.swift in Sources */,
+				F0B069621C24B21300B4A7A3 /* TargetView.swift in Sources */,
+				F0393A651D09BFC900AA2873 /* CheckView.swift in Sources */,
+				F098450D1CF67EB6001C8DEB /* PlusViewController.swift in Sources */,
+				F042350B1CF938D80054446A /* ComparingNums.swift in Sources */,
+				F0B0695E1C24B21300B4A7A3 /* SumEquation.swift in Sources */,
+				F0F158401C4C29CC004E8F0D /* DivideNums.swift in Sources */,
+				F098450B1CF67882001C8DEB /* PlusNums.swift in Sources */,
+				F06F21751C49EC7B00DE5B46 /* DifferenceNums.swift in Sources */,
+				F037CCE61D0880B700524992 /* RemainderEquation.swift in Sources */,
+				F0B0695F1C24B21300B4A7A3 /* AddLevelViewController.swift in Sources */,
+				F0EFC40B1C3C9BEE00C1960F /* BorrowEquation.swift in Sources */,
+				F0393A671D09F06A00AA2873 /* WelcomePageViewController.swift in Sources */,
+				F042350D1CFA7E520054446A /* TimesNums.swift in Sources */,
+				F0CCE5961D086514000E8C44 /* CationViewController.swift in Sources */,
+				F0EFC4071C3C7AC900C1960F /* BorrowViewController.swift in Sources */,
+				F0B069651C24B21300B4A7A3 /* AddLevelSums.swift in Sources */,
+				F055B68F1C7FB56500695559 /* PageViewController.swift in Sources */,
+				F0CCE5801D07ABFC000E8C44 /* ProductLevel.swift in Sources */,
+				F0F1583E1C4C2758004E8F0D /* ProductNums.swift in Sources */,
+				F0CCE58A1D07AEB5000E8C44 /* CationLevel.swift in Sources */,
+				F0714A611C38AC0400242C9A /* TakeAwayNums.swift in Sources */,
+				F037CCEA1D0882C400524992 /* RemainderViewController.swift in Sources */,
+				F0393A6B1D0B3CE900AA2873 /* ViewController1.swift in Sources */,
+				F037CCF61D088FF800524992 /* ComparingLevel.swift in Sources */,
+				F0714A6D1C38D78600242C9A /* SubtractLevelViewController.swift in Sources */,
+				F0F158391C4B2E37004E8F0D /* MultiEquation.swift in Sources */,
+				F037CCE11D087AF800524992 /* DivideLevel.swift in Sources */,
+				F0714A691C38CC5400242C9A /* Level.swift in Sources */,
+				F0EFC4091C3C9BE000C1960F /* BorrowLevel.swift in Sources */,
+				F0714A6B1C38D31000242C9A /* TAEquation.swift in Sources */,
+				F0F2239A1D0DB5F2006C0DCA /* OperationsView.swift in Sources */,
+				F055B6911C80A12000695559 /* ScrollViewController.swift in Sources */,
+				F0CCE5821D07AC34000E8C44 /* ProductEquation.swift in Sources */,
+				F037CCF11D088C9200524992 /* EquivalentViewController.swift in Sources */,
+				F0393A6D1D0B3CF200AA2873 /* ViewController2.swift in Sources */,
+				F0B069681C24B21300B4A7A3 /* NumberView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0B0692E1C24B16100B4A7A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0B069371C24B16100B4A7A3 /* PP2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0B069391C24B16100B4A7A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0B069421C24B16100B4A7A3 /* PP2UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F0B069341C24B16100B4A7A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0B0691D1C24B16000B4A7A3 /* PP2 */;
+			targetProxy = F0B069331C24B16100B4A7A3 /* PBXContainerItemProxy */;
+		};
+		F0B0693F1C24B16100B4A7A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0B0691D1C24B16000B4A7A3 /* PP2 */;
+			targetProxy = F0B0693E1C24B16100B4A7A3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F0B0692A1C24B16100B4A7A3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F0B0692B1C24B16100B4A7A3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F0B069441C24B16100B4A7A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F0B069451C24B16100B4A7A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F0B069471C24B16100B4A7A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PP2/PP2.entitlements;
+				INFOPLIST_FILE = PP2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wetried.PP2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
+			};
+			name = Debug;
+		};
+		F0B069481C24B16100B4A7A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PP2/PP2.entitlements;
+				INFOPLIST_FILE = PP2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wetried.PP2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 2.3;
+			};
+			name = Release;
+		};
+		F0B0694A1C24B16100B4A7A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PP2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tbd.PP2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PP2.app/PP2";
+			};
+			name = Debug;
+		};
+		F0B0694B1C24B16100B4A7A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PP2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tbd.PP2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 2.3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PP2.app/PP2";
+			};
+			name = Release;
+		};
+		F0B0694D1C24B16100B4A7A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PP2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tbd.PP2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
+				TEST_TARGET_NAME = PP2;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		F0B0694E1C24B16100B4A7A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PP2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tbd.PP2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 2.3;
+				TEST_TARGET_NAME = PP2;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F0B069191C24B16000B4A7A3 /* Build configuration list for PBXProject "PP2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0B069441C24B16100B4A7A3 /* Debug */,
+				F0B069451C24B16100B4A7A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0B069461C24B16100B4A7A3 /* Build configuration list for PBXNativeTarget "PP2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0B069471C24B16100B4A7A3 /* Debug */,
+				F0B069481C24B16100B4A7A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0B069491C24B16100B4A7A3 /* Build configuration list for PBXNativeTarget "PP2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0B0694A1C24B16100B4A7A3 /* Debug */,
+				F0B0694B1C24B16100B4A7A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0B0694C1C24B16100B4A7A3 /* Build configuration list for PBXNativeTarget "PP2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0B0694D1C24B16100B4A7A3 /* Debug */,
+				F0B0694E1C24B16100B4A7A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F0B069161C24B16000B4A7A3 /* Project object */;
+}
