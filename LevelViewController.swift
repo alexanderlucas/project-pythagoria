@@ -183,24 +183,24 @@ class LevelViewController: UIViewController {
         let container = CKContainer.defaultContainer()
         let privateDatabase = container.privateCloudDatabase
         
-        privateDatabase.fetch(withRecordID: CKRecordID(recordName: "moo"), completionHandler: { record, error in
-            if let fetchError = error {
-                print("An error occurred in \(fetchError)")
-            } else {
-                // Modify the record
-                print("changing record")
-                record!.setObject(lvl, forKey: "level")
-                
-                privateDatabase.saveRecord(record!, completionHandler: { (savedRecord, savedError) -> Void in
-                    if (savedError != nil) {
-                        print(savedError)
-                    }
-                })
-
-            }
-            
-
-        })
+//        privateDatabase.fetch(withRecordID: CKRecordID(recordName: "moo"), completionHandler: { record, error in
+//            if let fetchError = error {
+//                print("An error occurred in \(fetchError)")
+//            } else {
+//                // Modify the record
+//                print("changing record")
+//                record!.setObject(lvl, forKey: "level")
+//                
+//                privateDatabase.saveRecord(record!, completionHandler: { (savedRecord, savedError) -> Void in
+//                    if (savedError != nil) {
+//                        print(savedError)
+//                    }
+//                })
+//
+//            }
+//            
+//
+//        })
         
 
     
