@@ -13,32 +13,37 @@ class CheckView: UIView {
     var button = UIButton()
     var label = UILabel()
     
-    init(frame: CGRect, correct: Bool){
+    var parentVC = LevelViewController()
+    
+    init(frame: CGRect, correct: Bool, parent: LevelViewController){
         super.init(frame: frame)
 
         let midx = frame.midX
         let miny = frame.minY
-        button.frame = CGRectMake(midx - 50, miny + 300, 100, 100)
-        label.frame = CGRectMake(midx-50, miny + 100, 100, 50)
+        button.frame = CGRect(x: midx - 50, y: miny + 300, width: 100, height: 100)
+        label.frame = CGRect(x: midx-50, y: miny + 100, width: 100, height: 50)
 
         
         if(correct) {
-            button.setTitle("Next", forState: .Normal)
+            button.setTitle("Next", for: UIControlState())
             label.text = "Correct!"
+            button.addTarget(parent, action: Selector(("backButtonPressed:")), for: .touchUpInside)
+
         }
         else {
-            button.setTitle("Try Again", forState: .Normal)
+            button.setTitle("Try Again", for: UIControlState())
             label.text = "Incorrect"
         }
         
-        self.backgroundColor = UIColor.blueColor()
-        button.backgroundColor = UIColor.whiteColor()
-        label.backgroundColor = UIColor.whiteColor()
-        button.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        label.textColor = UIColor.blackColor()
+        self.backgroundColor = UIColor.blue
+        button.backgroundColor = UIColor.white
+        label.backgroundColor = UIColor.white
+        button.setTitleColor(UIColor.black, for: UIControlState())
+        label.textColor = UIColor.black
         self.addSubview(button)
         self.addSubview(label)
 
+        parentVC = parent
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -51,5 +56,6 @@ class CheckView: UIView {
         // Drawing code
     }
     */
+    
 
 }

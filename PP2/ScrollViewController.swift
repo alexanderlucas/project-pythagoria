@@ -14,7 +14,7 @@ class ScrollViewController: UIViewController, UIScrollViewDelegate {
 //    var lsv = LevelSelectorView.init(frame: CGRectMake(0, 0, 768, 1024))
 //    var lsv2 = LevelSelectorView.init(frame: CGRectMake(0, 1024, 768, 1024))
 
-    var gsv = GameSelectorView(frame: CGRectMake(0,0,786,1024), games: 3)
+    var gsv = GameSelectorView(frame: CGRect(x: 0,y: 0,width: 786,height: 1024), games: 3)
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,21 +37,21 @@ class ScrollViewController: UIViewController, UIScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         print("oye")
 //        let scrollPoint = CGPointMake(0.0, 0.0)
 //        scrollView.setContentOffset(scrollPoint, animated: true)
 
     }
     
-    func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         print("hi")
-        let y = targetContentOffset.memory.y
+        let y = targetContentOffset.pointee.y
         if y < 200 {
-            targetContentOffset.memory.y = 0
+            targetContentOffset.pointee.y = 0
         }
         else if y>824 && y<1224 {
-            targetContentOffset.memory.y = 1024
+            targetContentOffset.pointee.y = 1024
         }
     }
     

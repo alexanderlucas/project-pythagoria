@@ -19,9 +19,9 @@ class WelcomeViewController: UIViewController, UIScrollViewDelegate {
         // Do any additional setup after loading the view.
         scrollView.delegate = self
 
-        subs.append(self.storyboard!.instantiateViewControllerWithIdentifier("WelcomeViewController"))
-        subs.append(self.storyboard!.instantiateViewControllerWithIdentifier("ViewController1"))
-        subs.append(self.storyboard!.instantiateViewControllerWithIdentifier("ViewController2"))
+        subs.append(self.storyboard!.instantiateViewController(withIdentifier: "WelcomeViewController"))
+        subs.append(self.storyboard!.instantiateViewController(withIdentifier: "ViewController1"))
+        subs.append(self.storyboard!.instantiateViewController(withIdentifier: "ViewController2"))
 
         print("loaded")
         
@@ -38,11 +38,11 @@ class WelcomeViewController: UIViewController, UIScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if(scrollView.contentOffset.x >= scrollView.frame.size.width && subs.count == 3){
             dumpFirstView()
-            scrollView.setContentOffset(CGPointMake(0, 0), animated: false)
-            scrollView.scrollEnabled = false;
+            scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
+            scrollView.isScrollEnabled = false;
 
         }
 //        if(scrollView.contentOffset.x < scrollView.frame.size.width*2){
@@ -58,12 +58,12 @@ class WelcomeViewController: UIViewController, UIScrollViewDelegate {
 
         var index = 0
         for vc in subs {
-            vc.willMoveToParentViewController(self)
+            vc.willMove(toParentViewController: self)
             vc.view.frame.size = scrollView.frame.size
-            vc.view.frame.origin = CGPointMake(view.frame.width * CGFloat(index), 0)
+            vc.view.frame.origin = CGPoint(x: view.frame.width * CGFloat(index), y: 0)
             scrollView.addSubview(vc.view)
             self.addChildViewController(vc)
-            vc.didMoveToParentViewController(self)
+            vc.didMove(toParentViewController: self)
             
             index += 1
         }
@@ -107,7 +107,7 @@ class WelcomeViewController: UIViewController, UIScrollViewDelegate {
         //else, dump vc1
         for vc in subs {
             if(vc is ViewController0){
-                subs.removeAtIndex(subs.indexOf(vc)!)
+                subs.remove(at: subs.index(of: vc)!)
                 initScrollViews()
                 break;
             }
@@ -145,11 +145,11 @@ class WelcomeViewController: UIViewController, UIScrollViewDelegate {
     func dumpSecondView() {
         for vc in subs {
             if(vc is ViewController1){
-                subs.removeAtIndex(subs.indexOf(vc)!)
+                subs.remove(at: subs.index(of: vc)!)
                 initScrollViews()
             }
             else if(vc is ViewController2 && subs.count == 2){
-                subs.removeAtIndex(subs.indexOf(vc)!)
+                subs.remove(at: subs.index(of: vc)!)
                 initScrollViews()
             }
         }

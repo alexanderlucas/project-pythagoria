@@ -22,7 +22,7 @@ class WelcomePageViewController: UIPageViewController {
 
         if let firstViewController = orderedViewControllers.first {
             setViewControllers([firstViewController],
-                               direction: .Forward,
+                               direction: .forward,
                                animated: false,
                                completion: nil)
         }
@@ -31,10 +31,10 @@ class WelcomePageViewController: UIPageViewController {
         
     }
 
-    private(set) lazy var orderedViewControllers: [UIViewController] = {
-        return [self.storyboard!.instantiateViewControllerWithIdentifier("WelcomeViewController"),
-                self.storyboard!.instantiateViewControllerWithIdentifier("ViewController2"),
-                self.storyboard!.instantiateViewControllerWithIdentifier("ViewController3")]
+    fileprivate(set) lazy var orderedViewControllers: [UIViewController] = {
+        return [self.storyboard!.instantiateViewController(withIdentifier: "WelcomeViewController"),
+                self.storyboard!.instantiateViewController(withIdentifier: "ViewController2"),
+                self.storyboard!.instantiateViewController(withIdentifier: "ViewController3")]
     }()
 
     override func didReceiveMemoryWarning() {
@@ -61,10 +61,10 @@ class WelcomePageViewController: UIPageViewController {
 }
 extension WelcomePageViewController: UIPageViewControllerDataSource {
     
-    func pageViewController(pageViewController: UIPageViewController,
-                            viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController,
+                            viewControllerBefore viewController: UIViewController) -> UIViewController? {
         print("backwards")
-        guard let viewControllerIndex = orderedViewControllers.indexOf(viewController) else {
+        guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {
             print("A")
             
             return nil
@@ -87,11 +87,11 @@ extension WelcomePageViewController: UIPageViewControllerDataSource {
     }
     
     
-    func pageViewController(pageViewController: UIPageViewController,
-                            viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController,
+                            viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
         print("forwards")
-        guard let viewControllerIndex = orderedViewControllers.indexOf(viewController) else {
+        guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {
             return nil
         }
         

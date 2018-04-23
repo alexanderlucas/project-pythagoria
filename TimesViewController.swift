@@ -28,8 +28,8 @@ class TimesViewController: LevelViewController {
     @IBOutlet weak var targetFifteen: TargetView!
     @IBOutlet weak var targetSixteen: TargetView!
     
-    @IBOutlet weak var next: UIButton!
     @IBOutlet weak var check: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,24 +76,24 @@ class TimesViewController: LevelViewController {
             let number = (answers as! TimesNums).numbers[currLevel][i]
             if(number == -1){
                 targets[i].text = ""
-                targets[i].backgroundColor = UIColor.blackColor()
-                targets[i].enabled = false
+                targets[i].backgroundColor = UIColor.black
+                targets[i].isEnabled = false
                 print("false")
             }
             else {
-                targets[i].backgroundColor = UIColor.greenColor()
+                targets[i].backgroundColor = UIColor.green
                 targets[i].text = String(number)
-                targets[i].enabled = true
+                targets[i].isEnabled = true
                 print("true")
             }
         }
     }
-    @IBAction func checkButtonPressed(sender: AnyObject) {
+    @IBAction func checkButtonPressed(_ sender: AnyObject) {
         
         if(allFilled()){
             if(map.equationsCorrect()){
                 print("equations correct!")
-                check.hidden = true
+                check.isHidden = true
                 if(!played){
                     level += 1
                 }
@@ -104,7 +104,7 @@ class TimesViewController: LevelViewController {
                 currLevel+=1
                 
                 if(currLevel<20){
-                    next.hidden = false;
+                    nextButton.isHidden = false;
                 }
                 
             }
@@ -117,7 +117,7 @@ class TimesViewController: LevelViewController {
         }
     }
     
-    @IBAction func nextButtonPressed(sender: AnyObject) {
+    @IBAction func nextButtonPressed(_ sender: AnyObject) {
         reset()
     }
     
@@ -136,11 +136,11 @@ class TimesViewController: LevelViewController {
         
         // header.text = "Level \(currLevel+1)"
         
-        next.hidden = true;
-        check.hidden = false;
+        nextButton.isHidden = true;
+        check.isHidden = false;
     }
     
-    @IBAction func bringBackButtonPressed(sender: AnyObject) {
+    @IBAction func bringBackButtonPressed(_ sender: AnyObject) {
         for i in 0..<numbers.count {
             numbers[i].center = numbers[i].origLocation;
             targets[i].occupied = false;
@@ -149,8 +149,8 @@ class TimesViewController: LevelViewController {
             numbers[i].inTarget = false
         }
     }
-    @IBAction func backButtonPressed(sender: AnyObject) {
-        self.navigationController?.popViewControllerAnimated(true);
+    @IBAction func backButtonPressed(_ sender: AnyObject) {
+        self.navigationController?.popViewController(animated: true);
         
     }
 

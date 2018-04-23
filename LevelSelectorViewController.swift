@@ -77,9 +77,9 @@ class LevelSelectorViewController: UIViewController {
         
     }
     
-    func disableLevelsFrom(index:Int){
+    func disableLevelsFrom(_ index:Int){
         for i in index ..< levels.count {
-            levels[i].enabled = false;
+            levels[i].isEnabled = false;
         }
     }
     
@@ -87,7 +87,7 @@ class LevelSelectorViewController: UIViewController {
         //for var i=0; i<20; i+=1
         
         for level in levels{
-            level.enabled = true;
+            level.isEnabled = true;
         }
         //var lev = student.currentLevel
         var lev = currentLevel
@@ -329,7 +329,7 @@ class LevelSelectorViewController: UIViewController {
 
         
         for i in 0...lev-1{
-            levels[i].tintColor = UIColor.redColor();
+            levels[i].tintColor = UIColor.red;
         }
         
 
@@ -340,7 +340,7 @@ class LevelSelectorViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func buttonPressed(sender: UIButton) {
+    @IBAction func buttonPressed(_ sender: UIButton) {
         print(Int((sender.titleLabel?.text)!));
         var segue = "";
         print("puzzle")
@@ -384,24 +384,24 @@ class LevelSelectorViewController: UIViewController {
         }
         print(puzzle)
         print(segue);
-        self.performSegueWithIdentifier(segue, sender: sender);
+        self.performSegue(withIdentifier: segue, sender: sender);
     }
     
     
-    @IBAction func backButtonPressed(sender: AnyObject) {
+    @IBAction func backButtonPressed(_ sender: AnyObject) {
         print("hi");
-        self.navigationController?.popViewControllerAnimated(true)
+        self.navigationController?.popViewController(animated: true)
     }
 
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         updateNumbers();
     }
     
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         let level = currentLevel
         print(level)
@@ -409,7 +409,7 @@ class LevelSelectorViewController: UIViewController {
         let lvl = Int((sender as! UIButton).titleLabel!.text!)! - 1;
         print(lvl)
 
-        let destinationVC = segue.destinationViewController as? LevelViewController
+        let destinationVC = segue.destination as? LevelViewController
 
         var greater = false
         print(destinationVC)

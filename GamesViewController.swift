@@ -21,9 +21,9 @@ class GamesViewController: UIViewController {
     let div = ["Divide", "Remainder", "Equivalent", "Comparing"]
    // var student:Student = Student(name: "");
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
     //    print(level)
-        locally = NSUserDefaults.standardUserDefaults().boolForKey("storeDataLocally")
+        locally = UserDefaults.standard.bool(forKey: "storeDataLocally")
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,15 +36,15 @@ class GamesViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func buttonPressed(sender: AnyObject) {
+    @IBAction func buttonPressed(_ sender: AnyObject) {
         print("levels segue?")
-        self.performSegueWithIdentifier("showLevels", sender: sender)
+        self.performSegue(withIdentifier: "showLevels", sender: sender)
         
 
     }
     
-    @IBAction func backButtonPressed(sender: AnyObject) {
-        self.navigationController?.popViewControllerAnimated(true)
+    @IBAction func backButtonPressed(_ sender: AnyObject) {
+        self.navigationController?.popViewController(animated: true)
 
     }
     
@@ -53,10 +53,10 @@ class GamesViewController: UIViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if let destinationVC = segue.destinationViewController as? LevelSelectorViewController{
+        if let destinationVC = segue.destination as? LevelSelectorViewController{
          //  print(student);
          //   destinationVC.student = student;
             let number = Int(((sender as! UIButton).titleLabel?.text)!)

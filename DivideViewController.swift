@@ -26,8 +26,8 @@ class DivideViewController: LevelViewController {
     @IBOutlet weak var targetThirteen: TargetView!
     @IBOutlet weak var targetFourteen: TargetView!
         
-    @IBOutlet weak var next: UIButton!
     @IBOutlet weak var check: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,13 +69,13 @@ class DivideViewController: LevelViewController {
             let number = (answers as! DivideNums).numbers[currLevel][i]
             if(number == -1){
                 targets[i].text = ""
-                targets[i].backgroundColor = UIColor.blackColor()
-                targets[i].enabled = false
+                targets[i].backgroundColor = UIColor.black
+                targets[i].isEnabled = false
             }
             else {
-                targets[i].backgroundColor = UIColor.greenColor()
+                targets[i].backgroundColor = UIColor.green
                 targets[i].text = String(number)
-                targets[i].enabled = true
+                targets[i].isEnabled = true
             }
         }
     }
@@ -84,7 +84,7 @@ class DivideViewController: LevelViewController {
         if(allFilled()){
             if(map.equationsCorrect()){
                 print("equations correct!")
-                check.hidden = true
+                check.isHidden = true
                 if(!played){
                     level += 1
                 }
@@ -95,7 +95,7 @@ class DivideViewController: LevelViewController {
                 currLevel+=1
                 
                 if(currLevel<20){
-                    next.hidden = false;
+                    nextButton.isHidden = false;
                 }
                 
             }
@@ -127,8 +127,8 @@ class DivideViewController: LevelViewController {
         
         // header.text = "Level \(currLevel+1)"
         
-        next.hidden = true;
-        check.hidden = false;
+        nextButton.isHidden = true;
+        check.isHidden = false;
     }
     
     @IBAction func bringBackButtonPressed(sender: AnyObject) {
@@ -141,7 +141,7 @@ class DivideViewController: LevelViewController {
         }
     }
     @IBAction func backButtonPressed(sender: AnyObject) {
-        self.navigationController?.popViewControllerAnimated(true);
+        self.navigationController?.popViewController(animated: true);
         
     }
 

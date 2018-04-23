@@ -16,9 +16,9 @@ class GameSelectorView: UIView {
         super.init(frame: frame)
         
         for i in 0..<games {
-            let button = UIButton(frame: CGRectMake(284,CGFloat(250*(i+1)),200,200))
-            button.setTitle(String(i+1), forState: .Normal)
-            button.backgroundColor = UIColor.redColor()
+            let button = UIButton(frame: CGRect(x: 284,y: CGFloat(250*(i+1)),width: 200,height: 200))
+            button.setTitle(String(i+1), for: UIControlState())
+            button.backgroundColor = UIColor.red
             self.addSubview(button)
         }
     }

@@ -18,22 +18,22 @@ class PageViewController: UIPageViewController {
         
         if let firstViewController = orderedViewControllers.first {
             setViewControllers([firstViewController],
-                               direction: .Forward,
+                               direction: .forward,
                                animated: false,
                                completion: nil)
         }
         
     }
     
-    private(set) lazy var orderedViewControllers: [UIViewController] = {
+    fileprivate(set) lazy var orderedViewControllers: [UIViewController] = {
         return [self.newColoredViewController("Cyan"),
                 self.newColoredViewController("Magenta"),
                 self.newColoredViewController("Yellow")]
     }()
     
-    private func newColoredViewController(color: String) -> UIViewController {
+    fileprivate func newColoredViewController(_ color: String) -> UIViewController {
         return UIStoryboard(name: "Main", bundle: nil) .
-            instantiateViewControllerWithIdentifier("\(color)ViewController")
+            instantiateViewController(withIdentifier: "\(color)ViewController")
     }
 
 
@@ -59,10 +59,10 @@ class PageViewController: UIPageViewController {
 
 extension PageViewController: UIPageViewControllerDataSource {
     
-    func pageViewController(pageViewController: UIPageViewController,
-                            viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController,
+                            viewControllerBefore viewController: UIViewController) -> UIViewController? {
         print("backwards")
-        guard let viewControllerIndex = orderedViewControllers.indexOf(viewController) else {
+        guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {
             print("A")
 
             return nil
@@ -85,11 +85,11 @@ extension PageViewController: UIPageViewControllerDataSource {
     }
 
     
-    func pageViewController(pageViewController: UIPageViewController,
-                            viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController,
+                            viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
         print("forwards")
-        guard let viewControllerIndex = orderedViewControllers.indexOf(viewController) else {
+        guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {
             return nil
         }
         

@@ -14,24 +14,24 @@ class OperationsView: UIView {
     
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         // Drawing code
         if(line){
         let context = UIGraphicsGetCurrentContext()
-        CGContextSetLineWidth(context!, 2.0)
+        context!.setLineWidth(2.0)
         let colorSpace = CGColorSpaceCreateDeviceRGB()
         let components: [CGFloat] = [0.0, 0.0, 1.0, 1.0]
-        let color = CGColorCreate(colorSpace, components)
-        CGContextSetStrokeColorWithColor(context!, color!)
+        let color = CGColor(colorSpace: colorSpace, components: components)
+        context!.setStrokeColor(color!)
         
 //        let start = (sender as! UIButton).center
 //        let x = start.x
 //        let y = start.y
-        CGContextMoveToPoint(context!, 50, 50)
+        context!.move(to: CGPoint(x: 50, y: 50))
         
-        CGContextAddLineToPoint(context!, 0, 0)
+        context!.addLine(to: CGPoint(x: 0, y: 0))
         
-        CGContextStrokePath(context!)
+        context!.strokePath()
         }
 
     }

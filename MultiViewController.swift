@@ -28,7 +28,7 @@ class MultiViewController: LevelViewController {
     @IBOutlet weak var labelFive: UILabel!
     
     @IBOutlet weak var check: UIButton!
-    @IBOutlet weak var next: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,13 +65,13 @@ class MultiViewController: LevelViewController {
         
         updateLabels()
         
-        next.hidden = true
+        nextButton.isHidden = true
 
     }
     
     func disableTargets() {
         for i in 0..<targets.count {
-            targets[i].enabled = false;
+            targets[i].isEnabled = false;
         }
     }
     
@@ -88,11 +88,11 @@ class MultiViewController: LevelViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func checkButtonPressed(sender: AnyObject) {
+    @IBAction func checkButtonPressed(_ sender: AnyObject) {
         if(allFilled()){
             if(map.equationsCorrect()){
                 print("equations correct!")
-                check.hidden = true
+                check.isHidden = true
                 if(!played){
                     level += 1
                 }
@@ -103,7 +103,7 @@ class MultiViewController: LevelViewController {
                 currLevel+=1
                 
                 if(currLevel<20){
-                    next.hidden = false;
+                    nextButton.isHidden = false;
                 }
                 
             }
@@ -117,7 +117,7 @@ class MultiViewController: LevelViewController {
         
     }
     
-    @IBAction func nextButtonPressed(sender: AnyObject) {
+    @IBAction func nextButtonPressed(_ sender: AnyObject) {
         reset()
     }
     
@@ -134,11 +134,11 @@ class MultiViewController: LevelViewController {
         
         map = MultiLevel.init(level: currLevel, arrayOfTargets: targets); //map
         
-        next.hidden = true;
-        check.hidden = false;
+        nextButton.isHidden = true;
+        check.isHidden = false;
     }
     
-    @IBAction func bringBackButtonPressed(sender: AnyObject) {
+    @IBAction func bringBackButtonPressed(_ sender: AnyObject) {
         for i in 0..<numbers.count {
             numbers[i].center = numbers[i].origLocation;
             targets[i].occupied = false;
@@ -148,8 +148,8 @@ class MultiViewController: LevelViewController {
         }
     }
     
-    @IBAction func backButtonPressed(sender: AnyObject) {
-        self.navigationController?.popViewControllerAnimated(true);
+    @IBAction func backButtonPressed(_ sender: AnyObject) {
+        self.navigationController?.popViewController(animated: true);
         
     }
 

@@ -29,24 +29,24 @@ class ViewController1: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func controlSelected(sender: AnyObject) {
+    @IBAction func controlSelected(_ sender: AnyObject) {
         if(segmentedControl.selectedSegmentIndex == 0){
-            let parent = self.parentViewController as! WelcomeViewController
-            parent.scrollView.scrollEnabled = true
+            let parent = self.parent as! WelcomeViewController
+            parent.scrollView.isScrollEnabled = true
             let x = parent.scrollView.frame.width
-            parent.scrollView.setContentOffset(CGPointMake(x, 0), animated: true)
-            playButton.hidden = true
+            parent.scrollView.setContentOffset(CGPoint(x: x, y: 0), animated: true)
+            playButton.isHidden = true
 
 
         }
         else {
-            playButton.hidden = false
+            playButton.isHidden = false
         }
        
     }
-    @IBAction func playButtonPressed(sender: AnyObject) {
-        let parent = self.parentViewController as! WelcomeViewController
-        parent.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func playButtonPressed(_ sender: AnyObject) {
+        let parent = self.parent as! WelcomeViewController
+        parent.dismiss(animated: true, completion: nil)
     }
 
     /*

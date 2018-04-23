@@ -10,7 +10,7 @@ import UIKit
 
 class NumberView: UIView {
 
-    var origLocation:CGPoint = CGPointMake(0.0, 0.0);
+    var origLocation:CGPoint = CGPoint(x: 0.0, y: 0.0);
     var number: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 85, height: 85));
     var value:Int!
     var inTarget = false;
@@ -23,8 +23,8 @@ class NumberView: UIView {
         //initialization
 
 
-        number.textAlignment = NSTextAlignment.Center;
-        number.font = UIFont.systemFontOfSize(60);
+        number.textAlignment = NSTextAlignment.center;
+        number.font = UIFont.systemFont(ofSize: 60);
         
         self.addSubview(number);
 

@@ -35,8 +35,8 @@ class CarryViewController: LevelViewController {
     @IBOutlet weak var targetTwentyTwo: TargetView!
     @IBOutlet weak var targetTwentyThree: TargetView!
 
-    @IBOutlet weak var next: UIButton!
     @IBOutlet weak var check: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,7 +75,7 @@ class CarryViewController: LevelViewController {
         map = CarryLevel.init(level: currLevel, arrayOfTargets: targets)
         
         updateLabels()
-        next.hidden = true;
+        nextButton.isHidden = true;
 
     }
     
@@ -84,13 +84,13 @@ class CarryViewController: LevelViewController {
             let number = (answers as! CarryNums).numbers[currLevel][i]
             if(number == -1){
                 targets[i].text = ""
-                targets[i].backgroundColor = UIColor.blackColor()
-                targets[i].enabled = false
+                targets[i].backgroundColor = UIColor.black
+                targets[i].isEnabled = false
             }
             else {
-                targets[i].backgroundColor = UIColor.greenColor()
+                targets[i].backgroundColor = UIColor.green
                 targets[i].text = String(number)
-                targets[i].enabled = true
+                targets[i].isEnabled = true
             }
         }
     }
@@ -100,11 +100,11 @@ class CarryViewController: LevelViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func checkButtonPressed(sender: AnyObject) {
+    @IBAction func checkButtonPressed(_ sender: AnyObject) {
         if(allFilled()){
             if(map.equationsCorrect()){
                 print("equations correct!")
-                check.hidden = true
+                check.isHidden = true
                 if(!played){
                     level += 1
                 }
@@ -115,7 +115,7 @@ class CarryViewController: LevelViewController {
                 currLevel+=1
                 
                 if(currLevel<20){
-                    next.hidden = false;
+                    nextButton.isHidden = false;
                 }
                 
             }
@@ -129,7 +129,7 @@ class CarryViewController: LevelViewController {
         
     }
 
-    @IBAction func nextButtonPressed(sender: AnyObject) {
+    @IBAction func nextButtonPressed(_ sender: AnyObject) {
         reset()
     }
     
@@ -146,11 +146,11 @@ class CarryViewController: LevelViewController {
         
         map = CarryLevel.init(level: currLevel, arrayOfTargets: targets); //map
         
-        next.hidden = true;
-        check.hidden = false;
+        nextButton.isHidden = true;
+        check.isHidden = false;
     }
     
-    @IBAction func bringBackButtonPressed(sender: AnyObject) {
+    @IBAction func bringBackButtonPressed(_ sender: AnyObject) {
         for i in 0..<numbers.count {
             numbers[i].center = numbers[i].origLocation;
             targets[i].occupied = false;
@@ -160,8 +160,8 @@ class CarryViewController: LevelViewController {
         }
     }
     
-    @IBAction func backButtonPressed(sender: AnyObject) {
-        self.navigationController?.popViewControllerAnimated(true);
+    @IBAction func backButtonPressed(_ sender: AnyObject) {
+        self.navigationController?.popViewController(animated: true);
         
     }
 

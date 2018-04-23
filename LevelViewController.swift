@@ -20,8 +20,8 @@ class LevelViewController: UIViewController {
     var level = 0
     var levelRecord:CKRecord!
     
-    @IBAction func panNumberView(sender: UIPanGestureRecognizer) {
-        self.view?.bringSubviewToFront(sender.view!);
+    @IBAction func panNumberView(_ sender: UIPanGestureRecognizer) {
+        self.view?.bringSubview(toFront: sender.view!);
         
         let num = self.whichNumber(sender.view as! NumberView);
         
@@ -31,13 +31,13 @@ class LevelViewController: UIViewController {
             numbers[num].currentTarget = nil
         }
         
-        if(sender.state == UIGestureRecognizerState.Ended){
+        if(sender.state == UIGestureRecognizerState.ended){
             print("hi");
             
             let target = isInTarget(numbers[num]);
             
             
-            if(target != nil && target?.occupied == false && target?.enabled == false){
+            if(target != nil && target?.occupied == false && target?.isEnabled == false){
                 print("moo");
                 sender.view!.center = target!.center;
                 target?.occupied = true;
@@ -50,19 +50,19 @@ class LevelViewController: UIViewController {
                 print("what");
                 print(target)
                 print(target?.occupied)
-                print(target?.enabled)
+                print(target?.isEnabled)
                 sender.view!.center = numbers[num].origLocation;
             }
             
         }
         else{
-            let translation = sender.translationInView(self.view);
+            let translation = sender.translation(in: self.view);
             sender.view!.center = CGPoint(x: sender.view!.center.x + translation.x, y: sender.view!.center.y + translation.y)
-            sender.setTranslation(CGPointZero, inView: self.view);
+            sender.setTranslation(CGPoint.zero, in: self.view);
         }
     }
     
-    func whichNumber(movedView:NumberView) -> Int {
+    func whichNumber(_ movedView:NumberView) -> Int {
         for i in 0..<numbers.count{
             if(numbers[i] == movedView){
                 return i;
@@ -71,11 +71,11 @@ class LevelViewController: UIViewController {
         return -1;
     }
     
-    func isInTarget(number:UIView) -> TargetView? {
+    func isInTarget(_ number:UIView) -> TargetView? {
         var maxArea = 0.0;
         var returnView:TargetView = TargetView();
         for i in 0..<targets.count {
-            if(intersectRect(number.frame, r2: targets[i].frame) && !targets[i].occupied && !targets[i].enabled){
+            if(intersectRect(number.frame, r2: targets[i].frame) && !targets[i].occupied && !targets[i].isEnabled){
                 let intArea = Double(overlapArea(number.frame, r2: targets[i].frame))
                 if(intArea > maxArea){
                     maxArea = Double(overlapArea(number.frame, r2: targets[i].frame))
@@ -90,7 +90,7 @@ class LevelViewController: UIViewController {
     }
     
     
-    func intersectRect(r1:CGRect, r2:CGRect) -> Bool{
+    func intersectRect(_ r1:CGRect, r2:CGRect) -> Bool{
         let r2left = r2.origin.x;
         let r2right = r2.origin.x + r2.width;
         let r2bottom = r2.origin.y + r2.height;
@@ -106,7 +106,7 @@ class LevelViewController: UIViewController {
         
     }
     
-    func overlapArea(r1:CGRect, r2:CGRect) -> CGFloat {
+    func overlapArea(_ r1:CGRect, r2:CGRect) -> CGFloat {
         let r2left = r2.origin.x;
         let r2right = r2.origin.x + r2.width;
         let r2bottom = r2.origin.y + r2.height;
@@ -133,7 +133,7 @@ class LevelViewController: UIViewController {
     func allFilled() -> Bool {
         var ret = true
         for i in 0..<targets.count {
-            if(!targets[i].occupied && !targets[i].enabled){
+            if(!targets[i].occupied && !targets[i].isEnabled){
                 ret = false
             }
         }
@@ -151,7 +151,7 @@ class LevelViewController: UIViewController {
             else {
                 pointY = CGFloat(863);
             }
-            let newView = NumberView(frame: CGRectMake(pointX, pointY, 85, 85));
+            let newView = NumberView(frame: CGRect(x: pointX, y: pointY, width: 85, height: 85));
             newView.number.text = String(i);
             newView.value = i;
             
@@ -166,23 +166,23 @@ class LevelViewController: UIViewController {
 
     }
     
-    func saveLevel(lvl:Int) {
+    func saveLevel(_ lvl:Int) {
 //        iCloudKeyStore?.setDouble(Double(lvl), forKey: "level")
 //        
 //        print(iCloudKeyStore?.doubleForKey("level"))
        
         //let record = CKRecord(recordType: "UserInfo", recordID: CKRecordID(recordName: "hi"))
-        print(lvl)
-        
-        if levelRecord == nil{
-            levelRecord = CKRecord(recordType: "UserInfo", recordID: CKRecordID(recordName: "moo"))
-
-        }
-        levelRecord.setObject(lvl, forKey: "level")
-        
-        let container = CKContainer.defaultContainer()
-        let privateDatabase = container.privateCloudDatabase
-        
+//        print(lvl)
+//        
+//        if levelRecord == nil{
+//            levelRecord = CKRecord(recordType: "UserInfo", recordID: CKRecordID(recordName: "moo"))
+//
+//        }
+//        levelRecord.setObject(lvl as CKRecordValue, forKey: "level")
+//        
+//        let container = CKContainer.default()
+//        let privateDatabase = container.privateCloudDatabase
+//        
 //        privateDatabase.fetch(withRecordID: CKRecordID(recordName: "moo"), completionHandler: { record, error in
 //            if let fetchError = error {
 //                print("An error occurred in \(fetchError)")

@@ -1,3 +1,4 @@
+
 //
 //  OperationsViewController.swift
 //  PP2
@@ -38,7 +39,7 @@ class OperationsViewController: UIViewController {
 
     var smallButtons = [UIButton]()
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         //    print(level)
        // locally = NSUserDefaults.standardUserDefaults().boolForKey("storeDataLocally")
         getLevel()
@@ -49,14 +50,14 @@ class OperationsViewController: UIViewController {
 
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
 
-        let launchedBefore = NSUserDefaults.standardUserDefaults().boolForKey("launchedBefore")
+        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
         if launchedBefore  {
             print("Not first launch.")
         }
         else {
             print("First launch, setting NSUserDefault.")
-            self.performSegueWithIdentifier("showWelcomePage", sender: self)
-            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "launchedBefore") ///this needs to be when the welcomeview willr esign 
+            self.performSegue(withIdentifier: "showWelcomePage", sender: self)
+            UserDefaults.standard.set(true, forKey: "launchedBefore") ///this needs to be when the welcomeview willr esign 
             print("here?")
         }
         
@@ -65,30 +66,30 @@ class OperationsViewController: UIViewController {
         
         blurView = UIButton.init(frame: self.view.frame)
         if !UIAccessibilityIsReduceTransparencyEnabled() {
-            blurView.backgroundColor = UIColor.clearColor()
+            blurView.backgroundColor = UIColor.clear
             
-            let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.ExtraLight)
+            let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.extraLight)
             let blurEffectView = UIVisualEffectView(effect: blurEffect)
             //always fill the view
             blurEffectView.frame = self.view.frame
-            blurEffectView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
-            blurEffectView.userInteractionEnabled = false
+            blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            blurEffectView.isUserInteractionEnabled = false
             
             blurView.addSubview(blurEffectView) //if you have more UIViews, use an insertSubview API to place it where needed
         }
         else {
             blurView.backgroundColor = self.view.backgroundColor
         }
-        blurView.addTarget(self, action: #selector(blurButtonPressed), forControlEvents: .TouchUpInside)
-        blurView.hidden = true
+        blurView.addTarget(self, action: #selector(blurButtonPressed), for: .touchUpInside)
+        blurView.isHidden = true
         self.view.addSubview(blurView)
 
         
 
         // Do any additional setup after loading the view.
-        offlineLabel.hidden = true
-        icloudLabel.hidden = true
-        tryButton.hidden = true
+        offlineLabel.isHidden = true
+        icloudLabel.isHidden = true
+        tryButton.isHidden = true
     }
     
     override func viewDidLayoutSubviews() {
@@ -106,27 +107,27 @@ class OperationsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func blurButtonPressed(sender: UIButton!){
+    func blurButtonPressed(_ sender: UIButton!){
         print("aksldjf")
-        UIView.animateWithDuration(0.5, animations: {
+        UIView.animate(withDuration: 0.5, animations: {
             self.blurView.alpha = 0
             
         })
         
         hideCircles()
         
-        blurView.userInteractionEnabled = false
+        blurView.isUserInteractionEnabled = false
         
         blurred = !blurred
 
     }
 
-    @IBAction func buttonPressed(sender: AnyObject) {
+    @IBAction func buttonPressed(_ sender: AnyObject) {
         //self.performSegueWithIdentifier("showPuzzles", sender: sender)
 
         if(blurred){
             //blurView.hidden = true
-            UIView.animateWithDuration(0.5, animations: {
+            UIView.animate(withDuration: 0.5, animations: {
                 self.blurView.alpha = 0
 
             })
@@ -136,16 +137,16 @@ class OperationsViewController: UIViewController {
             
         }
         else {
-            self.view.bringSubviewToFront(blurView)
+            self.view.bringSubview(toFront: blurView)
             
             puzzle = (sender as! UIButton).titleLabel!.text!
 
             blurView.alpha = 0
-            blurView.hidden = false
-            UIView.animateWithDuration(0.5, animations: {
+            blurView.isHidden = false
+            UIView.animate(withDuration: 0.5, animations: {
                 self.blurView.alpha = 1
             })
-            blurView.userInteractionEnabled = true
+            blurView.isUserInteractionEnabled = true
 //            let beginning = sender.center
 //            print(beginning)
 //            
@@ -174,7 +175,7 @@ class OperationsViewController: UIViewController {
 //            }
         //    let line = Line()
             moveCirclesOut(sender as! UIButton)
-            self.view.bringSubviewToFront(sender as! UIView)
+            self.view.bringSubview(toFront: sender as! UIView)
 
        //     self.view.addSubview(line)
          //   self.view.bringSubviewToFront(line)
@@ -198,25 +199,24 @@ class OperationsViewController: UIViewController {
 
         }
         else {
-            let container = CKContainer.defaultContainer()
+            let container = CKContainer.default()
             let privateDatabase = container.privateCloudDatabase
             let predicate = NSPredicate(value: true)
             
             let query = CKQuery(recordType: "UserInfo", predicate: predicate)
             
-            privateDatabase.performQuery(query, inZoneWithID: nil) { (results, error) -> Void in
+            privateDatabase.perform(query, inZoneWith: nil) { (results, error) -> Void in
                 if error != nil {
                     let description = (error?.localizedDescription)! as String
                     print(description)
-                    self.tryButton.hidden = false
+                    self.tryButton.isHidden = false
                     if description == "The Internet connection appears to be offline." {
-                        self.offlineLabel.hidden = false
+                        self.offlineLabel.isHidden = false
                     }
                     else if description == "This request requires an authenticated account" {
-                        self.icloudLabel.hidden = false;
+                        self.icloudLabel.isHidden = false;
                     }
                     print(error?.localizedDescription)
-                    print(error?.localizedFailureReason)
                     print(error)
                 }
                 else {
@@ -225,11 +225,11 @@ class OperationsViewController: UIViewController {
                         if result.recordID.recordName == "moo"{
                             print("set")
                             
-                            self.level = result.objectForKey("level") as! Int
+                            self.level = result.object(forKey: "level") as! Int
                             
                         }
                     }
-                    NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                    OperationQueue.main.addOperation({ () -> Void in
                         self.activityIndicator.stopAnimating()
                         self.levelSetter.text = String(self.level)
                         
@@ -241,7 +241,7 @@ class OperationsViewController: UIViewController {
         
     }
 
-    func moveCirclesOut(button: UIButton){
+    func moveCirclesOut(_ button: UIButton){
         var beginning:CGPoint!
         var end1:CGPoint!
         var end2:CGPoint!
@@ -259,10 +259,10 @@ class OperationsViewController: UIViewController {
             cx = beginning.x
             cy = beginning.y
 
-            end1 = CGPointMake(cx + 220, cy)
-            end2 = CGPointMake(cx + a, cy + 110)
-            end3 = CGPointMake(cx + 110, cy + a)
-            end4 = CGPointMake(cx, cy + 220)
+            end1 = CGPoint(x: cx + 220, y: cy)
+            end2 = CGPoint(x: cx + a, y: cy + 110)
+            end3 = CGPoint(x: cx + 110, y: cy + a)
+            end4 = CGPoint(x: cx, y: cy + 220)
 
             
         case "–"?:
@@ -270,30 +270,30 @@ class OperationsViewController: UIViewController {
             cx = beginning.x
             cy = beginning.y
 
-            end1 = CGPointMake(cx - 220, cy)
-            end2 = CGPointMake(cx - a, cy + 110)
-            end3 = CGPointMake(cx - 110, cy + a)
-            end4 = CGPointMake(cx, cy + 220)
+            end1 = CGPoint(x: cx - 220, y: cy)
+            end2 = CGPoint(x: cx - a, y: cy + 110)
+            end3 = CGPoint(x: cx - 110, y: cy + a)
+            end4 = CGPoint(x: cx, y: cy + 220)
 
         case "×"?:
             beginning = multiplyButton.center
             cx = beginning.x
             cy = beginning.y
             
-            end1 = CGPointMake(cx, cy - 220)
-            end2 = CGPointMake(cx + 110, cy - a)
-            end3 = CGPointMake(cx + a, cy - 110)
-            end4 = CGPointMake(cx + 220, cy)
+            end1 = CGPoint(x: cx, y: cy - 220)
+            end2 = CGPoint(x: cx + 110, y: cy - a)
+            end3 = CGPoint(x: cx + a, y: cy - 110)
+            end4 = CGPoint(x: cx + 220, y: cy)
             
         case "÷"?:
             beginning = divideButton.center
             cx = beginning.x
             cy = beginning.y
             
-            end1 = CGPointMake(cx, cy - 220)
-            end2 = CGPointMake(cx - 110, cy - a)
-            end3 = CGPointMake(cx - a, cy - 110)
-            end4 = CGPointMake(cx - 220, cy)
+            end1 = CGPoint(x: cx, y: cy - 220)
+            end2 = CGPoint(x: cx - 110, y: cy - a)
+            end3 = CGPoint(x: cx - a, y: cy - 110)
+            end4 = CGPoint(x: cx - 220, y: cy)
 
         default:
             break
@@ -307,19 +307,19 @@ class OperationsViewController: UIViewController {
         for center in centers {
             
             let blah = UIButton(frame: CGRect(x: beginning.x - 40, y: beginning.y - 40, width: 80, height: 80))
-            blah.backgroundColor = UIColor.redColor()
+            blah.backgroundColor = UIColor.red
             blah.layer.cornerRadius = 40
-            blah.setTitle(String(i), forState: .Normal)
+            blah.setTitle(String(i), for: UIControlState())
             print(blah.titleLabel!.frame)
-            blah.addTarget(self, action: #selector(nextLevel), forControlEvents: .TouchUpInside)
+            blah.addTarget(self, action: #selector(nextLevel), for: .touchUpInside)
             
             smallButtons.append(blah)
             self.view.addSubview(blah)
-            blah.transform = CGAffineTransformMakeScale(0.1, 0.1)
-            UIView.animateWithDuration(0.7, delay: 0.1, options: [], animations: {
-                blah.center.x = center.x
-                blah.center.y = center.y
-                blah.transform = CGAffineTransformMakeScale(1.5, 1.0)
+            blah.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+            UIView.animate(withDuration: 0.7, delay: 0.1, options: [], animations: {
+                blah.center.x = (center?.x)!
+                blah.center.y = (center?.y)!
+                blah.transform = CGAffineTransform(scaleX: 1.5, y: 1.0)
 //
 //                blah.frame = CGRectMake(center.x - 40, center.y - 40, 80, 80)
 //                blah.layer.cornerRadius = 40
@@ -338,10 +338,10 @@ class OperationsViewController: UIViewController {
 
         for blah in smallButtons {
             
-            UIView.animateWithDuration(0.7, animations: {
+            UIView.animate(withDuration: 0.7, animations: {
                 blah.center.x = self.center.x
                 blah.center.y = self.center.y
-                blah.transform = CGAffineTransformMakeScale(0.1, 0.1)
+                blah.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
                 }, completion:  { finished in
                     blah.removeFromSuperview()
                 })
@@ -349,8 +349,8 @@ class OperationsViewController: UIViewController {
         }
     }
     
-    func nextLevel(sender: UIButton!) {
-        self.performSegueWithIdentifier("showLevels", sender: sender)
+    func nextLevel(_ sender: UIButton!) {
+        self.performSegue(withIdentifier: "showLevels", sender: sender)
     }
 
 //    func drawLine(from: CGPoint, to: CGPoint){
@@ -382,8 +382,8 @@ class OperationsViewController: UIViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let destinationVC = segue.destinationViewController as? LevelSelectorViewController{
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? LevelSelectorViewController{
             //  print(student);
             //   destinationVC.student = student;
             let number = Int(((sender as! UIButton).titleLabel?.text)!)

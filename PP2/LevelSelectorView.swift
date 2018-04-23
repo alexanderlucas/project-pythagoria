@@ -64,9 +64,9 @@ class LevelSelectorView: UIView {
         var i = 1
         var j = 1
         for var level in levels {
-            level = UIButton(frame: CGRectMake(CGFloat((i-1)%5*150),CGFloat((j-1)*150),100,100))
-            level.setTitle(String(i), forState: .Normal)
-            level.backgroundColor = UIColor.redColor()
+            level = UIButton(frame: CGRect(x: CGFloat((i-1)%5*150),y: CGFloat((j-1)*150),width: 100,height: 100))
+            level.setTitle(String(i), for: UIControlState())
+            level.backgroundColor = UIColor.red
             self.addSubview(level)
             if(i%5==0){
                 print("true")

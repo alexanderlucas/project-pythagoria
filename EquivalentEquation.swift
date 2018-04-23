@@ -77,8 +77,8 @@ class EquivalentEquation: NSObject {
         return false
     }
     
-    func getNumber(tv:TargetView) -> Int {
-        if(tv.enabled == false){
+    func getNumber(_ tv:TargetView) -> Int {
+        if(tv.isEnabled == false){
             return tv.currentNum.value
         }
         else {
