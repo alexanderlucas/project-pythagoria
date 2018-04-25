@@ -31,6 +31,8 @@ class TimesViewController: LevelViewController {
     @IBOutlet weak var check: UIButton!
     @IBOutlet weak var nextButton: UIButton!
 
+    @IBOutlet var background: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -89,7 +91,7 @@ class TimesViewController: LevelViewController {
         }
     }
     @IBAction func checkButtonPressed(_ sender: AnyObject) {
-        
+        var cv:CheckView
         if(allFilled()){
             if(map.equationsCorrect()){
                 print("equations correct!")
@@ -103,6 +105,8 @@ class TimesViewController: LevelViewController {
                 
                 currLevel+=1
                 
+                cv = CheckView.init(frame: CGRect(x: 50, y: 50, width: 500, height: 500), correct: true, parent: self)
+                
                 if(currLevel<20){
                     nextButton.isHidden = false;
                 }
@@ -110,7 +114,9 @@ class TimesViewController: LevelViewController {
             }
             else {
                 print("incorrect")
+                cv = CheckView.init(frame: CGRect(x: 50, y: 50, width: 500, height: 500), correct: false, parent: self)
             }
+            background.addSubview(cv)
         }
         else {
             print("not filled")
