@@ -159,12 +159,15 @@ class AddLevelViewController: LevelViewController {
                 cv = CheckView.init(frame: CGRect(x: 50, y: 50, width: 500, height: 500), correct: false, parent: self)
             }
             background.addSubview(cv)
+            
+            check.isEnabled = false;
+            nextButton.isEnabled = false;
+            
         }
         else {
             print("not filled")
         }
     }
-    
    @objc @IBAction func backButtonPressed(_ sender: AnyObject) {
         self.navigationController?.popViewController(animated: true);
     }
