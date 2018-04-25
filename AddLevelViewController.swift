@@ -100,7 +100,7 @@ class AddLevelViewController: LevelViewController {
 
     }
     
-    func reset() {
+    @objc func reset() {
         for i in 0..<numbers.count {
             numbers[i].center = numbers[i].origLocation;
             targets[i].occupied = false;
@@ -164,6 +164,7 @@ class AddLevelViewController: LevelViewController {
             print("not filled")
         }
     }
+    
    @objc @IBAction func backButtonPressed(_ sender: AnyObject) {
         self.navigationController?.popViewController(animated: true);
     }

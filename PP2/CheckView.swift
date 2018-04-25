@@ -33,6 +33,9 @@ class CheckView: UIView {
         else {
             button.setTitle("Try Again", for: UIControlState())
             label.text = "Incorrect"
+            //#selector(reset(_:)
+            //Selector(("reset:"))
+            //button.addTarget(parent, action: Selector(("reset:")), for: .touchUpInside)
         }
         
         self.backgroundColor = UIColor.blue
