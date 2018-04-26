@@ -20,6 +20,9 @@ class LevelViewController: UIViewController {
     var level = 0
     var levelRecord:CKRecord!
     
+    var cv: CheckView?
+
+    
     @IBAction func panNumberView(_ sender: UIPanGestureRecognizer) {
         self.view?.bringSubview(toFront: sender.view!);
         
@@ -236,5 +239,14 @@ class LevelViewController: UIViewController {
         
 
     }*/
+    
+    @objc func reset() {
+    
+        cv?.removeFromSuperview()
+        
+    }
+    
+    
+
 
 }

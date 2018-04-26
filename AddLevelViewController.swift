@@ -33,6 +33,9 @@ class AddLevelViewController: LevelViewController {
     
     @IBOutlet var background: UIView!
     
+    
+    
+
     //var student:Student!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -80,6 +83,8 @@ class AddLevelViewController: LevelViewController {
         updateLabels()
         
         nextButton.isHidden = true;
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -100,23 +105,6 @@ class AddLevelViewController: LevelViewController {
 
     }
     
-    @objc func reset() {
-        for i in 0..<numbers.count {
-            numbers[i].center = numbers[i].origLocation;
-            targets[i].occupied = false;
-            targets[i].currentNum = nil
-            numbers[i].currentTarget = nil
-            numbers[i].inTarget = false
-        }
-        updateLabels()
-        
-        map = AddLevel.init(level: currLevel, arrayOfTargets: targets); //map
-
-        header.text = "Level \(currLevel+1)"
-        
-        nextButton.isHidden = true;
-        check.isHidden = false;
-    }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
             reset()
@@ -134,7 +122,6 @@ class AddLevelViewController: LevelViewController {
     }
     
     @IBAction func checkButton() {
-        var cv:CheckView
         if(allFilled()){
             if(map.equationsCorrect()){
                 print("correct")
@@ -147,7 +134,7 @@ class AddLevelViewController: LevelViewController {
 
                 currLevel += 1
                 
-                cv = CheckView.init(frame: CGRect(x: 50, y: 50, width: 500, height: 500), correct: true, parent: self)
+                super.cv = CheckView.init(frame: CGRect(x: 50, y: 50, width: 500, height: 500), correct: true, parent: self)
 
                 
                 if(currLevel<20){
@@ -156,9 +143,9 @@ class AddLevelViewController: LevelViewController {
             }
             else {
                 print("incorrect")
-                cv = CheckView.init(frame: CGRect(x: 50, y: 50, width: 500, height: 500), correct: false, parent: self)
+                super.cv = CheckView.init(frame: CGRect(x: 50, y: 50, width: 500, height: 500), correct: false, parent: self)
             }
-            background.addSubview(cv)
+            background.addSubview(super.cv!)
             
             check.isEnabled = false;
             nextButton.isEnabled = false;
@@ -181,5 +168,24 @@ class AddLevelViewController: LevelViewController {
         // Pass the selected object to the new view controller.
     }
 
+    override func reset() {
+        super.reset()
+        for i in 0..<numbers.count {
+            numbers[i].center = numbers[i].origLocation;
+            targets[i].occupied = false;
+            targets[i].currentNum = nil
+            numbers[i].currentTarget = nil
+            numbers[i].inTarget = false
+        }
+        updateLabels()
+        
+        map = AddLevel.init(level: currLevel, arrayOfTargets: targets); //map
+        
+        header.text = "Level \(currLevel+1)"
+        
+        nextButton.isHidden = true;
+        check.isHidden = false;
+        
+    }
 }
 

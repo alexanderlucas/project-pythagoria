@@ -100,7 +100,9 @@ class SumLevelViewController: LevelViewController {
         }
     }
     
-    func reset() {
+    override func reset() {
+        super.reset()
+
         for i in 0..<numbers.count {
             numbers[i].center = numbers[i].origLocation;
             let target = numbers[i].currentTarget
@@ -125,37 +127,38 @@ class SumLevelViewController: LevelViewController {
     }
 
     @IBAction func checkButtonPressed(_ sender: AnyObject) {
-        var cv:CheckView
         if(allFilled()){
             if(map.equationsCorrect()){
-                print("equations correct!")
-                check.isHidden = true
+                print("correct")
+                check.isHidden = true;
                 if(!played){
                     level += 1
                 }
-                
+                print(level)
                 saveLevel(level)
                 
-                currLevel+=1
+                currLevel += 1
                 
-                cv = CheckView.init(frame: CGRect(x: 50, y: 50, width: 500, height: 500), correct: true, parent: self)
+                super.cv = CheckView.init(frame: CGRect(x: 50, y: 50, width: 500, height: 500), correct: true, parent: self)
+                
                 
                 if(currLevel<20){
                     nextButton.isHidden = false;
-                    
                 }
-                
             }
             else {
                 print("incorrect")
-                cv = CheckView.init(frame: CGRect(x: 50, y: 50, width: 500, height: 500), correct: false, parent: self)
+                super.cv = CheckView.init(frame: CGRect(x: 50, y: 50, width: 500, height: 500), correct: false, parent: self)
             }
-            background.addSubview(cv)
+            background.addSubview(super.cv!)
+            
+            check.isEnabled = false;
+            nextButton.isEnabled = false;
+            
         }
         else {
             print("not filled")
         }
-        
     }
 
     @IBAction func bringBackButtonPressed(_ sender: AnyObject) {
