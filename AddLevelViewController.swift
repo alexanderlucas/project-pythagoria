@@ -120,7 +120,7 @@ class AddLevelViewController: LevelViewController {
             numbers[i].currentTarget = nil
             numbers[i].inTarget = false
         }
-        
+        //super.currLevel
     }
     
     @IBAction func checkButton() {
@@ -162,14 +162,19 @@ class AddLevelViewController: LevelViewController {
             print("not filled")
         }
     }
+   
+    
    @objc @IBAction func backButtonPressed(_ sender: AnyObject) {
-        self.navigationController?.popViewController(animated: true);
+    
+    self.navigationController?.popViewController(animated: true);
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         if let destinationVC = segue.destination as? LevelSelectorViewController{
+            destinationVC.currentLevel = level;
             destinationVC.updateNumbers();
+            
         }
         
         // Pass the selected object to the new view controller.

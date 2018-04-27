@@ -192,9 +192,13 @@ class OperationsViewController: UIViewController {
     
     
     func getLevel() {
+        
         if(locally){
+            //TODO this is where the level is being set ///
+            
             print("get data from sudefaults")
-            level = 1000
+            //level = 1000
+            level = 0
             self.activityIndicator.stopAnimating()
 
         }

@@ -73,8 +73,10 @@ class LevelSelectorViewController: UIViewController {
         levels.append(levelEighteen)
         levels.append(levelNineteen)
         levels.append(levelTwenty)
-        currentLevel = 1000
+        //currentLevel = 1000
+        //currentLevel = 0;
         
+        //updateNumbers()
     }
     
     func disableLevelsFrom(_ index:Int){
@@ -93,10 +95,6 @@ class LevelSelectorViewController: UIViewController {
         var lev = currentLevel
         print(lev)
         
-        
-        if (lev == 0){
-            
-        }
         //var lev = 0
 
         if(puzzle == "Add"){
@@ -108,8 +106,6 @@ class LevelSelectorViewController: UIViewController {
             }
 
             //for var i = lev-1; i>=0; i-=1
-            
-            
 
         }
         else if(puzzle == "Sum"){
@@ -327,12 +323,12 @@ class LevelSelectorViewController: UIViewController {
             
         }
 
-        
-        for i in 0...lev-1{
-            levels[i].tintColor = UIColor.red;
+        if (lev != 0){
+            for i in 0...lev-1{
+                levels[i].tintColor = UIColor.red;
+            }
         }
         
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -389,7 +385,7 @@ class LevelSelectorViewController: UIViewController {
     
     
     @IBAction func backButtonPressed(_ sender: AnyObject) {
-        print("hi");
+        //print("hi");
         self.navigationController?.popViewController(animated: true)
     }
 
@@ -400,6 +396,14 @@ class LevelSelectorViewController: UIViewController {
     
     // MARK: - Navigation
 
+    
+    @IBAction func unwindToThisView(sender: UIStoryboardSegue) {
+        if let vc = sender.source as? AddLevelViewController {
+            currentLevel = vc.level
+        }
+    }
+    
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
