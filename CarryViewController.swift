@@ -40,6 +40,11 @@ class CarryViewController: LevelViewController {
 
     @IBOutlet var background: UIView!
     
+    @IBOutlet weak var backButton: UIButton!
+    
+    @IBOutlet weak var resetButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -128,9 +133,13 @@ class CarryViewController: LevelViewController {
             }
             background.addSubview(super.cv!)
             
-            check.isEnabled = false;
-            nextButton.isEnabled = false;
+            nextButton.isHidden = true;
+            check.isHidden = false;
             
+            check.isEnabled = false
+            nextButton.isEnabled = false
+            backButton.isEnabled = false
+            resetButton.isEnabled = false
         }
         else {
             print("not filled")
@@ -159,6 +168,11 @@ class CarryViewController: LevelViewController {
         
         nextButton.isHidden = true;
         check.isHidden = false;
+        
+        check.isEnabled = true
+        nextButton.isEnabled = true
+        backButton.isEnabled = true
+        resetButton.isEnabled = true
     }
     
     @IBAction func bringBackButtonPressed(_ sender: AnyObject) {

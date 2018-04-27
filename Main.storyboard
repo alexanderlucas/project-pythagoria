@@ -238,17 +238,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="32P-xm-khp">
-                                <rect key="frame" x="478" y="624" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                <state key="normal" title="Bring Back"/>
-                                <connections>
-                                    <action selector="bringBackPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M9k-Y4-r89"/>
-                                    <action selector="checkButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="ggt-xV-xTW"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hc3-U1-zah">
                                 <rect key="frame" x="598" y="624" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -258,10 +247,22 @@
                                     <action selector="checkButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="uXw-b2-amx"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="32P-xm-khp">
+                                <rect key="frame" x="471" y="624" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <state key="normal" title="Bring Back"/>
+                                <connections>
+                                    <action selector="bringBackPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M9k-Y4-r89"/>
+                                    <action selector="checkButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="ggt-xV-xTW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="9lr-ec-yFw" id="X1Z-0F-A0y"/>
                         <outlet property="background" destination="8bC-Xf-vdC" id="Miu-FE-wRa"/>
                         <outlet property="check" destination="hc3-U1-zah" id="ZIC-VF-bYq"/>
                         <outlet property="header" destination="Hmu-TE-f58" id="7se-dr-y1L"/>
@@ -271,6 +272,7 @@
                         <outlet property="labelThree" destination="dcm-yv-TZR" id="T9c-2A-2zc"/>
                         <outlet property="labelTwo" destination="0KU-v8-T1H" id="rCJ-JR-kzY"/>
                         <outlet property="nextButton" destination="I0g-hZ-pY2" id="kxt-81-Cyx"/>
+                        <outlet property="resetButton" destination="32P-xm-khp" id="Lif-Bd-23n"/>
                         <outlet property="targetEight" destination="fMn-TB-IGA" id="e6Q-rH-dMB"/>
                         <outlet property="targetFive" destination="Y5z-Ta-g9E" id="aWC-PN-0vl"/>
                         <outlet property="targetFour" destination="Tsz-7a-VcW" id="cj0-HU-2h0"/>
@@ -460,9 +462,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="u19-pg-0Qn" id="NFc-KQ-juI"/>
                         <outlet property="background" destination="t3K-av-xN4" id="3l7-cM-3N7"/>
                         <outlet property="check" destination="uoe-7s-Fi1" id="ZTy-T6-a2b"/>
                         <outlet property="nextButton" destination="omk-vT-o8f" id="Ph8-DT-kbw"/>
+                        <outlet property="resetButton" destination="yQM-a0-7L1" id="vUl-49-vaB"/>
                         <outlet property="targetEight" destination="LRi-rQ-PqG" id="e8P-Tg-Phc"/>
                         <outlet property="targetEighteen" destination="MOt-nq-98n" id="xmr-JK-xEG"/>
                         <outlet property="targetEleven" destination="evW-Fi-cSD" id="Jen-KA-qPG"/>
@@ -666,9 +670,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="Qmi-Sd-1c8" id="4oO-oS-EaS"/>
                         <outlet property="background" destination="bAI-ST-SQA" id="SqU-ba-fp6"/>
                         <outlet property="check" destination="azx-d3-vYk" id="da5-Yc-BM2"/>
                         <outlet property="nextButton" destination="JIa-X5-V1l" id="J98-hG-bAg"/>
+                        <outlet property="resetButton" destination="kMR-LQ-eYS" id="lUg-3j-sj2"/>
                         <outlet property="targetEight" destination="cxB-9o-l0c" id="tQX-Jf-MqE"/>
                         <outlet property="targetEighteen" destination="LEo-R2-84B" id="NiR-cp-UHT"/>
                         <outlet property="targetEleven" destination="SNt-dF-GdQ" id="sWg-HW-jRV"/>
@@ -816,15 +822,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZQ-nw-xQC">
-                                <rect key="frame" x="20" y="28" width="104" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <action selector="backButtonPressed:" destination="rEs-fC-XPy" eventType="touchUpInside" id="EbF-6P-XdE"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bD-cJ-JVV">
                                 <rect key="frame" x="642" y="568" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -853,13 +850,24 @@
                                     <action selector="checkButtonPressed:" destination="rEs-fC-XPy" eventType="touchUpInside" id="7u9-6Y-Rao"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZQ-nw-xQC">
+                                <rect key="frame" x="20" y="20" width="104" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="rEs-fC-XPy" eventType="touchUpInside" id="EbF-6P-XdE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="TZQ-nw-xQC" id="xzy-bs-Q8x"/>
                         <outlet property="background" destination="wbd-2M-76V" id="AYZ-Iu-Vx6"/>
                         <outlet property="check" destination="UV8-bw-PsA" id="kOW-Jy-UpS"/>
                         <outlet property="nextButton" destination="8bD-cJ-JVV" id="WeN-yO-CYJ"/>
+                        <outlet property="resetButton" destination="jxq-wY-6kw" id="XJc-W1-Hv8"/>
                         <outlet property="targetEight" destination="UlW-1T-RVR" id="0RO-GO-eTd"/>
                         <outlet property="targetEighteen" destination="hAa-tq-t4Z" id="MnO-WO-g6m"/>
                         <outlet property="targetEleven" destination="HH7-Pg-CAy" id="pte-uJ-GdZ"/>
@@ -1134,6 +1142,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="oMS-LE-jiS" id="jl2-bQ-Wdz"/>
                         <outlet property="background" destination="bGm-vC-PfJ" id="buh-Sy-4hq"/>
                         <outlet property="check" destination="Umb-uV-VHi" id="KKY-Ni-Ugh"/>
                         <outlet property="labelFive" destination="Raa-vv-QQp" id="o5p-ly-ENc"/>
@@ -1142,6 +1151,7 @@
                         <outlet property="labelThree" destination="rEi-eb-yqe" id="yxy-O0-8L5"/>
                         <outlet property="labelTwo" destination="0E2-Xw-7Gx" id="hA3-aK-eva"/>
                         <outlet property="nextButton" destination="yIc-u3-MqX" id="tJv-Ur-4sa"/>
+                        <outlet property="resetButton" destination="J5h-fQ-DF0" id="2PG-a9-iBK"/>
                         <outlet property="targetEight" destination="KuB-nc-VrP" id="Iyd-j3-7dO"/>
                         <outlet property="targetFive" destination="zdz-qJ-kXG" id="HpR-HI-5hf"/>
                         <outlet property="targetFour" destination="KsV-to-7UM" id="rOc-uH-odL"/>
@@ -1401,6 +1411,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="u88-Uj-fwV" id="WQO-aC-AYb"/>
                         <outlet property="background" destination="k4J-Pg-1JL" id="ZeX-Zt-Aak"/>
                         <outlet property="check" destination="MWi-rd-1kw" id="wy0-wK-wTd"/>
                         <outlet property="labelFive" destination="bop-iA-c0n" id="9FE-Vu-7v4"/>
@@ -1409,6 +1420,7 @@
                         <outlet property="labelThree" destination="sgD-ab-8Mi" id="JpD-gd-JMa"/>
                         <outlet property="labelTwo" destination="dP6-C6-a7u" id="dcM-fs-lhj"/>
                         <outlet property="nextButton" destination="oTU-dQ-O4z" id="VBu-gf-S9S"/>
+                        <outlet property="resetButton" destination="eif-oW-84m" id="Drq-Lj-Fl7"/>
                         <outlet property="targetEight" destination="Amj-if-tHg" id="Jfu-Hh-51K"/>
                         <outlet property="targetFive" destination="yim-AO-1VL" id="reI-aw-Tsq"/>
                         <outlet property="targetFour" destination="fC4-z7-sdq" id="EQc-K0-qXe"/>
@@ -1627,10 +1639,12 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="FFB-uc-nMy" id="dsf-7m-ZEC"/>
                         <outlet property="background" destination="EAr-4O-FRm" id="BmU-aT-yop"/>
                         <outlet property="check" destination="Zgy-g5-AbT" id="wTg-NR-6Em"/>
                         <outlet property="next" destination="fic-hl-Iby" id="WPN-b5-y9K"/>
                         <outlet property="nextButton" destination="fic-hl-Iby" id="CJr-Xf-mzJ"/>
+                        <outlet property="resetButton" destination="fEm-08-EZ5" id="v0a-7l-u1G"/>
                         <outlet property="targetEight" destination="wG9-NF-dD7" id="qeq-82-W5F"/>
                         <outlet property="targetEleven" destination="Ot3-mc-SMl" id="9Cg-FD-93G"/>
                         <outlet property="targetFive" destination="8Ef-Na-iT1" id="yOX-zM-weA"/>
@@ -1819,9 +1833,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="bS1-nn-3h9" id="hUb-U7-Nrv"/>
                         <outlet property="background" destination="k2s-9J-s20" id="t5w-cN-roJ"/>
                         <outlet property="check" destination="ONi-Cd-ve3" id="z4e-cg-0gS"/>
                         <outlet property="nextButton" destination="A0r-ZH-Okk" id="qwi-dd-cBm"/>
+                        <outlet property="resetButton" destination="ODS-Nl-0Qd" id="qZw-p0-Jb1"/>
                         <outlet property="targetEight" destination="zhs-WB-AB5" id="JGB-He-wmJ"/>
                         <outlet property="targetEighteen" destination="KWu-BK-3va" id="BFL-18-jii"/>
                         <outlet property="targetEleven" destination="MPz-4J-YIv" id="BVI-1u-8mH"/>
@@ -1996,9 +2012,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="gae-dW-9Rg" id="sAJ-3h-7lf"/>
                         <outlet property="background" destination="BDe-FY-ix2" id="HQV-C3-X89"/>
                         <outlet property="check" destination="w0E-IL-9zs" id="c6L-qc-nTK"/>
                         <outlet property="nextButton" destination="Jrg-E7-VK5" id="DS2-vb-mXa"/>
+                        <outlet property="resetButton" destination="i4e-Fs-j1f" id="JAK-tV-bOq"/>
                         <outlet property="targetEight" destination="wa0-lo-mG4" id="bnb-Ro-sCa"/>
                         <outlet property="targetEleven" destination="0dT-mb-n2W" id="ZFz-Qn-bxQ"/>
                         <outlet property="targetFifteen" destination="Wod-fc-AMo" id="kuI-bb-d3E"/>
@@ -2217,9 +2235,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="ytF-yO-3cI" id="djc-un-nPv"/>
                         <outlet property="background" destination="qjy-B9-i6U" id="EGO-K4-GVz"/>
                         <outlet property="check" destination="Pyf-pG-KJk" id="7Gs-E1-eQI"/>
                         <outlet property="nextButton" destination="7UU-85-R0R" id="wu1-pd-tbu"/>
+                        <outlet property="resetButton" destination="ijb-r2-9B9" id="GVL-TF-EhC"/>
                         <outlet property="targetEight" destination="fIG-m1-LJ7" id="EM6-XI-wgp"/>
                         <outlet property="targetEighteen" destination="zPC-hC-LB0" id="eNX-6h-R0z"/>
                         <outlet property="targetEleven" destination="rD3-jg-D90" id="96s-3r-G4w"/>
@@ -2404,9 +2424,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="xK7-q0-mYg" id="dIg-G4-RNp"/>
                         <outlet property="background" destination="WvD-H0-vf1" id="1n0-mE-eo3"/>
                         <outlet property="check" destination="aLo-Hy-dl3" id="hBG-6D-L6C"/>
                         <outlet property="nextButton" destination="mCI-yu-EG5" id="Xbo-S2-JNO"/>
+                        <outlet property="resetButton" destination="MIe-pf-kUW" id="5CN-TL-Sbg"/>
                         <outlet property="targetEight" destination="woA-eo-ImA" id="Z4r-4j-FbA"/>
                         <outlet property="targetEighteen" destination="SBq-lc-nm1" id="4pY-cL-f9Z"/>
                         <outlet property="targetEleven" destination="fbD-C0-4oE" id="ldj-5V-2dM"/>
@@ -2579,9 +2601,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="fEf-HV-8kM" id="Dth-uy-m1b"/>
                         <outlet property="background" destination="fjS-Jq-G30" id="I0N-3b-APk"/>
                         <outlet property="check" destination="v8Q-5G-iHI" id="jhi-OF-Je4"/>
                         <outlet property="nextButton" destination="CiE-EC-t7G" id="taU-A7-zGa"/>
+                        <outlet property="resetButton" destination="AQY-h1-I9Y" id="CiD-gk-yjW"/>
                         <outlet property="targetEight" destination="rQ2-we-kZV" id="7rK-iU-ZM1"/>
                         <outlet property="targetEleven" destination="MJ3-JY-LEK" id="99C-O0-UJ2"/>
                         <outlet property="targetFifteen" destination="IpZ-a8-pV8" id="sko-ok-XYE"/>
@@ -2779,10 +2803,12 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="kOV-n8-ylP" id="WGn-t2-LPZ"/>
                         <outlet property="background" destination="TEi-ko-5ie" id="vJg-PA-nqx"/>
                         <outlet property="check" destination="TR1-ow-3jO" id="3eK-x7-aj8"/>
                         <outlet property="next" destination="QIA-5W-wI9" id="G6j-ZV-qou"/>
                         <outlet property="nextButton" destination="QIA-5W-wI9" id="bsI-p8-Gez"/>
+                        <outlet property="resetButton" destination="8SW-D4-dXi" id="CxX-d2-vRT"/>
                         <outlet property="targetEight" destination="uUp-b0-bUJ" id="zwS-4h-kfi"/>
                         <outlet property="targetEighteen" destination="FJd-Q8-4vU" id="YIa-4h-QTP"/>
                         <outlet property="targetEleven" destination="qsp-HS-KbF" id="fD0-hs-qdw"/>
@@ -3552,9 +3578,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="LmQ-fd-AHa" id="kEt-Pi-Fia"/>
                         <outlet property="background" destination="yPD-Kz-nK5" id="dS0-Ls-SgV"/>
                         <outlet property="check" destination="2aE-P1-I9Y" id="ax2-wQ-JfM"/>
                         <outlet property="nextButton" destination="efh-bs-pGA" id="QJf-sn-mYr"/>
+                        <outlet property="resetButton" destination="6CT-0q-ymg" id="ASL-AT-48y"/>
                         <outlet property="targetEight" destination="VYV-wi-ECb" id="Li2-ah-P1Z"/>
                         <outlet property="targetEighteen" destination="Gs2-Qd-VWr" id="hET-C9-Vu9"/>
                         <outlet property="targetEleven" destination="Ot8-Sm-aRy" id="NHT-yg-qZy"/>
@@ -3758,9 +3786,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="sh8-UJ-UcE" id="xF6-b2-rPf"/>
                         <outlet property="background" destination="SCA-ml-ZRa" id="0SN-xe-PNI"/>
                         <outlet property="check" destination="1xC-Ht-8Sp" id="EBc-E7-hSK"/>
                         <outlet property="nextButton" destination="BPs-qf-sVi" id="dvW-52-hkG"/>
+                        <outlet property="resetButton" destination="QbE-aH-53f" id="s9T-qa-7n4"/>
                         <outlet property="targetEight" destination="FZ5-Cc-hg8" id="jHD-WV-hQg"/>
                         <outlet property="targetEighteen" destination="FMl-eP-XZS" id="7Vv-T0-ZS8"/>
                         <outlet property="targetEleven" destination="R7c-Aa-cTB" id="Q0v-40-WI6"/>
@@ -3976,9 +4006,11 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="g2o-Ub-zWh" id="shq-GI-PKE"/>
                         <outlet property="background" destination="URG-nj-daQ" id="1VG-jm-rce"/>
                         <outlet property="check" destination="Qgk-k1-NjC" id="3ZQ-ur-9w4"/>
                         <outlet property="nextButton" destination="ALR-vx-s4G" id="WGu-t1-uzD"/>
+                        <outlet property="resetButton" destination="9yM-eJ-pEW" id="sBr-3D-CaV"/>
                         <outlet property="targetEight" destination="MjM-Yo-DbE" id="HTb-wp-ksH"/>
                         <outlet property="targetEighteen" destination="EUQ-2Q-Qxv" id="aVU-YZ-cNt"/>
                         <outlet property="targetEleven" destination="qz0-Fy-FYi" id="d8Y-ot-I3r"/>

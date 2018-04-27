@@ -37,6 +37,11 @@ class TakeAwayViewController: LevelViewController {
     
     @IBOutlet var background: UIView!
     
+    @IBOutlet weak var backButton: UIButton!
+    
+    @IBOutlet weak var resetButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -125,6 +130,10 @@ class TakeAwayViewController: LevelViewController {
             check.isEnabled = false;
             nextButton.isEnabled = false;
             
+            check.isEnabled = false
+            nextButton.isEnabled = false
+            backButton.isEnabled = false
+            resetButton.isEnabled = false
         }
         else {
             print("not filled")
@@ -154,6 +163,13 @@ class TakeAwayViewController: LevelViewController {
         
         nextButton.isHidden = true;
         check.isHidden = false;
+        
+        
+        
+        check.isEnabled = true
+        nextButton.isEnabled = true
+        backButton.isEnabled = true
+        resetButton.isEnabled = true
     }
     
     override func didReceiveMemoryWarning() {
