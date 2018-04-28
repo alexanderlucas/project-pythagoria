@@ -470,7 +470,14 @@ class LevelSelectorViewController: UIViewController {
             destinationVC!.played = true;
         }
         
-        destinationVC!.level = level;
+        let defaults = UserDefaults.standard
+        if let levelNum = defaults.string(forKey: defaultsKeys.level) {
+            destinationVC!.level = Int(levelNum)!
+        }else{
+            destinationVC!.level = 0
+        }
+        
+        //destinationVC!.level = level;
         destinationVC!.currLevel = lvl
 
 //        if let destinationVC = segue.destinationViewController as? AddLevelViewController

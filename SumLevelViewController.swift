@@ -144,7 +144,7 @@ class SumLevelViewController: LevelViewController {
                 print(level)
                 saveLevel(level)
                 
-                currLevel += 1
+                //currLevel += 1
                 
                 super.cv = CheckView.init(frame: CGRect(x: 50, y: 50, width: 500, height: 500), correct: true, parent: self)
                 

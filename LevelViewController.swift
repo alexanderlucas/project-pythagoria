@@ -174,6 +174,11 @@ class LevelViewController: UIViewController {
     }
     
     func saveLevel(_ lvl:Int) {
+        
+        let defaults = UserDefaults.standard
+        defaults.set(String(lvl), forKey: defaultsKeys.level)
+        
+    }
 //        iCloudKeyStore?.setDouble(Double(lvl), forKey: "level")
 //        
 //        print(iCloudKeyStore?.doubleForKey("level"))
@@ -213,7 +218,7 @@ class LevelViewController: UIViewController {
     
         
 
-    }
+    
     
     /*
     func checkSolutions(lvl:Int) {

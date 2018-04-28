@@ -86,7 +86,12 @@ class AddLevelViewController: LevelViewController {
         
         nextButton.isHidden = true;
         
-        
+        //let defaults = UserDefaults.standard
+        //if let levelNum = defaults.string(forKey: defaultsKeys.level) {
+            //level = Int(levelNum)!
+        //}else{
+            //level = 0
+        //}
     }
     
     override func didReceiveMemoryWarning() {
@@ -130,22 +135,20 @@ class AddLevelViewController: LevelViewController {
                 check.isHidden = true;
                 if(!played){
                     level += 1
-                    played = true
                 }
                 print(level)
                 saveLevel(level)
 
-                currLevel += 1
                 
-                let defaults = UserDefaults.standard
-                defaults.set(String(level), forKey: defaultsKeys.level)
+                
+                
                 
                 super.cv = CheckView.init(frame: CGRect(x: 50, y: 50, width: 500, height: 500), correct: true, parent: self)
 
                 
-                if(currLevel<20){
-                    nextButton.isHidden = false;
-                }
+                //if(currLevel<20){
+                    //nextButton.isHidden = false;
+                //}
             }
             else {
                 print("incorrect")

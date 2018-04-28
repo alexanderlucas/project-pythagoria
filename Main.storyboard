@@ -3305,6 +3305,9 @@
                                 <rect key="frame" x="281" y="55" width="63" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Set Level"/>
+                                <connections>
+                                    <action selector="setLevelPressed:" destination="2Xe-7i-auT" eventType="touchUpInside" id="CuX-Mm-DvY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Npx-Wr-5tM">
                                 <rect key="frame" x="267" y="519" width="66" height="30"/>

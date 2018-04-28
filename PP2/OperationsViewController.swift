@@ -422,7 +422,12 @@ class OperationsViewController: UIViewController {
         
         }
 
+    @IBAction func setLevelPressed(_ sender: Any) {
+        
+        let defaults = UserDefaults.standard
+        defaults.set(levelSetter.text, forKey: defaultsKeys.level)
     }
+}
     
 
 
