@@ -255,7 +255,6 @@
                                 <state key="normal" title="Bring Back"/>
                                 <connections>
                                     <action selector="bringBackPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M9k-Y4-r89"/>
-                                    <action selector="checkButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="ggt-xV-xTW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1455,8 +1454,7 @@
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <action selector="backButtonPressed:" destination="mMh-g4-4rK" eventType="touchUpInside" id="RD9-kP-nmF"/>
-                                    <action selector="backButtonPressed:" destination="1Xh-NK-hXR" eventType="touchUpInside" id="VZM-B7-YYp"/>
+                                    <action selector="backButtonPressedWithSender:" destination="mMh-g4-4rK" eventType="touchUpInside" id="XIf-dR-v1O"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fic-hl-Iby">
@@ -1466,7 +1464,6 @@
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="mMh-g4-4rK" eventType="touchUpInside" id="vtM-Nq-1Yf"/>
-                                    <action selector="nextButtonPressed:" destination="1Xh-NK-hXR" eventType="touchUpInside" id="yBz-Ye-lj3"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cPM-5u-p9C" customClass="TargetView" customModule="PP2" customModuleProvider="target">
@@ -1591,8 +1588,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                 <state key="normal" title="Bring Back"/>
                                 <connections>
-                                    <action selector="bringBackButtonPressed:" destination="1Xh-NK-hXR" eventType="touchUpInside" id="ZaT-NZ-Mcn"/>
-                                    <action selector="bringBackButtonPressed:" destination="mMh-g4-4rK" eventType="touchUpInside" id="fn7-Xs-0TX"/>
+                                    <action selector="bringBackButtonPressedWithSender:" destination="mMh-g4-4rK" eventType="touchUpInside" id="EjM-s6-mzw"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y03-Bf-7XB" customClass="TargetView" customModule="PP2" customModuleProvider="target">
@@ -1642,7 +1638,6 @@
                         <outlet property="backButton" destination="FFB-uc-nMy" id="dsf-7m-ZEC"/>
                         <outlet property="background" destination="EAr-4O-FRm" id="BmU-aT-yop"/>
                         <outlet property="check" destination="Zgy-g5-AbT" id="wTg-NR-6Em"/>
-                        <outlet property="next" destination="fic-hl-Iby" id="WPN-b5-y9K"/>
                         <outlet property="nextButton" destination="fic-hl-Iby" id="CJr-Xf-mzJ"/>
                         <outlet property="resetButton" destination="fEm-08-EZ5" id="v0a-7l-u1G"/>
                         <outlet property="targetEight" destination="wG9-NF-dD7" id="qeq-82-W5F"/>

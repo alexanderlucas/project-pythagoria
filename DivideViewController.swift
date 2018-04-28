@@ -158,10 +158,13 @@ class DivideViewController: LevelViewController {
     @IBAction func bringBackButtonPressed(sender: AnyObject) {
         for i in 0..<numbers.count {
             numbers[i].center = numbers[i].origLocation;
-            targets[i].occupied = false;
-            targets[i].currentNum = nil
             numbers[i].currentTarget = nil
             numbers[i].inTarget = false
+        }
+        
+        for i in 0..<targets.count {
+            targets[i].occupied = false;
+            targets[i].currentNum = nil
         }
     }
     @IBAction func backButtonPressed(sender: AnyObject) {
