@@ -92,7 +92,16 @@ class LevelSelectorViewController: UIViewController {
             level.isEnabled = true;
         }
         //var lev = student.currentLevel
-        var lev = currentLevel
+        let defaults = UserDefaults.standard
+        
+        var lev = 0;
+        
+        if let levelNum = defaults.string(forKey: defaultsKeys.level) {
+            
+            lev = Int(levelNum)!
+        }
+        
+        //var lev = currentLevel
         print(lev)
         
         //var lev = 0

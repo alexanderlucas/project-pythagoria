@@ -130,11 +130,15 @@ class AddLevelViewController: LevelViewController {
                 check.isHidden = true;
                 if(!played){
                     level += 1
+                    played = true
                 }
                 print(level)
                 saveLevel(level)
 
                 currLevel += 1
+                
+                let defaults = UserDefaults.standard
+                defaults.set(String(level), forKey: defaultsKeys.level)
                 
                 super.cv = CheckView.init(frame: CGRect(x: 50, y: 50, width: 500, height: 500), correct: true, parent: self)
 

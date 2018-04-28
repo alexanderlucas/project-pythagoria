@@ -9,6 +9,10 @@
 import UIKit
 import CloudKit
 
+struct defaultsKeys {
+    static let level = "0"
+}
+
 class LevelViewController: UIViewController {
     var numbers = [NumberView]()
     var targets = [TargetView]()

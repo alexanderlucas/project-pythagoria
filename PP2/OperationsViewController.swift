@@ -199,6 +199,14 @@ class OperationsViewController: UIViewController {
             print("get data from sudefaults")
             //level = 1000
             level = 0
+            
+            let defaults = UserDefaults.standard
+            if let levelNum = defaults.string(forKey: defaultsKeys.level) {
+                level = Int(levelNum)
+            }else{
+                level = 0
+            }
+            
             self.activityIndicator.stopAnimating()
 
         }
