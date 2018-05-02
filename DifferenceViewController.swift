@@ -50,6 +50,8 @@ class DifferenceViewController: LevelViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "minus_bg.png")!)
+
         
         answers = DifferenceNums()
         
@@ -92,13 +94,13 @@ class DifferenceViewController: LevelViewController {
         for i in 0..<targets.count {
             let number = (answers as! DifferenceNums).numbers[currLevel][i]
             if(number == -1){
-                targets[i].text = ""
+                targets[i].number.text = ""
                 targets[i].backgroundColor = UIColor.black
                 targets[i].isEnabled = false
             }
             else {
                 targets[i].backgroundColor = UIColor.green
-                targets[i].text = String(number)
+                targets[i].number.text = String(number)
                 targets[i].isEnabled = true
             }
         }

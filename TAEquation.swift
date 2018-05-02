@@ -40,7 +40,7 @@ class TAEquation: NSObject {
             return tv.currentNum.value
         }
         else {
-            return Int(tv.text!)!
+            return Int(tv.number.text!)!
         }
     }
 }

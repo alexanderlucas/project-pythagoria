@@ -32,12 +32,82 @@ class LevelSelectorViewController: UIViewController {
     @IBOutlet weak var levelEighteen: UIButton!
     @IBOutlet weak var levelNineteen: UIButton!
     @IBOutlet weak var levelTwenty: UIButton!
-    
+    @IBOutlet weak var levelTwentyOne: UIButton!
+    @IBOutlet weak var levelTwentyTwo: UIButton!
+    @IBOutlet weak var levelTwentyThree: UIButton!
+    @IBOutlet weak var levelTwentyFour: UIButton!
+    @IBOutlet weak var levelTwentyFive: UIButton!
+    @IBOutlet weak var levelTwentySix: UIButton!
+    @IBOutlet weak var levelTwentySeven: UIButton!
+    @IBOutlet weak var levelTwentyEight: UIButton!
+    @IBOutlet weak var levelTwentyNine: UIButton!
+    @IBOutlet weak var levelThirty: UIButton!
+    @IBOutlet weak var levelThirtyOne: UIButton!
+    @IBOutlet weak var levelThirtyTwo: UIButton!
+    @IBOutlet weak var levelThirtyThree: UIButton!
+    @IBOutlet weak var levelThirtyFour: UIButton!
+    @IBOutlet weak var levelThirtyFive: UIButton!
+    @IBOutlet weak var levelThirtySix: UIButton!
+    @IBOutlet weak var levelThirtySeven: UIButton!
+    @IBOutlet weak var levelThirtyEight: UIButton!
+    @IBOutlet weak var levelThirtyNine: UIButton!
+    @IBOutlet weak var levelForty: UIButton!
+    @IBOutlet weak var levelFortyOne: UIButton!
+    @IBOutlet weak var levelFortyTwo: UIButton!
+    @IBOutlet weak var levelFortyThree: UIButton!
+    @IBOutlet weak var levelFortyFour: UIButton!
+    @IBOutlet weak var levelFortyFive: UIButton!
+    @IBOutlet weak var levelFortySix: UIButton!
+    @IBOutlet weak var levelFortySeven: UIButton!
+    @IBOutlet weak var levelFortyEight: UIButton!
+    @IBOutlet weak var levelFortyNine: UIButton!
+    @IBOutlet weak var levelFifty: UIButton!
+    @IBOutlet weak var levelFiftyOne: UIButton!
+    @IBOutlet weak var levelFiftyTwo: UIButton!
+    @IBOutlet weak var levelFiftyThree: UIButton!
+    @IBOutlet weak var levelFiftyFour: UIButton!
+    @IBOutlet weak var levelFiftyFive: UIButton!
+    @IBOutlet weak var levelFiftySix: UIButton!
+    @IBOutlet weak var levelFiftySeven: UIButton!
+    @IBOutlet weak var levelFiftyEight: UIButton!
+    @IBOutlet weak var levelFiftyNine: UIButton!
+    @IBOutlet weak var levelSixty: UIButton!
+    @IBOutlet weak var levelSixtyOne: UIButton!
+    @IBOutlet weak var levelSixtyTwo: UIButton!
+    @IBOutlet weak var levelSixtyThree: UIButton!
+    @IBOutlet weak var levelSixtyFour: UIButton!
+    @IBOutlet weak var levelSixtyFive: UIButton!
+    @IBOutlet weak var levelSixtySix: UIButton!
+    @IBOutlet weak var levelSixtySeven: UIButton!
+    @IBOutlet weak var levelSixtyEight: UIButton!
+    @IBOutlet weak var levelSixtyNine: UIButton!
+    @IBOutlet weak var levelSeventy: UIButton!
+    @IBOutlet weak var levelSeventyOne: UIButton!
+    @IBOutlet weak var levelSeventyTwo: UIButton!
+    @IBOutlet weak var levelSeventyThree: UIButton!
+    @IBOutlet weak var levelSeventyFour: UIButton!
+    @IBOutlet weak var levelSeventyFive: UIButton!
+    @IBOutlet weak var levelSeventySix: UIButton!
+    @IBOutlet weak var levelSeventySeven: UIButton!
+    @IBOutlet weak var levelSeventyEight: UIButton!
+    @IBOutlet weak var levelSeventyNine: UIButton!
+    @IBOutlet weak var levelEighty: UIButton!
+
+    @IBOutlet weak var level1View: UIView!
+    @IBOutlet weak var level2View: UIView!
+    @IBOutlet weak var level3View: UIView!
+    @IBOutlet weak var level4View: UIView!
     var levels:[UIButton] = [];
     
     var currentLevel = 0
    
     //var student:Student!;
+    
+    let adds = ["showAddPuzzle", "showSumPuzzle", "showCarryPuzzle", "showPlusPuzzle"]
+    let subs = ["showSubtractPuzzle", "showDifferencePuzzle", "showTakeAwayPuzzle", "showBorrowPuzzle"]
+    let mult = ["showMultiPuzzle", "showProductPuzzle", "showTimesPuzzle", "showCationPuzzle"]
+    let div = ["showDividePuzzle", "showRemainderPuzzle", "showEquivalentPuzzle", "showComparingPuzzle"]
+
     
     var puzzle:String = "";
     
@@ -73,6 +143,67 @@ class LevelSelectorViewController: UIViewController {
         levels.append(levelEighteen)
         levels.append(levelNineteen)
         levels.append(levelTwenty)
+        levels.append(levelTwentyOne)
+        levels.append(levelTwentyTwo)
+        levels.append(levelTwentyThree)
+        levels.append(levelTwentyFour)
+        levels.append(levelTwentyFive)
+        levels.append(levelTwentySix)
+        levels.append(levelTwentySeven)
+        levels.append(levelTwentyEight)
+        levels.append(levelTwentyNine)
+        levels.append(levelThirty)
+        levels.append(levelThirtyOne)
+        levels.append(levelThirtyTwo)
+        levels.append(levelThirtyThree)
+        levels.append(levelThirtyFour)
+        levels.append(levelThirtyFive)
+        levels.append(levelThirtySix)
+        levels.append(levelThirtySeven)
+        levels.append(levelThirtyEight)
+        levels.append(levelThirtyNine)
+        levels.append(levelForty)
+        levels.append(levelFortyOne)
+        levels.append(levelFortyTwo)
+        levels.append(levelFortyThree)
+        levels.append(levelFortyFour)
+        levels.append(levelFortyFive)
+        levels.append(levelFortySix)
+        levels.append(levelFortySeven)
+        levels.append(levelFortyEight)
+        levels.append(levelFortyNine)
+        levels.append(levelFifty)
+        levels.append(levelFiftyOne)
+        levels.append(levelFiftyTwo)
+        levels.append(levelFiftyThree)
+        levels.append(levelFiftyFour)
+        levels.append(levelFiftyFive)
+        levels.append(levelFiftySix)
+        levels.append(levelFiftySeven)
+        levels.append(levelFiftyEight)
+        levels.append(levelFiftyNine)
+        levels.append(levelSixty)
+        levels.append(levelSixtyOne)
+        levels.append(levelSixtyTwo)
+        levels.append(levelSixtyThree)
+        levels.append(levelSixtyFour)
+        levels.append(levelSixtyFive)
+        levels.append(levelSixtySix)
+        levels.append(levelSixtySeven)
+        levels.append(levelSixtyEight)
+        levels.append(levelSixtyNine)
+        levels.append(levelSeventy)
+        levels.append(levelSeventyOne)
+        levels.append(levelSeventyTwo)
+        levels.append(levelSeventyThree)
+        levels.append(levelSeventyFour)
+        levels.append(levelSeventyFive)
+        levels.append(levelSeventySix)
+        levels.append(levelSeventySeven)
+        levels.append(levelSeventyEight)
+        levels.append(levelSeventyNine)
+        levels.append(levelEighty)
+
         //currentLevel = 1000
         //currentLevel = 0;
         
@@ -81,6 +212,8 @@ class LevelSelectorViewController: UIViewController {
     
     func disableLevelsFrom(_ index:Int){
         for i in index ..< levels.count {
+            levels[i].alpha = 0.5
+            levels[i].tintColor = .white
             levels[i].isEnabled = false;
         }
     }
@@ -89,6 +222,8 @@ class LevelSelectorViewController: UIViewController {
         //for var i=0; i<20; i+=1
         
         for level in levels{
+            level.alpha = 1
+
             level.isEnabled = true;
         }
         //var lev = student.currentLevel
@@ -105,237 +240,281 @@ class LevelSelectorViewController: UIViewController {
         print(lev)
         
         //var lev = 0
-
-        if(puzzle == "Add"){
-            if(lev >= 20){
-                lev = 20
+        switch puzzle {
+        case "add":
+            if(lev >= 80){
+                lev = 80
             }
             else {
-                disableLevelsFrom(lev+1);
+                disableLevelsFrom(lev + 1)
             }
-
-            //for var i = lev-1; i>=0; i-=1
-
-        }
-        else if(puzzle == "Sum"){
-            if(lev < 20){
-                disableLevelsFrom(0);
-                return;
-            }
-            else if(lev >= 40){
-                lev = 20;
-            } else {
-                lev = lev%20;
-                disableLevelsFrom(lev+1);
-            }
-
-        }
-        else if(puzzle == "Take Away"){
-            if(lev < 40){
-                disableLevelsFrom(0)
-                return;
-            }
-            else if(lev >= 60){
-                lev = 20;
-            }
-            else {
-                lev = lev%20;
-                disableLevelsFrom(lev+1);
-            }
-
-     
-        }
-        else if(puzzle == "Subtract"){
-            if(lev < 60){
-                disableLevelsFrom(0)
-                return;
-            }
-            else if(lev >= 80){
-                lev = 20;
-            }
-            else {
-                lev = lev%20;
-                disableLevelsFrom(lev+1);
-            }
-            
-  
-        }
-        else if(puzzle == "Borrow"){
+        case "subtract":
             if(lev < 80){
                 disableLevelsFrom(0)
-                return;
-            }
-            else if(lev >= 100){
-                lev = 20;
-            }
-            else {
-                lev = lev%20;
-                disableLevelsFrom(lev+1);
-            }
-            
-  
-        }
-        else if(puzzle == "Difference"){
-            if(lev < 100){
-                disableLevelsFrom(0)
-                return;
-            }
-            else if(lev >= 120){
-                lev = 20;
+                return
+            }else if (lev >= 160){
+                lev = 160
             }
             else {
-                lev = lev%20;
-                disableLevelsFrom(lev+1);
+                lev = lev % 80
+                disableLevelsFrom(lev+1)
             }
-            
-  
-        }
-        else if(puzzle == "Carry"){
-            if(lev < 120){
-                disableLevelsFrom(0)
-                return;
-            }
-            else if(lev >= 140){
-                lev = 20;
-            }
-            else {
-                lev = lev%20;
-                disableLevelsFrom(lev+1);
-            }
-            
-
-        }
-        else if(puzzle == "Multi"){
-            if(lev < 140){
-                disableLevelsFrom(0)
-                return;
-            }
-            else if(lev >= 160){
-                lev = 20;
-            }
-            else {
-                lev = lev%20;
-                disableLevelsFrom(lev+1);
-            }
-            
-        }
-        else if(puzzle == "Plus"){
+        case "multiply":
             if(lev < 160){
                 disableLevelsFrom(0)
-                return;
-            }
-            else if(lev >= 180){
-                lev = 20;
+                return
+            }else if (lev >= 240){
+                lev = 240
             }
             else {
-                lev = lev%20;
-                disableLevelsFrom(lev+1);
+                lev = lev % 80
+                disableLevelsFrom(lev+1)
             }
-            
-        }
-        else if(puzzle == "Product"){
-            if(lev < 160){
+        case "divide":
+            if(lev < 240){
                 disableLevelsFrom(0)
-                return;
-            }
-            else if(lev >= 180){
-                lev = 20;
-            }
-            else {
-                lev = lev%20;
-                disableLevelsFrom(lev+1);
-            }
-            
-        }
-        else if(puzzle == "Times"){
-            if(lev < 160){
-                disableLevelsFrom(0)
-                return;
-            }
-            else if(lev >= 180){
-                lev = 20;
+                return
+            }else if (lev >= 320){
+                lev = 320
             }
             else {
-                lev = lev%20;
-                disableLevelsFrom(lev+1);
+                lev = lev % 80
+                disableLevelsFrom(lev+1)
             }
-            
+        default:
+            return
         }
-        else if(puzzle == "Cation"){
-            if(lev < 160){
-                disableLevelsFrom(0)
-                return;
-            }
-            else if(lev >= 180){
-                lev = 20;
-            }
-            else {
-                lev = lev%20;
-                disableLevelsFrom(lev+1);
-            }
-            
-        }
-        else if(puzzle == "Divide"){
-            if(lev < 160){
-                disableLevelsFrom(0)
-                return;
-            }
-            else if(lev >= 180){
-                lev = 20;
-            }
-            else {
-                lev = lev%20;
-                disableLevelsFrom(lev+1);
-            }
-            
-        }
-        else if(puzzle == "Remainder"){
-            if(lev < 160){
-                disableLevelsFrom(0)
-                return;
-            }
-            else if(lev >= 180){
-                lev = 20;
-            }
-            else {
-                lev = lev%20;
-                disableLevelsFrom(lev+1);
-            }
-            
-        }
-        else if(puzzle == "Equivalent"){
-            if(lev < 160){
-                disableLevelsFrom(0)
-                return;
-            }
-            else if(lev >= 180){
-                lev = 20;
-            }
-            else {
-                lev = lev%20;
-                disableLevelsFrom(lev+1);
-            }
-            
-        }
-        else if(puzzle == "Comparing"){
-            if(lev < 160){
-                disableLevelsFrom(0)
-                return;
-            }
-            else if(lev >= 180){
-                lev = 20;
-            }
-            else {
-                lev = lev%20;
-                disableLevelsFrom(lev+1);
-            }
-            
-        }
-
+//        if(puzzle == "Add"){
+//            if(lev >= 20){
+//                lev = 20
+//            }
+//            else {
+//                disableLevelsFrom(lev+1);
+//            }
+//
+//            //for var i = lev-1; i>=0; i-=1
+//
+//        }
+//        else if(puzzle == "Sum"){
+//            if(lev < 20){
+//                disableLevelsFrom(0);
+//                return;
+//            }
+//            else if(lev >= 40){
+//                lev = 20;
+//            } else {
+//                lev = lev%20;
+//                disableLevelsFrom(lev+1);
+//            }
+//
+//        }
+//        else if(puzzle == "Take Away"){
+//            if(lev < 40){
+//                disableLevelsFrom(0)
+//                return;
+//            }
+//            else if(lev >= 60){
+//                lev = 20;
+//            }
+//            else {
+//                lev = lev%20;
+//                disableLevelsFrom(lev+1);
+//            }
+//
+//
+//        }
+//        else if(puzzle == "Subtract"){
+//            if(lev < 60){
+//                disableLevelsFrom(0)
+//                return;
+//            }
+//            else if(lev >= 80){
+//                lev = 20;
+//            }
+//            else {
+//                lev = lev%20;
+//                disableLevelsFrom(lev+1);
+//            }
+//
+//
+//        }
+//        else if(puzzle == "Borrow"){
+//            if(lev < 80){
+//                disableLevelsFrom(0)
+//                return;
+//            }
+//            else if(lev >= 100){
+//                lev = 20;
+//            }
+//            else {
+//                lev = lev%20;
+//                disableLevelsFrom(lev+1);
+//            }
+//
+//
+//        }
+//        else if(puzzle == "Difference"){
+//            if(lev < 100){
+//                disableLevelsFrom(0)
+//                return;
+//            }
+//            else if(lev >= 120){
+//                lev = 20;
+//            }
+//            else {
+//                lev = lev%20;
+//                disableLevelsFrom(lev+1);
+//            }
+//
+//
+//        }
+//        else if(puzzle == "Carry"){
+//            if(lev < 120){
+//                disableLevelsFrom(0)
+//                return;
+//            }
+//            else if(lev >= 140){
+//                lev = 20;
+//            }
+//            else {
+//                lev = lev%20;
+//                disableLevelsFrom(lev+1);
+//            }
+//
+//
+//        }
+//        else if(puzzle == "Multi"){
+//            if(lev < 140){
+//                disableLevelsFrom(0)
+//                return;
+//            }
+//            else if(lev >= 160){
+//                lev = 20;
+//            }
+//            else {
+//                lev = lev%20;
+//                disableLevelsFrom(lev+1);
+//            }
+//
+//        }
+//        else if(puzzle == "Plus"){
+//            if(lev < 160){
+//                disableLevelsFrom(0)
+//                return;
+//            }
+//            else if(lev >= 180){
+//                lev = 20;
+//            }
+//            else {
+//                lev = lev%20;
+//                disableLevelsFrom(lev+1);
+//            }
+//
+//        }
+//        else if(puzzle == "Product"){
+//            if(lev < 160){
+//                disableLevelsFrom(0)
+//                return;
+//            }
+//            else if(lev >= 180){
+//                lev = 20;
+//            }
+//            else {
+//                lev = lev%20;
+//                disableLevelsFrom(lev+1);
+//            }
+//
+//        }
+//        else if(puzzle == "Times"){
+//            if(lev < 160){
+//                disableLevelsFrom(0)
+//                return;
+//            }
+//            else if(lev >= 180){
+//                lev = 20;
+//            }
+//            else {
+//                lev = lev%20;
+//                disableLevelsFrom(lev+1);
+//            }
+//
+//        }
+//        else if(puzzle == "Cation"){
+//            if(lev < 160){
+//                disableLevelsFrom(0)
+//                return;
+//            }
+//            else if(lev >= 180){
+//                lev = 20;
+//            }
+//            else {
+//                lev = lev%20;
+//                disableLevelsFrom(lev+1);
+//            }
+//
+//        }
+//        else if(puzzle == "Divide"){
+//            if(lev < 160){
+//                disableLevelsFrom(0)
+//                return;
+//            }
+//            else if(lev >= 180){
+//                lev = 20;
+//            }
+//            else {
+//                lev = lev%20;
+//                disableLevelsFrom(lev+1);
+//            }
+//
+//        }
+//        else if(puzzle == "Remainder"){
+//            if(lev < 160){
+//                disableLevelsFrom(0)
+//                return;
+//            }
+//            else if(lev >= 180){
+//                lev = 20;
+//            }
+//            else {
+//                lev = lev%20;
+//                disableLevelsFrom(lev+1);
+//            }
+//
+//        }
+//        else if(puzzle == "Equivalent"){
+//            if(lev < 160){
+//                disableLevelsFrom(0)
+//                return;
+//            }
+//            else if(lev >= 180){
+//                lev = 20;
+//            }
+//            else {
+//                lev = lev%20;
+//                disableLevelsFrom(lev+1);
+//            }
+//
+//        }
+//        else if(puzzle == "Comparing"){
+//            if(lev < 160){
+//                disableLevelsFrom(0)
+//                return;
+//            }
+//            else if(lev >= 180){
+//                lev = 20;
+//            }
+//            else {
+//                lev = lev%20;
+//                disableLevelsFrom(lev+1);
+//            }
+//
+//        }
+//
         if (lev != 0){
             for i in 0...lev-1{
-                levels[i].tintColor = UIColor.red;
-            }
+                levels[i].setBackgroundImage(UIImage(named: "completed_level_bg"), for: .normal)
+                levels[i].tintColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        }
         }
         
     }
@@ -346,47 +525,42 @@ class LevelSelectorViewController: UIViewController {
     }
     
     @IBAction func buttonPressed(_ sender: UIButton) {
-        print(Int((sender.titleLabel?.text)!));
         var segue = "";
-        print("puzzle")
-        print(puzzle)
+        
+        
+
+        let superview = sender.superview?.superview
+        
+        print(superview)
+        var index = -1
+        switch superview {
+        case level1View:
+            index = 0;
+        case level2View:
+            index = 1
+        case level3View:
+            index = 2
+        case level4View:
+            index = 3
+        default:
+            index = -1
+        }
+        
+        print("puzzle", puzzle)
+        
         switch puzzle {
-        case "Add":
-            segue = "showAddPuzzle";
-        case "Sum":
-            segue = "showSumPuzzle";
-        case "Take Away":
-            segue = "showTakeAwayPuzzle";
-        case "Subtract":
-            segue = "showSubtractPuzzle";
-        case "Borrow":
-            segue = "showBorrowPuzzle";
-        case "Difference":
-            segue = "showDifferencePuzzle"
-        case "Carry":
-            segue = "showCarryPuzzle"
-        case "Multi":
-            segue = "showMultiPuzzle"
-        case "Plus":
-            segue = "showPlusPuzzle"
-        case "Product":
-            segue = "showProductPuzzle"
-        case "Times":
-            segue = "showTimesPuzzle"
-        case "Cation":
-            segue = "showCationPuzzle"
-        case "Divide":
-            segue = "showDividePuzzle"
-        case "Remainder":
-            segue = "showRemainderPuzzle"
-        case "Equivalent":
-            segue = "showEquivalentPuzzle"
-        case "Comparing":
-            segue = "showComparingPuzzle"
+        case "add":
+            segue = adds[index]
+        case "subtract":
+            segue = subs[index]
+        case "multiply":
+            segue = mult[index]
+        case "divide":
+            segue = div[index]
         default:
             segue = "error"
-            
         }
+
         print(puzzle)
         print(segue);
         self.performSegue(withIdentifier: segue, sender: sender);

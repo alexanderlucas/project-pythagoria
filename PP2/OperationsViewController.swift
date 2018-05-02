@@ -22,11 +22,6 @@ class OperationsViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var levelSetter: UITextField!
     
-    let adds = ["Add", "Sum", "Carry", "Plus"]
-    let subs = ["Take Away", "Subtract", "Borrow", "Difference"]
-    let mult = ["Multi", "Product", "Times", "Cation"]
-    let div = ["Divide", "Remainder", "Equivalent", "Comparing"]
-
     var level:Int!
     var locally:Bool = true
     var blurred = false
@@ -93,12 +88,12 @@ class OperationsViewController: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
-        addButton.layer.cornerRadius = 0.5 * addButton.bounds.size.height
-        print(multiplyButton.frame)
-        print("why")
-        subtractButton.layer.cornerRadius = 0.5 * subtractButton.bounds.size.height
-        multiplyButton.layer.cornerRadius = 0.5 * multiplyButton.bounds.size.height
-        divideButton.layer.cornerRadius = 0.5 * divideButton.bounds.size.height
+//        addButton.layer.cornerRadius = 0.5 * addButton.bounds.size.height
+//        print(multiplyButton.frame)
+//        print("why")
+//        subtractButton.layer.cornerRadius = 0.5 * subtractButton.bounds.size.height
+//        multiplyButton.layer.cornerRadius = 0.5 * multiplyButton.bounds.size.height
+//        divideButton.layer.cornerRadius = 0.5 * divideButton.bounds.size.height
 
     }
 
@@ -122,71 +117,84 @@ class OperationsViewController: UIViewController {
 
     }
 
-    @IBAction func buttonPressed(_ sender: AnyObject) {
-        //self.performSegueWithIdentifier("showPuzzles", sender: sender)
-
-        if(blurred){
-            //blurView.hidden = true
-            UIView.animate(withDuration: 0.5, animations: {
-                self.blurView.alpha = 0
-
-            })
-
-            hideCircles()
-           //r blurView.hidden = true
-            
-        }
-        else {
-            self.view.bringSubview(toFront: blurView)
-            
-            puzzle = (sender as! UIButton).titleLabel!.text!
-
-            blurView.alpha = 0
-            blurView.isHidden = false
-            UIView.animate(withDuration: 0.5, animations: {
-                self.blurView.alpha = 1
-            })
-            blurView.isUserInteractionEnabled = true
-//            let beginning = sender.center
-//            print(beginning)
-//            
-//            let cx = beginning.x
-//            let cy = beginning.y
-//            let a = CGFloat(110 * sqrt(3.0))
-//            
-//            let end1 = CGPointMake(cx + 220, cy)
-//            let end2 = CGPointMake(cx + a, cy + 110)
-//            let end3 = CGPointMake(cx + 110, cy + a)
-//            let end4 = CGPointMake(cx, cy + 220)
-//            drawLine(beginning, to: end1)
-//            drawLine(beginning, to: end2)
-//            drawLine(beginning, to: end3)
-//            drawLine(beginning, to: end4)
-            
-//            let centers = [end1,end2,end3,end4]
-//        
-//            
-//            for center in centers {
-//                let blah = UIView(frame: CGRect(x: center.x - 30, y: center.y - 30, width: 60, height: 60))
-//                blah.backgroundColor = UIColor.redColor()
-//                blah.layer.cornerRadius = 30
-//                
-//                self.view.addSubview(blah)
-//            }
-        //    let line = Line()
-            moveCirclesOut(sender as! UIButton)
-            self.view.bringSubview(toFront: sender as! UIView)
-
-       //     self.view.addSubview(line)
-         //   self.view.bringSubviewToFront(line)
-            
-            //blurView.line = true
-            blurView.setNeedsDisplay()
-            
-        }
+    @IBAction func buttonPressed(_ sender: UIButton) {
         
-    //    self.view.bringSubviewToFront(addButton)
-        blurred = !blurred
+        switch sender {
+        case addButton:
+            puzzle = "add"
+        case subtractButton:
+            puzzle = "subtract"
+        case multiplyButton:
+            puzzle = "multiply"
+        case divideButton:
+            puzzle = "divide"
+        default:
+            puzzle = ""
+        }
+        self.performSegue(withIdentifier: "showLevels", sender: sender)
+
+//        if(blurred){
+//            //blurView.hidden = true
+//            UIView.animate(withDuration: 0.5, animations: {
+//                self.blurView.alpha = 0
+//
+//            })
+//
+//            hideCircles()
+//           //r blurView.hidden = true
+//
+//        }
+//        else {
+//            self.view.bringSubview(toFront: blurView)
+//
+////            puzzle = (sender as! UIButton).titleLabel!.text!
+//
+//            blurView.alpha = 0
+//            blurView.isHidden = false
+//            UIView.animate(withDuration: 0.5, animations: {
+//                self.blurView.alpha = 1
+//            })
+//            blurView.isUserInteractionEnabled = true
+////            let beginning = sender.center
+////            print(beginning)
+////
+////            let cx = beginning.x
+////            let cy = beginning.y
+////            let a = CGFloat(110 * sqrt(3.0))
+////
+////            let end1 = CGPointMake(cx + 220, cy)
+////            let end2 = CGPointMake(cx + a, cy + 110)
+////            let end3 = CGPointMake(cx + 110, cy + a)
+////            let end4 = CGPointMake(cx, cy + 220)
+////            drawLine(beginning, to: end1)
+////            drawLine(beginning, to: end2)
+////            drawLine(beginning, to: end3)
+////            drawLine(beginning, to: end4)
+//
+////            let centers = [end1,end2,end3,end4]
+////
+////
+////            for center in centers {
+////                let blah = UIView(frame: CGRect(x: center.x - 30, y: center.y - 30, width: 60, height: 60))
+////                blah.backgroundColor = UIColor.redColor()
+////                blah.layer.cornerRadius = 30
+////
+////                self.view.addSubview(blah)
+////            }
+//        //    let line = Line()
+//            moveCirclesOut(sender as! UIButton)
+//            self.view.bringSubview(toFront: sender as! UIView)
+//
+//       //     self.view.addSubview(line)
+//         //   self.view.bringSubviewToFront(line)
+//
+//            //blurView.line = true
+//            blurView.setNeedsDisplay()
+//
+//        }
+//
+//    //    self.view.bringSubviewToFront(addButton)
+//        blurred = !blurred
     }
     
     
@@ -398,25 +406,33 @@ class OperationsViewController: UIViewController {
         if let destinationVC = segue.destination as? LevelSelectorViewController{
             //  print(student);
             //   destinationVC.student = student;
-            let number = Int(((sender as! UIButton).titleLabel?.text)!)
-            print(number!)
+//            let number = Int(((sender as! UIButton).titleLabel?.text)!)
             print(destinationVC)
             var game = ""
             switch puzzle {
-            case "+":
-                game = adds[number!-1]
-            case "–":
-                game = subs[number!-1]
-            case "×":
-                game = mult[number!-1]
-            case "÷":
-                game = div[number!-1]
+            case "add":
+//                game = adds[0]
+//                game = adds[number!-1]
+                destinationVC.view.backgroundColor = UIColor(patternImage: UIImage(named: "add_bg.png")!)
+
+            case "subtract":
+                destinationVC.view.backgroundColor = UIColor(patternImage: UIImage(named: "minus_bg.png")!)
+
+//                game = subs[0]
+            case "multiply":
+                destinationVC.view.backgroundColor = UIColor(patternImage: UIImage(named: "times_bg.png")!)
+
+//                game = mult[0]
+            case "divide":
+                destinationVC.view.backgroundColor = UIColor(patternImage: UIImage(named: "divide_bg.png")!)
+
+//                game = div[0]
             default:
                 game = ""
             }
             print(game)
             print(level)
-            destinationVC.puzzle = game;
+            destinationVC.puzzle = puzzle;
             destinationVC.currentLevel = level
         }
         

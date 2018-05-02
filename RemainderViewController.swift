@@ -43,6 +43,8 @@ class RemainderViewController: LevelViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "divide_bg.png")!)
+
         answers = RemainderNums()
         
         putNumbersOnScreen()
@@ -82,13 +84,13 @@ class RemainderViewController: LevelViewController {
         for i in 0..<targets.count {
             let number = (answers as! RemainderNums).numbers[currLevel][i]
             if(number == -1){
-                targets[i].text = ""
+                targets[i].number.text = ""
                 targets[i].backgroundColor = UIColor.black
                 targets[i].isEnabled = false
             }
             else {
                 targets[i].backgroundColor = UIColor.green
-                targets[i].text = String(number)
+                targets[i].number.text = String(number)
                 targets[i].isEnabled = true
             }
         }

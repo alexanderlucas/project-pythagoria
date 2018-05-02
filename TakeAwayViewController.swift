@@ -47,6 +47,9 @@ class TakeAwayViewController: LevelViewController {
 
         // Do any additional setup after loading the view.
         
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "minus_bg.png")!)
+
+        
         answers = TakeAwayNums()
         
         //put tiles 0-9 on screen
@@ -89,13 +92,13 @@ class TakeAwayViewController: LevelViewController {
         for i in 0..<targets.count {
             let number = (answers as! TakeAwayNums).numbers[currLevel][i]
             if(number == -1){
-                targets[i].text = ""
+                targets[i].number.text = ""
                 targets[i].backgroundColor = UIColor.black
                 targets[i].isEnabled = false
             }
             else {
                 targets[i].backgroundColor = UIColor.green
-                targets[i].text = String(number)
+                targets[i].number.text = String(number)
                 targets[i].isEnabled = true
             }
         }
@@ -192,7 +195,7 @@ class TakeAwayViewController: LevelViewController {
         for i in 0..<targets.count {
             targets[i].occupied = false;
             targets[i].currentNum = nil
-        }ers[i].inTarget = false
+        
         }
     }
 

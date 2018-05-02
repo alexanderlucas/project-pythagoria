@@ -41,6 +41,8 @@ class MultiViewController: LevelViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "times_bg.png")!)
+
         answers = MultiNums()
         
         putNumbersOnScreen()

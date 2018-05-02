@@ -50,6 +50,9 @@ class CarryViewController: LevelViewController {
 
         // Do any additional setup after loading the view.
         
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "add_bg.png")!)
+
+        
         answers = CarryNums()
         
         putNumbersOnScreen();
@@ -80,7 +83,10 @@ class CarryViewController: LevelViewController {
         targets.append(targetTwentyThree)
         
         map = CarryLevel.init(level: currLevel, arrayOfTargets: targets)
-        
+        for target in targets {
+            target.layer.contents = UIImage(named: "level_bg")?.cgImage
+        }
+
         updateLabels()
         nextButton.isHidden = true;
 
@@ -90,13 +96,11 @@ class CarryViewController: LevelViewController {
         for i in 0..<targets.count {
             let number = (answers as! CarryNums).numbers[currLevel][i]
             if(number == -1){
-                targets[i].text = ""
-                targets[i].backgroundColor = UIColor.black
+                targets[i].number.text = ""
                 targets[i].isEnabled = false
             }
             else {
-                targets[i].backgroundColor = UIColor.green
-                targets[i].text = String(number)
+                targets[i].number.text = String(number)
                 targets[i].isEnabled = true
             }
         }

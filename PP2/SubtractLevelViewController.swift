@@ -41,6 +41,8 @@ class SubtractLevelViewController: LevelViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "minus_bg.png")!)
+
         
         putNumbersOnScreen()
         

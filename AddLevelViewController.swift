@@ -47,6 +47,8 @@ class AddLevelViewController: LevelViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "add_bg.png")!)
+
                 
         answers = AddLevelSums();
         
@@ -77,6 +79,14 @@ class AddLevelViewController: LevelViewController {
         labels.append(labelFour)
         labels.append(labelFive)
         
+        for target in targets {
+            target.layer.contents = UIImage(named: "level_bg")?.cgImage
+        }
+        for label in labels {
+            label.superview?.layer.contents = UIImage(named: "level_bg")?.cgImage
+        }
+        print(labels[0].font.fontDescriptor)
+
 
         map = AddLevel.init(level: currLevel, arrayOfTargets: targets); //map
         

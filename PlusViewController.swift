@@ -41,6 +41,9 @@ class PlusViewController: LevelViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "add_bg.png")!)
+
+        
         answers = PlusNums()
 
         putNumbersOnScreen();
@@ -67,6 +70,9 @@ class PlusViewController: LevelViewController {
         targets.append(targetNineteen)
         
         map = PlusLevel.init(level: currLevel, arrayOfTargets: targets)
+        for target in targets {
+            target.layer.contents = UIImage(named: "level_bg")?.cgImage
+        }
 
         updateLabels()
 
@@ -79,13 +85,11 @@ class PlusViewController: LevelViewController {
         for i in 0..<targets.count {
             let number = (answers as! PlusNums).numbers[currLevel][i]
             if(number == -1){
-                targets[i].text = ""
-                targets[i].backgroundColor = UIColor.black
+                targets[i].number.text = ""
                 targets[i].isEnabled = false
             }
             else {
-                targets[i].backgroundColor = UIColor.green
-                targets[i].text = String(number)
+                targets[i].number.text = String(number)
                 targets[i].isEnabled = true
             }
         }

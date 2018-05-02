@@ -11,7 +11,7 @@ import UIKit
 class NumberView: UIView {
 
     var origLocation:CGPoint = CGPoint(x: 0.0, y: 0.0);
-    var number: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 85, height: 85));
+    var number: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 85, height: 73));
     var value:Int!
     var inTarget = false;
     var currentTarget:TargetView?;
@@ -24,15 +24,15 @@ class NumberView: UIView {
 
 
         number.textAlignment = NSTextAlignment.center;
-        number.font = UIFont.systemFont(ofSize: 60);
-        
+        number.font = UIFont(name: "ChalkboardSE-Bold", size: 50)
+        number.textColor = .white
         self.addSubview(number);
 
         currentTarget = nil;
         
         //randomize color
         
-        self.backgroundColor = UIColor(red: 220/255.0, green: 0, blue: 16/255.0, alpha: 1);
+//        self.backgroundColor = UIColor(red: 220/255.0, green: 0, blue: 16/255.0, alpha: 1);
     }
 
     required init?(coder aDecoder: NSCoder) {
