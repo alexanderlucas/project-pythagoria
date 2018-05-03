@@ -121,7 +121,7 @@ class TakeAwayViewController: LevelViewController {
                 
                 
                 if(currLevel<20){
-                    nextButton.isHidden = false;
+                    //nextButton.isHidden = false;
                 }
             }
             else {
