@@ -39,13 +39,11 @@ class LevelViewController: UIViewController {
         }
         
         if(sender.state == UIGestureRecognizerState.ended){
-            print("hi");
             
             let target = isInTarget(numbers[num]);
             
             
             if(target != nil && target?.occupied == false && target?.isEnabled == false){
-                print("moo");
                 sender.view!.center = target!.center;
                 target?.occupied = true;
                 numbers[num].inTarget = true;
@@ -54,10 +52,6 @@ class LevelViewController: UIViewController {
                 
             }
             else {
-                print("what");
-                print(target)
-                print(target?.occupied)
-                print(target?.isEnabled)
                 sender.view!.center = numbers[num].origLocation;
             }
             
@@ -182,76 +176,8 @@ class LevelViewController: UIViewController {
         defaults.set(String(lvl), forKey: defaultsKeys.level)
         
     }
-//        iCloudKeyStore?.setDouble(Double(lvl), forKey: "level")
-//        
-//        print(iCloudKeyStore?.doubleForKey("level"))
-       
-        //let record = CKRecord(recordType: "UserInfo", recordID: CKRecordID(recordName: "hi"))
-//        print(lvl)
-//        
-//        if levelRecord == nil{
-//            levelRecord = CKRecord(recordType: "UserInfo", recordID: CKRecordID(recordName: "moo"))
-//
-//        }
-//        levelRecord.setObject(lvl as CKRecordValue, forKey: "level")
-//        
-//        let container = CKContainer.default()
-//        let privateDatabase = container.privateCloudDatabase
-//        
-//        privateDatabase.fetch(withRecordID: CKRecordID(recordName: "moo"), completionHandler: { record, error in
-//            if let fetchError = error {
-//                print("An error occurred in \(fetchError)")
-//            } else {
-//                // Modify the record
-//                print("changing record")
-//                record!.setObject(lvl, forKey: "level")
-//                
-//                privateDatabase.saveRecord(record!, completionHandler: { (savedRecord, savedError) -> Void in
-//                    if (savedError != nil) {
-//                        print(savedError)
-//                    }
-//                })
-//
-//            }
-//            
-//
-//        })
-        
+    
 
-    
-        
-
-    
-    
-    /*
-    func checkSolutions(lvl:Int) {
-        if(allFilled()){
-            if(map.equationsCorrect()){
-                print("equations correct!")
-                check.hidden = true
-                if(!played){
-                    NSUserDefaults.standardUserDefaults().setInteger(level+1, forKey: "level")
-                }
-                level = NSUserDefaults.standardUserDefaults().integerForKey("level")
-                
-                currLevel++
-                
-                if(currLevel<lvl){
-                    next.hidden = false;
-                }
-                
-            }
-            else {
-                print("incorrect")
-            }
-        }
-        else {
-            print("not filled")
-        }
-        
-
-    }*/
-    
     @objc func reset() {
     
         cv?.removeFromSuperview()

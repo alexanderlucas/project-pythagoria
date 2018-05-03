@@ -115,13 +115,7 @@ class LevelSelectorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("reloading view??")
-        print(puzzle)
-
         // Do any additional setup after loading the view.
-
-        //nameLabel.text = puzzle;
-        
         
         levels.append(levelOne)
         levels.append(levelTwo)
@@ -204,10 +198,7 @@ class LevelSelectorViewController: UIViewController {
         levels.append(levelSeventyNine)
         levels.append(levelEighty)
 
-        //currentLevel = 1000
-        //currentLevel = 0;
         
-        //updateNumbers()
     }
     
     func disableLevelsFrom(_ index:Int){
@@ -219,14 +210,12 @@ class LevelSelectorViewController: UIViewController {
     }
     
     func updateNumbers(){
-        //for var i=0; i<20; i+=1
         
         for level in levels{
             level.alpha = 1
 
             level.isEnabled = true;
         }
-        //var lev = student.currentLevel
         let defaults = UserDefaults.standard
         
         var lev = 0;
@@ -236,10 +225,8 @@ class LevelSelectorViewController: UIViewController {
             lev = Int(levelNum)!
         }
         
-        //var lev = currentLevel
         print(lev)
         
-        //var lev = 0
         switch puzzle {
         case "add":
             if(lev >= 80){
@@ -284,232 +271,7 @@ class LevelSelectorViewController: UIViewController {
         default:
             return
         }
-//        if(puzzle == "Add"){
-//            if(lev >= 20){
-//                lev = 20
-//            }
-//            else {
-//                disableLevelsFrom(lev+1);
-//            }
-//
-//            //for var i = lev-1; i>=0; i-=1
-//
-//        }
-//        else if(puzzle == "Sum"){
-//            if(lev < 20){
-//                disableLevelsFrom(0);
-//                return;
-//            }
-//            else if(lev >= 40){
-//                lev = 20;
-//            } else {
-//                lev = lev%20;
-//                disableLevelsFrom(lev+1);
-//            }
-//
-//        }
-//        else if(puzzle == "Take Away"){
-//            if(lev < 40){
-//                disableLevelsFrom(0)
-//                return;
-//            }
-//            else if(lev >= 60){
-//                lev = 20;
-//            }
-//            else {
-//                lev = lev%20;
-//                disableLevelsFrom(lev+1);
-//            }
-//
-//
-//        }
-//        else if(puzzle == "Subtract"){
-//            if(lev < 60){
-//                disableLevelsFrom(0)
-//                return;
-//            }
-//            else if(lev >= 80){
-//                lev = 20;
-//            }
-//            else {
-//                lev = lev%20;
-//                disableLevelsFrom(lev+1);
-//            }
-//
-//
-//        }
-//        else if(puzzle == "Borrow"){
-//            if(lev < 80){
-//                disableLevelsFrom(0)
-//                return;
-//            }
-//            else if(lev >= 100){
-//                lev = 20;
-//            }
-//            else {
-//                lev = lev%20;
-//                disableLevelsFrom(lev+1);
-//            }
-//
-//
-//        }
-//        else if(puzzle == "Difference"){
-//            if(lev < 100){
-//                disableLevelsFrom(0)
-//                return;
-//            }
-//            else if(lev >= 120){
-//                lev = 20;
-//            }
-//            else {
-//                lev = lev%20;
-//                disableLevelsFrom(lev+1);
-//            }
-//
-//
-//        }
-//        else if(puzzle == "Carry"){
-//            if(lev < 120){
-//                disableLevelsFrom(0)
-//                return;
-//            }
-//            else if(lev >= 140){
-//                lev = 20;
-//            }
-//            else {
-//                lev = lev%20;
-//                disableLevelsFrom(lev+1);
-//            }
-//
-//
-//        }
-//        else if(puzzle == "Multi"){
-//            if(lev < 140){
-//                disableLevelsFrom(0)
-//                return;
-//            }
-//            else if(lev >= 160){
-//                lev = 20;
-//            }
-//            else {
-//                lev = lev%20;
-//                disableLevelsFrom(lev+1);
-//            }
-//
-//        }
-//        else if(puzzle == "Plus"){
-//            if(lev < 160){
-//                disableLevelsFrom(0)
-//                return;
-//            }
-//            else if(lev >= 180){
-//                lev = 20;
-//            }
-//            else {
-//                lev = lev%20;
-//                disableLevelsFrom(lev+1);
-//            }
-//
-//        }
-//        else if(puzzle == "Product"){
-//            if(lev < 160){
-//                disableLevelsFrom(0)
-//                return;
-//            }
-//            else if(lev >= 180){
-//                lev = 20;
-//            }
-//            else {
-//                lev = lev%20;
-//                disableLevelsFrom(lev+1);
-//            }
-//
-//        }
-//        else if(puzzle == "Times"){
-//            if(lev < 160){
-//                disableLevelsFrom(0)
-//                return;
-//            }
-//            else if(lev >= 180){
-//                lev = 20;
-//            }
-//            else {
-//                lev = lev%20;
-//                disableLevelsFrom(lev+1);
-//            }
-//
-//        }
-//        else if(puzzle == "Cation"){
-//            if(lev < 160){
-//                disableLevelsFrom(0)
-//                return;
-//            }
-//            else if(lev >= 180){
-//                lev = 20;
-//            }
-//            else {
-//                lev = lev%20;
-//                disableLevelsFrom(lev+1);
-//            }
-//
-//        }
-//        else if(puzzle == "Divide"){
-//            if(lev < 160){
-//                disableLevelsFrom(0)
-//                return;
-//            }
-//            else if(lev >= 180){
-//                lev = 20;
-//            }
-//            else {
-//                lev = lev%20;
-//                disableLevelsFrom(lev+1);
-//            }
-//
-//        }
-//        else if(puzzle == "Remainder"){
-//            if(lev < 160){
-//                disableLevelsFrom(0)
-//                return;
-//            }
-//            else if(lev >= 180){
-//                lev = 20;
-//            }
-//            else {
-//                lev = lev%20;
-//                disableLevelsFrom(lev+1);
-//            }
-//
-//        }
-//        else if(puzzle == "Equivalent"){
-//            if(lev < 160){
-//                disableLevelsFrom(0)
-//                return;
-//            }
-//            else if(lev >= 180){
-//                lev = 20;
-//            }
-//            else {
-//                lev = lev%20;
-//                disableLevelsFrom(lev+1);
-//            }
-//
-//        }
-//        else if(puzzle == "Comparing"){
-//            if(lev < 160){
-//                disableLevelsFrom(0)
-//                return;
-//            }
-//            else if(lev >= 180){
-//                lev = 20;
-//            }
-//            else {
-//                lev = lev%20;
-//                disableLevelsFrom(lev+1);
-//            }
-//
-//        }
-//
+
         if (lev != 0){
             for i in 0...lev-1{
                 levels[i].setBackgroundImage(UIImage(named: "number_circle"), for: .normal)
@@ -531,7 +293,6 @@ class LevelSelectorViewController: UIViewController {
 
         let superview = sender.superview?.superview
         
-        print(superview)
         var index = -1
         switch superview {
         case level1View:
@@ -546,7 +307,6 @@ class LevelSelectorViewController: UIViewController {
             index = -1
         }
         
-        print("puzzle", puzzle)
         
         switch puzzle {
         case "add":
@@ -561,14 +321,11 @@ class LevelSelectorViewController: UIViewController {
             segue = "error"
         }
 
-        print(puzzle)
-        print(segue);
         self.performSegue(withIdentifier: segue, sender: sender);
     }
     
     
     @IBAction func backButtonPressed(_ sender: AnyObject) {
-        //print("hi");
         self.navigationController?.popViewController(animated: true)
     }
 
@@ -591,16 +348,11 @@ class LevelSelectorViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         let level = currentLevel
-        print(level)
-        print("hi")
         let lvl = Int((sender as! UIButton).titleLabel!.text!)! - 1;
-        print(lvl)
 
         let destinationVC = segue.destination as? LevelViewController
 
         var greater = false
-        print(destinationVC)
-        print(greater)
         //cases
         switch destinationVC {
         case is AddLevelViewController:
@@ -651,43 +403,8 @@ class LevelSelectorViewController: UIViewController {
             destinationVC!.level = 0
         }
         
-        //destinationVC!.level = level;
         destinationVC!.currLevel = lvl
 
-//        if let destinationVC = segue.destinationViewController as? AddLevelViewController
-//        {
-//            //destinationVC.student = student;
-//            let lvl = Int((sender as! UIButton).titleLabel!.text!)! - 1;
-//            if(lvl<level%20 || level>20){
-//                destinationVC.played = true;
-//            }
-//            destinationVC.level = level;
-//            destinationVC.currLevel = lvl
-//            
-//        }
-//        if let destinationVC = segue.destinationViewController as? SumLevelViewController {
-//            print("gonna do it")
-//            let lvl = Int((sender as! UIButton).titleLabel!.text!)! - 1;
-//            if(level > 40 || lvl<(level)%20){
-//                destinationVC.played = true;
-//                print("played?")
-//            }
-//            print("here goes nothing")
-//            destinationVC.level = level;
-//            destinationVC.currLevel = lvl
-//        }
-//        if let destinationVC = segue.destinationViewController as? TakeAwayViewController {
-//            print("gonna do it")
-//            let lvl = Int((sender as! UIButton).titleLabel!.text!)! - 1;
-//            if(level > 60 || lvl<(level)%20){
-//                destinationVC.played = true;
-//                print("played?")
-//            }
-//            print("here goes nothing")
-//            destinationVC.level = level;
-//            destinationVC.currLevel = lvl
-//        }
-//        if let destinationVC = segue.destinationViewController as? SubtractLevelViewController {
     }
     
 

@@ -64,7 +64,6 @@
 		F0B069621C24B21300B4A7A3 /* TargetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B069551C24B21300B4A7A3 /* TargetView.swift */; };
 		F0B069641C24B21300B4A7A3 /* AddLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B069571C24B21300B4A7A3 /* AddLevel.swift */; };
 		F0B069651C24B21300B4A7A3 /* AddLevelSums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B069581C24B21300B4A7A3 /* AddLevelSums.swift */; };
-		F0B069661C24B21300B4A7A3 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B069591C24B21300B4A7A3 /* GamesViewController.swift */; };
 		F0B069671C24B21300B4A7A3 /* SimpleEquation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0695A1C24B21300B4A7A3 /* SimpleEquation.swift */; };
 		F0B069681C24B21300B4A7A3 /* NumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0695B1C24B21300B4A7A3 /* NumberView.swift */; };
 		F0B0696A1C24B22300B4A7A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0B069691C24B22300B4A7A3 /* Main.storyboard */; };
@@ -178,7 +177,6 @@
 		F0B069551C24B21300B4A7A3 /* TargetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetView.swift; sourceTree = "<group>"; };
 		F0B069571C24B21300B4A7A3 /* AddLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLevel.swift; sourceTree = "<group>"; };
 		F0B069581C24B21300B4A7A3 /* AddLevelSums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLevelSums.swift; sourceTree = "<group>"; };
-		F0B069591C24B21300B4A7A3 /* GamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 		F0B0695A1C24B21300B4A7A3 /* SimpleEquation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleEquation.swift; sourceTree = "<group>"; };
 		F0B0695B1C24B21300B4A7A3 /* NumberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberView.swift; sourceTree = "<group>"; };
 		F0B069691C24B22300B4A7A3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
@@ -400,7 +398,6 @@
 				F0F223951D0B45F2006C0DCA /* ViewController0.swift */,
 				F0393A6A1D0B3CE900AA2873 /* ViewController1.swift */,
 				F0393A6C1D0B3CF200AA2873 /* ViewController2.swift */,
-				F0B069591C24B21300B4A7A3 /* GamesViewController.swift */,
 				F0B0694F1C24B21300B4A7A3 /* LevelSelectorViewController.swift */,
 				F0714A661C38C7F600242C9A /* LevelViewController.swift */,
 				F0CCE58F1D07CA5E000E8C44 /* + */,
@@ -750,7 +747,6 @@
 				F0714A671C38C7F600242C9A /* LevelViewController.swift in Sources */,
 				F037CCDF1D087AD700524992 /* DivideEquation.swift in Sources */,
 				F04235051CF7BA060054446A /* OperationsViewController.swift in Sources */,
-				F0B069661C24B21300B4A7A3 /* GamesViewController.swift in Sources */,
 				F0CCE5921D07CAC4000E8C44 /* ProductViewController.swift in Sources */,
 				F0F1582A1C4B1111004E8F0D /* DifferenceViewController.swift in Sources */,
 				F037CCF41D088FEE00524992 /* ComparingEquation.swift in Sources */,

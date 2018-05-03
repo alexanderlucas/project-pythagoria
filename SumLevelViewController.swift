@@ -99,14 +99,11 @@ class SumLevelViewController: LevelViewController {
 
             if(number == -1){
                 targets[i].number.text = ""
-//                targets[i].backgroundColor = UIColor.black
                 targets[i].isEnabled = false
             }
             else {
-//                targets[i].backgroundColor = UIColor.green
                 targets[i].number.text = String(number)
                 targets[i].isEnabled = true
-                print("num!: ", targets[i].number.text)
             }
 
         }
