@@ -3604,7 +3604,7 @@
                                                                     <constraint firstAttribute="width" secondItem="53j-8f-LdJ" secondAttribute="height" multiplier="1:1" id="28I-8g-QCg"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="30"/>
-                                                                <color key="tintColor" red="0.31774252650000001" green="0.31773591039999999" blue="0.3177403808" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <color key="tintColor" red="0.31764705882352939" green="0.31764705882352939" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <state key="normal" title="18" backgroundImage="level_bg"/>
                                                                 <connections>
                                                                     <action selector="buttonPressed:" destination="6d7-TB-63p" eventType="touchUpInside" id="D1F-7O-Fel"/>

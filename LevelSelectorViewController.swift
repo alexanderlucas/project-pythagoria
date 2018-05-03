@@ -215,6 +215,8 @@ class LevelSelectorViewController: UIViewController {
             level.alpha = 1
 
             level.isEnabled = true;
+            
+            level.tintColor = #colorLiteral(red: 0.31761235, green: 0.317671299, blue: 0.3176046014, alpha: 1)
         }
         let defaults = UserDefaults.standard
         
