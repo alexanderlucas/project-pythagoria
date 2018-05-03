@@ -28,7 +28,6 @@ class MultiViewController: LevelViewController {
     @IBOutlet weak var labelFive: UILabel!
     
     @IBOutlet weak var check: UIButton!
-    @IBOutlet weak var nextButton: UIButton!
 
     @IBOutlet var background: UIView!
     
@@ -71,10 +70,15 @@ class MultiViewController: LevelViewController {
         labels.append(labelFive)
         
         map = MultiLevel.init(level: currLevel, arrayOfTargets: targets)
-        
+        for target in targets {
+            target.layer.contents = UIImage(named: "level_bg")?.cgImage
+        }
+        for label in labels {
+            label.superview?.layer.contents = UIImage(named: "level_bg")?.cgImage
+        }
+
         updateLabels()
         
-        nextButton.isHidden = true
 
     }
     
@@ -114,7 +118,6 @@ class MultiViewController: LevelViewController {
                 
                 
                 if(currLevel<20){
-                    nextButton.isHidden = false;
                 }
             }
             else {
@@ -123,11 +126,9 @@ class MultiViewController: LevelViewController {
             }
             background.addSubview(super.cv!)
             
-            nextButton.isHidden = true;
             check.isHidden = false;
             
             check.isEnabled = false
-            nextButton.isEnabled = false
             backButton.isEnabled = false
             resetButton.isEnabled = false
             
@@ -156,11 +157,9 @@ class MultiViewController: LevelViewController {
         
         map = MultiLevel.init(level: currLevel, arrayOfTargets: targets); //map
         
-        nextButton.isHidden = true;
         check.isHidden = false;
         
         check.isEnabled = true
-        nextButton.isEnabled = true
         backButton.isEnabled = true
         resetButton.isEnabled = true
     }

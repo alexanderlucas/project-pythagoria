@@ -110,20 +110,20 @@ class ComparingEquation: NSObject {
         print(Double(num1/den1))
         print(Double(num2/den2))
         if(whole){
-            if((Double(num1/den1) > Double(num2/den2)) && ( Double(num2/den2) < Double(num3/den3) ) && ( Double(num3/den3) >  Double(num4/den4))){
+            if((Double(num1)/Double(den1) > Double(num2)/Double(den2)) && ( Double(num2)/Double(den2) < Double(num3)/Double(den3) ) && ( Double(num3)/Double(den3) >  Double(num4)/Double(den4))){
                 return true
             }
             return false
         }
         else if(lessThan){
-            if((Double(num1/den1) < Double(num2/den2)) && ( Double(num2/den2) < Double(num3/den3) ) && ( Double(num3/den3) <  Double(num4/den4))){
+            if((Double(num1)/Double(den1) < Double(num2)/Double(den2)) && ( Double(num2)/Double(den2) < Double(num3)/Double(den3) ) && ( Double(num3)/Double(den3) <  Double(num4)/Double(den4))){
                 return true
             }
             return false
 
         }
         else{
-            if((Double(num1/den1) > Double(num2/den2)) && ( Double(num2/den2) > Double(num3/den3) ) && ( Double(num3/den3) >  Double(num4/den4))){
+            if((Double(num1)/Double(den1) > Double(num2)/Double(den2)) && ( Double(num2)/Double(den2) > Double(num3)/Double(den3) ) && ( Double(num3)/Double(den3) >  Double(num4)/Double(den4))){
                 return true
             }
             return false

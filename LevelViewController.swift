@@ -153,10 +153,10 @@ class LevelViewController: UIViewController {
             let pointX = CGFloat(135*mod + 63);
             var pointY = CGFloat(0);
             if(i<5) {
-                pointY = CGFloat(740);
+                pointY = CGFloat(800);
             }
             else {
-                pointY = CGFloat(863);
+                pointY = CGFloat(910);
             }
             let newView = NumberView(frame: CGRect(x: pointX, y: pointY, width: 85, height: 85));
             newView.number.text = String(i);

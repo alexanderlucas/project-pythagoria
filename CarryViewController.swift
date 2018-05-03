@@ -36,7 +36,6 @@ class CarryViewController: LevelViewController {
     @IBOutlet weak var targetTwentyThree: TargetView!
 
     @IBOutlet weak var check: UIButton!
-    @IBOutlet weak var nextButton: UIButton!
 
     @IBOutlet var background: UIView!
     
@@ -88,7 +87,6 @@ class CarryViewController: LevelViewController {
         }
 
         updateLabels()
-        nextButton.isHidden = true;
 
     }
     
@@ -128,7 +126,6 @@ class CarryViewController: LevelViewController {
                 
                 
                 if(currLevel<20){
-                    nextButton.isHidden = false;
                 }
             }
             else {
@@ -137,11 +134,9 @@ class CarryViewController: LevelViewController {
             }
             background.addSubview(super.cv!)
             
-            nextButton.isHidden = true;
             check.isHidden = false;
             
             check.isEnabled = false
-            nextButton.isEnabled = false
             backButton.isEnabled = false
             resetButton.isEnabled = false
         }
@@ -170,11 +165,9 @@ class CarryViewController: LevelViewController {
         
         map = CarryLevel.init(level: currLevel, arrayOfTargets: targets); //map
         
-        nextButton.isHidden = true;
         check.isHidden = false;
         
         check.isEnabled = true
-        nextButton.isEnabled = true
         backButton.isEnabled = true
         resetButton.isEnabled = true
     }

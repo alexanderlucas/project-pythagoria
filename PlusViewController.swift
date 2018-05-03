@@ -32,7 +32,6 @@ class PlusViewController: LevelViewController {
     @IBOutlet weak var targetNineteen: TargetView!
 
     @IBOutlet weak var check: UIButton!
-    @IBOutlet weak var nextButton: UIButton!
 
     @IBOutlet var background: UIView!
     @IBOutlet weak var backButton: UIButton!
@@ -76,7 +75,6 @@ class PlusViewController: LevelViewController {
 
         updateLabels()
 
-        nextButton.isHidden = true;
 
         // Do any additional setup after loading the view.
     }
@@ -112,11 +110,9 @@ class PlusViewController: LevelViewController {
         
         // header.text = "Level \(currLevel+1)"
         
-        nextButton.isHidden = true;
         check.isHidden = false;
         
         check.isEnabled = true
-        nextButton.isEnabled = true
         backButton.isEnabled = true
         resetButton.isEnabled = true
     }
@@ -143,7 +139,6 @@ class PlusViewController: LevelViewController {
                 
                 
                 if(currLevel<20){
-                    nextButton.isHidden = false;
                 }
             }
             else {
@@ -152,11 +147,9 @@ class PlusViewController: LevelViewController {
             }
             background.addSubview(super.cv!)
             
-            nextButton.isHidden = true;
             check.isHidden = false;
             
             check.isEnabled = false
-            nextButton.isEnabled = false
             backButton.isEnabled = false
             resetButton.isEnabled = false
         }

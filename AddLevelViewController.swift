@@ -27,9 +27,7 @@ class AddLevelViewController: LevelViewController {
     @IBOutlet weak var labelFour: UILabel!
     @IBOutlet weak var labelFive: UILabel!
     
-    @IBOutlet weak var header: UILabel!
     @IBOutlet weak var check: UIButton!
-    @IBOutlet weak var nextButton: UIButton!
     
     @IBOutlet var background: UIView!
     
@@ -90,11 +88,8 @@ class AddLevelViewController: LevelViewController {
 
         map = AddLevel.init(level: currLevel, arrayOfTargets: targets); //map
         
-        header.text = "Level \(currLevel+1)"
 
         updateLabels()
-        
-        nextButton.isHidden = true;
         
         //let defaults = UserDefaults.standard
         //if let levelNum = defaults.string(forKey: defaultsKeys.level) {
@@ -166,11 +161,9 @@ class AddLevelViewController: LevelViewController {
             }
             background.addSubview(super.cv!)
             
-            nextButton.isHidden = true;
             check.isHidden = false;
             
             check.isEnabled = false
-            nextButton.isEnabled = false
             backButton.isEnabled = false
             resetButton.isEnabled = false
             
@@ -210,9 +203,7 @@ class AddLevelViewController: LevelViewController {
         
         map = AddLevel.init(level: currLevel, arrayOfTargets: targets); //map
         
-        header.text = "Level \(currLevel+1)"
         
-        nextButton.isHidden = true
         check.isHidden = false
         check.isEnabled = true
         backButton.isEnabled = true

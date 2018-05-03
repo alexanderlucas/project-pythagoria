@@ -11,7 +11,7 @@ import UIKit
 class NumberView: UIView {
 
     var origLocation:CGPoint = CGPoint(x: 0.0, y: 0.0);
-    var number: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 85, height: 73));
+    var number: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 85, height: 75));
     var value:Int!
     var inTarget = false;
     var currentTarget:TargetView?;

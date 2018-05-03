@@ -80,10 +80,12 @@ class TakeAwayViewController: LevelViewController {
 
         //set up map
         map = TALevel.init(level: currLevel, arrayOfTargets: targets)
-        
+        for target in targets {
+            target.layer.contents = UIImage(named: "level_bg")?.cgImage
+        }
+
         updateLabels()
     
-        nextButton.isHidden = true;
 
     }
     
@@ -93,11 +95,9 @@ class TakeAwayViewController: LevelViewController {
             let number = (answers as! TakeAwayNums).numbers[currLevel][i]
             if(number == -1){
                 targets[i].number.text = ""
-                targets[i].backgroundColor = UIColor.black
                 targets[i].isEnabled = false
             }
             else {
-                targets[i].backgroundColor = UIColor.green
                 targets[i].number.text = String(number)
                 targets[i].isEnabled = true
             }

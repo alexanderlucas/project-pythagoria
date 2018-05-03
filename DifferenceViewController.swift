@@ -36,7 +36,6 @@ class DifferenceViewController: LevelViewController {
     @IBOutlet weak var targetTwentyThree: TargetView!
     
     @IBOutlet weak var check: UIButton!
-    @IBOutlet weak var nextButton: UIButton!
 
     @IBOutlet var background: UIView!
     
@@ -83,10 +82,11 @@ class DifferenceViewController: LevelViewController {
         targets.append(targetTwentyThree)
         
         map = DifferenceLevel.init(level: currLevel, arrayOfTargets: targets)
-        
-        updateLabels()
-        nextButton.isHidden = true;
+        for target in targets {
+            target.layer.contents = UIImage(named: "level_bg")?.cgImage
+        }
 
+        updateLabels()
         
     }
     
@@ -129,7 +129,6 @@ class DifferenceViewController: LevelViewController {
                 
                 
                 if(currLevel<20){
-                    nextButton.isHidden = false;
                 }
             }
             else {
@@ -138,11 +137,9 @@ class DifferenceViewController: LevelViewController {
             }
             background.addSubview(super.cv!)
             
-            nextButton.isHidden = true;
             check.isHidden = false;
             
             check.isEnabled = false
-            nextButton.isEnabled = false
             backButton.isEnabled = false
             resetButton.isEnabled = false
         }
@@ -172,11 +169,9 @@ class DifferenceViewController: LevelViewController {
         
         // header.text = "Level \(currLevel+1)"
         
-        nextButton.isHidden = true;
         check.isHidden = false;
         
         check.isEnabled = true
-        nextButton.isEnabled = true
         backButton.isEnabled = true
         resetButton.isEnabled = true
     }

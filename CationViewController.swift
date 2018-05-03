@@ -39,7 +39,6 @@ class CationViewController: LevelViewController {
     
     
     @IBOutlet weak var check: UIButton!
-    @IBOutlet weak var nextButton: UIButton!
 
     @IBOutlet var background: UIView!
     
@@ -86,7 +85,10 @@ class CationViewController: LevelViewController {
         print("hello")
         
         map = CationLevel.init(level: currLevel, arrayOfTargets: targets)
-        
+        for target in targets {
+            target.layer.contents = UIImage(named: "level_bg")?.cgImage
+        }
+
         print("mm")
         updateLabels()
     }
@@ -129,7 +131,6 @@ class CationViewController: LevelViewController {
                 
                 
                 if(currLevel<20){
-                    nextButton.isHidden = false;
                 }
             }
             else {
@@ -138,11 +139,9 @@ class CationViewController: LevelViewController {
             }
             background.addSubview(super.cv!)
             
-            nextButton.isHidden = true;
             check.isHidden = false;
             
             check.isEnabled = false
-            nextButton.isEnabled = false
             backButton.isEnabled = false
             resetButton.isEnabled = false
         }
@@ -172,11 +171,9 @@ class CationViewController: LevelViewController {
         
         // header.text = "Level \(currLevel+1)"
         
-        nextButton.isHidden = true;
         check.isHidden = false;
         
         check.isEnabled = true
-        nextButton.isEnabled = true
         backButton.isEnabled = true
         resetButton.isEnabled = true
     }

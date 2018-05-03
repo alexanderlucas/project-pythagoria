@@ -253,7 +253,7 @@ class LevelSelectorViewController: UIViewController {
                 disableLevelsFrom(0)
                 return
             }else if (lev >= 160){
-                lev = 160
+                lev = 80
             }
             else {
                 lev = lev % 80
@@ -264,7 +264,7 @@ class LevelSelectorViewController: UIViewController {
                 disableLevelsFrom(0)
                 return
             }else if (lev >= 240){
-                lev = 240
+                lev = 80
             }
             else {
                 lev = lev % 80
@@ -275,7 +275,7 @@ class LevelSelectorViewController: UIViewController {
                 disableLevelsFrom(0)
                 return
             }else if (lev >= 320){
-                lev = 320
+                lev = 80
             }
             else {
                 lev = lev % 80
@@ -512,7 +512,7 @@ class LevelSelectorViewController: UIViewController {
 //
         if (lev != 0){
             for i in 0...lev-1{
-                levels[i].setBackgroundImage(UIImage(named: "completed_level_bg"), for: .normal)
+                levels[i].setBackgroundImage(UIImage(named: "number_circle"), for: .normal)
                 levels[i].tintColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         }
         }

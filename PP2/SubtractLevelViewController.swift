@@ -28,7 +28,6 @@ class SubtractLevelViewController: LevelViewController {
     @IBOutlet weak var labelFive: UILabel!
     
     @IBOutlet weak var check: UIButton!
-    @IBOutlet weak var nextButton: UIButton!
 
     @IBOutlet var background: UIView!
     
@@ -74,10 +73,15 @@ class SubtractLevelViewController: LevelViewController {
         map = SubtractLevel.init(level: currLevel, arrayOfTargets: targets); //map
         
        // header.text = "Level \(currLevel+1)"
-        
+        for target in targets {
+            target.layer.contents = UIImage(named: "level_bg")?.cgImage
+        }
+        for label in labels {
+            label.superview?.layer.contents = UIImage(named: "level_bg")?.cgImage
+        }
+
         updateLabels()
         
-        nextButton.isHidden = true;
         
     }
     
@@ -118,7 +122,6 @@ class SubtractLevelViewController: LevelViewController {
                 
                 
                 if(currLevel<20){
-                    nextButton.isHidden = false;
                 }
             }
             else {
@@ -127,11 +130,9 @@ class SubtractLevelViewController: LevelViewController {
             }
             background.addSubview(super.cv!)
             
-            nextButton.isHidden = true;
             check.isHidden = false;
             
             check.isEnabled = false
-            nextButton.isEnabled = false
             backButton.isEnabled = false
             resetButton.isEnabled = false
         }
@@ -160,11 +161,9 @@ class SubtractLevelViewController: LevelViewController {
         
        // header.text = "Level \(currLevel+1)"
         
-        nextButton.isHidden = true;
         check.isHidden = false;
         
         check.isEnabled = true
-        nextButton.isEnabled = true
         backButton.isEnabled = true
         resetButton.isEnabled = true
     }

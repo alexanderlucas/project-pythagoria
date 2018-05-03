@@ -31,7 +31,6 @@ class RemainderViewController: LevelViewController {
     @IBOutlet weak var targetEighteen: TargetView!
     
     @IBOutlet weak var check: UIButton!
-    @IBOutlet weak var nextButton: UIButton!
 
     @IBOutlet var background: UIView!
     
@@ -70,7 +69,10 @@ class RemainderViewController: LevelViewController {
         targets.append(targetEighteen)
         
         map = RemainderLevel.init(level: currLevel, arrayOfTargets: targets)
-        
+        for target in targets {
+            target.layer.contents = UIImage(named: "level_bg")?.cgImage
+        }
+
         print("mm")
         updateLabels()
     }
@@ -85,11 +87,9 @@ class RemainderViewController: LevelViewController {
             let number = (answers as! RemainderNums).numbers[currLevel][i]
             if(number == -1){
                 targets[i].number.text = ""
-                targets[i].backgroundColor = UIColor.black
                 targets[i].isEnabled = false
             }
             else {
-                targets[i].backgroundColor = UIColor.green
                 targets[i].number.text = String(number)
                 targets[i].isEnabled = true
             }
@@ -112,7 +112,6 @@ class RemainderViewController: LevelViewController {
                 
                 
                 if(currLevel<20){
-                    nextButton.isHidden = false;
                 }
             }
             else {
@@ -121,11 +120,9 @@ class RemainderViewController: LevelViewController {
             }
             background.addSubview(super.cv!)
             
-            nextButton.isHidden = true;
             check.isHidden = false;
             
             check.isEnabled = false
-            nextButton.isEnabled = false
             backButton.isEnabled = false
             resetButton.isEnabled = false
         }
@@ -155,11 +152,9 @@ class RemainderViewController: LevelViewController {
         
         // header.text = "Level \(currLevel+1)"
         
-        nextButton.isHidden = true;
         check.isHidden = false;
         
         check.isEnabled = true
-        nextButton.isEnabled = true
         backButton.isEnabled = true
         resetButton.isEnabled = true
     }

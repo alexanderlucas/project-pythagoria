@@ -9,7 +9,7 @@
 import UIKit
 
 class TargetView: UIView {
-    var number: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 85, height: 73));
+    var number: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 85, height: 75));
 
     var occupied = false;
     
