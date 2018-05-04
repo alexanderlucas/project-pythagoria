@@ -349,13 +349,25 @@ class LevelSelectorViewController: UIViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
-        let level = currentLevel
+        let destinationVC = segue.destination as? LevelViewController
+        
+        var level = currentLevel
+        let defaults = UserDefaults.standard
+        if let levelNum = defaults.string(forKey: defaultsKeys.level) {
+            destinationVC!.level = Int(levelNum)!
+            level = Int(levelNum)!
+        }else{
+            destinationVC!.level = 0
+            level = 0
+        }
+        
         let lvl = Int((sender as! UIButton).titleLabel!.text!)! - 1;
 
-        let destinationVC = segue.destination as? LevelViewController
+        
 
         var greater = false
         //cases
+        
         switch destinationVC {
         case is AddLevelViewController:
             if(level>20){
@@ -365,15 +377,15 @@ class LevelSelectorViewController: UIViewController {
             if(level>40){
                 greater = true;
             }
-        case is TakeAwayViewController:
+        case is CarryViewController:
             if(level>60){
                 greater = true;
             }
-        case is SubtractLevelViewController:
+        case is PlusViewController:
             if(level>80){
                 greater = true;
             }
-        case is BorrowViewController:
+        case is SubtractLevelViewController:
             if(level>100){
                 greater = true;
             }
@@ -381,12 +393,48 @@ class LevelSelectorViewController: UIViewController {
             if(level>120){
                 greater = true;
             }
-        case is CarryViewController:
+        case is TakeAwayViewController:
             if(level>140){
                 greater = true;
             }
-        case is MultiViewController:
+        case is BorrowViewController:
             if(level>160){
+                greater = true;
+            }
+        case is MultiViewController:
+            if(level>180){
+                greater = true;
+            }
+            
+        case is ProductViewController:
+            if(level>200){
+                greater = true;
+            }
+            
+        case is TimesViewController:
+            if(level>220){
+                greater = true;
+            }
+            
+        case is CationViewController:
+            if(level>240){
+                greater = true;
+            }
+            
+        case is DivideViewController:
+            if(level>260){
+                greater = true;
+            }
+        case is RemainderViewController:
+            if(level>280){
+                greater = true;
+            }
+        case is EquivalentViewController:
+            if(level>300){
+                greater = true;
+            }
+        case is ComparingViewController:
+            if(level>320){
                 greater = true;
             }
         
@@ -394,15 +442,8 @@ class LevelSelectorViewController: UIViewController {
             greater = false
         }
         
-        if(lvl<level%20 || greater){
+        if(lvl < level%20 || greater){
             destinationVC!.played = true;
-        }
-        
-        let defaults = UserDefaults.standard
-        if let levelNum = defaults.string(forKey: defaultsKeys.level) {
-            destinationVC!.level = Int(levelNum)!
-        }else{
-            destinationVC!.level = 0
         }
         
         destinationVC!.currLevel = lvl

@@ -131,10 +131,10 @@ class TakeAwayViewController: LevelViewController {
             background.addSubview(super.cv!)
             
             check.isEnabled = false;
-            nextButton.isEnabled = false;
+            //nextButton.isEnabled = false;
             
             check.isEnabled = false
-            nextButton.isEnabled = false
+            //nextButton.isEnabled = false
             backButton.isEnabled = false
             resetButton.isEnabled = false
         }
@@ -164,13 +164,13 @@ class TakeAwayViewController: LevelViewController {
         
         // header.text = "Level \(currLevel+1)"
         
-        nextButton.isHidden = true;
+        //nextButton.isHidden = true;
         check.isHidden = false;
         
         
         
         check.isEnabled = true
-        nextButton.isEnabled = true
+        //nextButton.isEnabled = true
         backButton.isEnabled = true
         resetButton.isEnabled = true
     }

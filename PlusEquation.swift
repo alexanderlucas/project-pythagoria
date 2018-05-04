@@ -74,15 +74,15 @@ class PlusEquation: NSObject {
         let three = getNumber(numThree)
         let four = getNumber(numFour)
         let five = getNumber(numFive)
-        let six = getNumber(numSix)
-        let seven = getNumber(numSeven)
-        let eight = getNumber(numEight)
         
         var addendOne = 0
         var addendTwo = 0
         var sum = 0
 
         if(second){
+            let six = getNumber(numSix)
+            let seven = getNumber(numSeven)
+
             addendOne = one*10 + two
             addendTwo = three*10 + four
             sum = five*100 + six*10 + seven
@@ -93,6 +93,11 @@ class PlusEquation: NSObject {
             sum = four*10 + five
         }
         else {
+            let six = getNumber(numSix)
+            let seven = getNumber(numSeven)
+
+            let eight = getNumber(numEight)
+
             addendOne = one*100 + two*10 + three
             addendTwo = four*10 + five
             sum = six*100 + seven*10 + eight
