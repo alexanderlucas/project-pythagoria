@@ -1622,8 +1622,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="check"/>
                                 <connections>
-                                    <action selector="checkButtonPressed:" destination="mMh-g4-4rK" eventType="touchUpInside" id="LFR-U5-tuU"/>
-                                    <action selector="checkButtonPressed:" destination="1Xh-NK-hXR" eventType="touchUpInside" id="fmM-M1-CkC"/>
+                                    <action selector="checkButtonPressedWithSender:" destination="mMh-g4-4rK" eventType="touchUpInside" id="E56-Lh-Cct"/>
                                 </connections>
                             </button>
                         </subviews>

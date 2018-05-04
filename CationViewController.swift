@@ -104,11 +104,9 @@ class CationViewController: LevelViewController {
             let number = (answers as! CationNums).numbers[currLevel][i]
             if(number == -1){
                 targets[i].number.text = ""
-                targets[i].backgroundColor = UIColor.black
                 targets[i].isEnabled = false
             }
             else {
-                targets[i].backgroundColor = UIColor.green
                 targets[i].number.text = String(number)
                 targets[i].isEnabled = true
             }

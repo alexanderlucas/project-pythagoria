@@ -33,7 +33,7 @@ class CationEquation: NSObject {
         numSix = six;
         numSeven = seven;
         
-        second = true
+        second = false
     }
     
     
@@ -70,11 +70,16 @@ class CationEquation: NSObject {
             product = four*100 + five*10 + six
         }
         else {
+            print("second");
             let seven = getNumber(numSeven)
             multiplicand = one*10 + two
             multiplier = three*10 + four
             product = five*100 + six*10 + seven
         }
+        
+//        print(multiplicand)
+//        print(multiplier)
+//        print(product)
         if(multiplicand * multiplier == product){
             return true
         }

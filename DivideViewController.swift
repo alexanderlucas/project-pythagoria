@@ -167,7 +167,8 @@ class DivideViewController: LevelViewController {
             targets[i].currentNum = nil
         }
     }
-    @IBAction func backButtonPressed(sender: AnyObject) {
+    
+    @IBAction func backButtonPressed(_ sender: AnyObject) {
         self.navigationController?.popViewController(animated: true);
         
     }
