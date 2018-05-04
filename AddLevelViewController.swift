@@ -157,7 +157,7 @@ class AddLevelViewController: LevelViewController {
             }
             else {
                 print("incorrect")
-                super.cv = CheckView.init(frame: CGRect(x: 50, y: 50, width: 500, height: 500), correct: false, parent: self)
+                super.cv = CheckView.init(frame: CGRect(x: 60, y: 240, width: 644, height: 400), correct: false, parent: self)
             }
             background.addSubview(super.cv!)
             

@@ -16,22 +16,28 @@ class CheckView: UIView {
     var parentVC = LevelViewController()
     
     init(frame: CGRect, correct: Bool, parent: LevelViewController){
-        super.init(frame: frame)
+        super.init(frame: CGRect(x: 62, y: 240, width: 644, height: 400))
 
-        let midx = frame.midX
-        let miny = frame.minY
-        button.frame = CGRect(x: midx - 50, y: miny + 300, width: 100, height: 100)
-        label.frame = CGRect(x: midx-50, y: miny + 100, width: 100, height: 50)
+        let fr = CGRect(x: 62, y: 240, width: 644, height: 400)
+        let wid = fr.width/2
+//        button = UIButton(frame: CGRect(x: midx - 200, y: miny + 100, width: 400, height: 100))
+        button.frame = CGRect(x: wid-50, y: 220, width: 100, height: 100)
+        label.frame = CGRect(x: wid-200, y: 50, width: 400, height: 100)
 
-        
+        self.layer.contents = UIImage(named: "popup_bg")?.cgImage
+
         if(correct) {
-            button.setTitle("Next", for: UIControlState())
+            button.layer.contents = UIImage(named: "next")?.cgImage
+
+//            button.setTitle("Next", for: UIControlState())
             label.text = "Correct!"
             button.addTarget(parent, action: Selector(("backButtonPressed:")), for: .touchUpInside)
 
         }
         else {
-            button.setTitle("Try Again", for: UIControlState())
+//            button.setTitle("Try Again", for: UIControlState())
+            button.layer.contents = UIImage(named: "redo_button")?.cgImage
+
             label.text = "Incorrect"
             //#selector(reset(_:)
             //Selector(("reset:"))
@@ -39,11 +45,15 @@ class CheckView: UIView {
 
         }
         
-        self.backgroundColor = UIColor.blue
-        button.backgroundColor = UIColor.white
-        label.backgroundColor = UIColor.white
-        button.setTitleColor(UIColor.black, for: UIControlState())
-        label.textColor = UIColor.black
+//        self.backgroundColor = UIColor.blue
+//        button.backgroundColor = UIColor.white
+//        label.backgroundColor = UIColor.black
+        button.setTitleColor(.white, for: UIControlState())
+        label.textColor = UIColor.white
+        label.font = UIFont(name: "ChalkboardSE-Bold", size: 70)
+
+
+        label.textAlignment = .center
         self.addSubview(button)
         self.addSubview(label)
 
